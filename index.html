@@ -5,27 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Dr. Muhammad Mohsin - Academic Portfolio</title>
   <style>
-    html, body {
-      height: 100%;
-      margin: 0;
-      padding: 0;
-    }
-    body {
-      font-family: Arial, sans-serif;
-      line-height: 1.6;
-      background-color: #f9f9f9;
-      display: flex;
-      flex-direction: column;
-      min-height: 100vh;
-    }
-    header {
-      background-color: #2c3e50;
-      padding: 1rem;
-      color: white;
-      position: sticky;
-      top: 0;
-      z-index: 10;
-    }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f9f9f9; }
+    header { background-color: #2c3e50; padding: 1rem; color: white; position: sticky; top: 0; z-index: 10; }
     nav a {
       color: white;
       text-decoration: none;
@@ -33,53 +14,22 @@
       font-weight: bold;
       font-size: 0.9rem;
     }
-    nav a:hover {
-      text-decoration: underline;
-    }
-    .container {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      background: white;
-      flex: 1;
-    }
-    section {
-      display: none;
-      margin-bottom: 3rem;
-    }
-    section.active {
-      display: block;
-    }
-    h2 {
-      color: #2c3e50;
-      border-bottom: 2px solid #eee;
-      padding-bottom: 0.3rem;
-    }
-    ul, ol {
-      padding-left: 1.2rem;
-    }
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-top: 1rem;
-    }
-    th, td {
-      border: 1px solid #ddd;
-      padding: 8px;
-      text-align: left;
-    }
-    th {
-      background-color: #f4f4f4;
-    }
+    nav a:hover { text-decoration: underline; }
+    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: white; }
+    section { display: none; margin-bottom: 3rem; }
+    section.active { display: block; }
+    h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.3rem; }
+    ul, ol { padding-left: 1.2rem; }
+    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
+    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+    th { background-color: #f4f4f4; }
     footer {
       text-align: center;
       padding: 1rem;
       background-color: #2c3e50;
       color: white;
     }
-    a {
-      color: #0077cc;
-    }
+    a { color: #0077cc; }
     .profile-img {
       float: right;
       width: 120px;
@@ -88,21 +38,12 @@
       margin-left: 20px;
       object-fit: cover;
     }
-    .profile-img-global {
-      position: absolute;
-      top: 100px;
-      right: 50px;
-      width: 120px;
-      height: 120px;
-      border-radius: 60px;
-      object-fit: cover;
-      z-index: 5;
-    }
   </style>
 </head>
 <body>
 
 <header>
+  <nav>
   <nav>
     <a href="#home" onclick="showSection('home')">Home</a>
     <a href="#education" onclick="showSection('education')">Education</a>
@@ -111,22 +52,24 @@
     <a href="#seminars" onclick="showSection('seminars')">Seminars</a>
     <a href="#posters" onclick="showSection('posters')">Posters</a>
     <a href="#academic" onclick="showSection('academic')">Academic</a>
-    <a href="#training" onclick="showSection('training')">Training</a>
+    <a href="#training" onclick="showSection('training')">Training and Certifications</a>
     
-    
-  </nav>
+    <a href="mailto:muhammad.mohsin@edu.unige.it" target="_blank">Mail</a>
+    <a href="https://www.linkedin.com/in/engineermohsiin/" target="_blank">LinkedIn</a>
+    <a href="https://scholar.google.com/citations?hl=en&user=Ht3LV2kAAAAJ" target="_blank">Google Scholar</a>
+    <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank">ResearchGate</a>
+    <a href="https://github.com/drmuhammadmohsin" target="_blank">GitHub</a>
 </header>
 
-<img src="asset/Profile.jpeg" alt="Profile Photo" class="profile-img-global">
 <div class="container">
-  $1
-    <p>
-      <a href="mailto:muhammad.mohsin@edu.unige.it" target="_blank">Mail</a> &nbsp;&nbsp;
-      <a href="https://www.linkedin.com/in/engineermohsiin/" target="_blank">LinkedIn</a> &nbsp;&nbsp;
-      <a href="https://scholar.google.com/citations?hl=en&user=Ht3LV2kAAAAJ" target="_blank">Google Scholar</a> &nbsp;&nbsp;
-      <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank">ResearchGate</a> &nbsp;&nbsp;
-      <a href="https://github.com/drmuhammadmohsin" target="_blank">GitHub</a>
-    </p>
+  <section id="home" class="active">
+    <h2>About Me</h2>
+    <img src="asset/Profile.jpeg" alt="Profile Photo" class="profile-img">
+    <p><strong>Muhammad Mohsin</strong> is a Ph.D. candidate at the University of Genova, Italy. He received his M.S. degree in Computer Engineering from NUST, Islamabad, Pakistan in 2021. He is actively involved in cutting-edge research and development in the fields of Medical Imaging, Circular Economy, Machine Learning, Deep Learning, and Artificial Intelligence. His current research interests include Machine Learning, Deep Learning, Computer Vision, AI, Medical Imaging, Urban Mines, E-Waste Recycling, and Circular Economy.
+Thank you for visiting my profile. Please feel free to reach out if you have any questions or ideas to share. I look forward to connecting with others who share my passion for computer science and technology.</p>
+     <strong>Office:</strong> Room No 309, DIBRIS, University of Genoa, Via Dodecaneso 35, Genoa, 16146, Italy Genoa</p>
+    <p><strong>Email:</strong> muhammad.mohsin@edu.unige.it<br>
+      
   </section>
 
   <section id="education">
@@ -142,42 +85,53 @@
 
   <section id="publications">
     <h2>Publications</h2>
-    <ul>
-      <li>Mohsin et al. (2025). <strong>Automated Disassembly...</strong> [<a href="https://doi.org/10.3390/computers14020062">Link</a>]</li>
-      <li>Batool & Mohsin (2025). <strong>Green Innovation...</strong> [<a href="https://doi.org/10.3390/world6010029">Link</a>]</li>
-    </ul>
+   <ul>
+    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards <em>In Press</em>. </li>
+    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Automated Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT. <em>Computers</em>. [<a href="https://doi.org/10.3390/computers14020062" target="_blank">PDF</a>]</li>
+    <li>Fatima Batool, <strong>Muhammad Mohsin</strong>, Belal Mahmoud Alwadi (2025). Green Innovation and Environmental Performance: The Moderating Roles of Governance and Policy. <em>World</em>. [<a href="https://doi.org/10.3390/world6010029" target="_blank">PDF</a>]</li>
+    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2024). Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach. <em>ApplePies Conference</em>, Polytechnic University of Turin. [<a href="https://doi.org/10.1007/978-3-031-84100-2_21" target="_blank">PDF</a>]</li>
+    <li><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Danilo Greco, Alberto Cabri (2024). Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards. <em>IEEE RTSI</em>, Politecnico di Milano. [<a href="https://doi.org/10.1109/RTSI61910.2024.10761364" target="_blank">PDF</a>]</li>
+    <li><strong>Muhammad Mohsin</strong>, Xianlai Zeng, Stefano Rovetta, Francesco Masulli (2024). Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards. <em>ICWMT19</em>, Hangzhou, China. [<a href="https://www.bcrc.cn/icwmt-eng/atm/7/20240814170641676.pdf" target="_blank">PDF</a>]</li>
+    <li>Fatima Batool, <strong>Muhammad Mohsin</strong> (2024). Impact of Green Innovation on Business Sustainability and the Mediating Role of Green Intellectual Capital. <em>Educational Administration: Theory and Practice</em>, 30(4). [<a href="https://kuey.net/index.php/kuey/article/view/1528" target="_blank">PDF</a>]</li>
+    <li><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Alberto Cabri (2023). Virtual Mines – Component-level recycling of printed circuit boards using deep learning. <em>WIRN 2023</em>, Vietri sul Mare, Italy. [<a href="https://doi.org/10.48550/arXiv.2406.17162" target="_blank">PDF</a>]</li>
+    <li>Alberto Cabri, Francesco Masulli, Stefano Rovetta, <strong>Muhammad Mohsin</strong> (2022). Recovering Critical Raw Materials from WEEE using Artificial Intelligence. <em>MAS2022</em>, Rome, Italy. [<a href="https://www.cal-tek.eu/proceedings/i3m/2022/mas/023/" target="_blank">PDF</a>]</li>
+    <li><strong>Muhammad Mohsin</strong>, Arslan Shaukat, Usman Akram, Muhammad Kaab Zarrar (2021). Automatic Prostate Cancer Grading Using Deep Architectures. <em>IEEE AICCSA 2021</em>. [<a href="https://ieeexplore.ieee.org/document/9686869" target="_blank">PDF</a>]</li>
+    <li>Muhammad Kaab Zarrar, Farhan Hussain, <strong>Muhammad Mohsin</strong>, Rida Sheikh (2019). Latest Trends in Automatic Glioma Tumor Segmentation and Improved CNN Solution. <em>MACS 2019</em>. [<a href="https://ieeexplore.ieee.org/document/9024815" target="_blank">PDF</a>]</li>
+    <li>Arslan Shaukat, Ammar Younis, Usman Akram, <strong>Muhammad Mohsin</strong>, Zartasha Mustansar (2019). Towards Automatic Recognition of Sounds Observed in Daily Living Activity. <em>IEEE ICCI*CC 2019</em>. [<a href="https://ieeexplore.ieee.org/document/9146067" target="_blank">PDF</a>]</li>
+  </ul>
   </section>
 
   <section id="teaching">
     <h2>Teaching</h2>
     <ul>
-      <li>2024-2025 – Computer Vision (MSc Robotics Engineering)</li>
-      <li>2024-2025 – Algorithms & Object Oriented Programming (BSc Biomedical Engineering)</li>
+      <li>2024-2025 – Introduction to Computer Science and Programming (BSc Computer Engineering)</li>
+      <li>2024-2025 – Data Warehousing (MSc Computer Science)</li>
     </ul>
   </section>
 
   <section id="seminars">
-  <h2>Seminars</h2>
-  <ul>
-    <li>Selective Disassembly of Electronic Components from WEEE using Artificial Intelligence – <a href="assets/Seminar-2022.pdf" target="_blank">[Link]</a></li>
-    <li>Virtual Mines: A sustainable solution for the electronic industry – <a href="assets/Seminar-2023.pdf" target="_blank">[Link]</a></li>
-    <li>Measuring the recyclability of waste electronic components in printed circuit boards – <a href="assets/Seminar-2024.pdf" target="_blank">[Link]</a></li>
+    <h2>Seminars</h2>
+   <ul>
+    <li>Selective Disassembly of Electronic Components from WEEE using Artificial Intelligence – <a href="assets/Seminar-2022.pdf" target="_blank">PDF</a></li>
+    <li>Virtual Mines: A sustainable solution for the electronic industry – <a href="assets/Seminar-2023.pdf" target="_blank">PDF</a></li>
+    <li>Measuring the recyclability of waste electronic components in printed circuit boards – <a href="assets/Seminar-2024.pdf" target="_blank">PDF</a></li>
     <li>CINECA High-Performance Computing System: Leonardo – <a href="assets/CINECA-mohsin.pdf" target="_blank">[Slides]</a></li>
   </ul>
-</section>
+  </section>
 
   <section id="posters">
-  <h2>Posters</h2>
-  <ul>
-    <li>Selective Disassembly of Electronic Components from WEEE using Artificial Intelligence – <a href="http://dx.doi.org/10.13140/RG.2.2.27349.19687" target="_blank">[Link]</a></li>
-    <li>V-PCB Dataset: Detection of Electronic Components in Waste from Electrical and Electronic Equipment – <a href="http://dx.doi.org/10.13140/RG.2.2.20216.01284" target="_blank">[Link]</a></li>
-    <li>Assessing Recyclability for Automated Waste PCB Disassembly and Sorting – <a href="assets/CSW2024.pdf" target="_blank">[Link]</a></li>
+    <h2>Posters</h2>
+    <ul>
+    <li>Selective Disassembly of Electronic Components from WEEE using Artificial Intelligence – <a href="http://dx.doi.org/10.13140/RG.2.2.27349.19687" target="_blank">PDF</a></li>
+    <li>V-PCB Dataset: Detection of Electronic Components in Waste from Electrical and Electronic Equipment – <a href="http://dx.doi.org/10.13140/RG.2.2.20216.01284" target="_blank">PDF</a></li>
+    <li>Assessing Recyclability for Automated Waste PCB Disassembly and Sorting – <a href="assets/CSW2024.pdf" target="_blank">PDF</a></li>
   </ul>
-</section>
+  </section>
 
   <section id="academic">
   <h2>Academic</h2>
   <ul>
+    <li>Reviewer at a ICIVIS 2025 The 5th International Conference on Image, Vision and Intelligent Systems (<a href="https://www.icivis.net/" target="_blank">ICIVIS</a>), May 23-25, 2025 – Hangzhou, China.</li>
     <li>Reviewer at a NeurIPS 2024 Workshop on Algorithmic Fairness through the Lens of Metrics and Evaluation (<a href="https://www.afciworkshop.org/afme2024" target="_blank">AFME</a>), December 14, 2024 – Vancouver Convention Center, British Columbia, Canada.</li>
     <li>Program Committee Member at the Ninth International Conference on Advances in Computation, Communications and Services (<a href="https://www.iaria.org/conferences2024/ACCSE24.html" target="_blank">ACCSE 2024</a>), April 14–18, 2024 – Venice, Italy.</li>
     <li>Reviewed conference paper for the Ninth International Conference on Optimization and Applications (<a href="https://ieeexplore.ieee.org/xpl/conhome/10308776/proceeding" target="_blank">ICOA 2023</a>), October 5–6, 2023 – Abu Dhabi, UAE.</li>
@@ -185,8 +139,7 @@
     <li>Student Committee Member at the Eighth International Conference on Optimization and Applications (<a href="https://icoa2022.dibris.unige.it/" target="_blank">ICOA 2022</a>), October 6–7, 2022 – Sestri Levante, Italy.</li>
   </ul>
 </section>
-
-  <section id="training">
+ <section id="training">
   <h2>Training & Certifications</h2>
 
   <h3>Summer Schools/Courses at University of Genova, Italy</h3>
@@ -232,7 +185,6 @@
   </ul>
 </section>
 
-  
 </div>
 
 <footer>
