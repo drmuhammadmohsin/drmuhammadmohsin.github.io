@@ -1,326 +1,471 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dr. Muhammad Mohsin</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Dr. Muhammad Mohsin - Postdoctoral Researcher specializing in AI-driven circular economy, computer vision, and deep learning for sustainable electronic waste management at University of Genoa.">
+  <meta name="keywords" content="Muhammad Mohsin, AI, Machine Learning, Computer Vision, WEEE, Circular Economy, Deep Learning, University of Genoa, DIBRIS">
+  <meta name="author" content="Dr. Muhammad Mohsin">
+  <title>Dr. Muhammad Mohsin | Postdoctoral Researcher | University of Genoa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:wght@400;500;600&family=IBM+Plex+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; line-height: 1.6; background-color: #f9f9f9; }
-    header { background-color: #2c3e50; padding: 1rem; color: white; position: sticky; top: 0; z-index: 10; }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 0.6rem;
-      font-weight: bold;
-      font-size: 0.9rem;
+    :root {
+      --crimson: #a31f34;
+      --crimson-dark: #8a1a2c;
+      --crimson-light: #c4354d;
+      --slate: #1e293b;
+      --slate-light: #334155;
+      --gray-50: #f8fafc;
+      --gray-100: #f1f5f9;
+      --gray-200: #e2e8f0;
+      --gray-300: #cbd5e1;
+      --gray-400: #94a3b8;
+      --gray-500: #64748b;
+      --gray-600: #475569;
+      --gray-700: #334155;
+      --gray-800: #1e293b;
+      --gray-900: #0f172a;
+      --white: #ffffff;
+      --font-serif: 'Crimson Pro', Georgia, serif;
+      --font-sans: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
-    nav a:hover { text-decoration: underline; }
-    .container { max-width: 960px; margin: 2rem auto; padding: 0 1rem; background: white; }
-    section { display: none; margin-bottom: 3rem; }
-    section.active { display: block; }
-    h2 { color: #2c3e50; border-bottom: 2px solid #eee; padding-bottom: 0.3rem; }
-    ul, ol { padding-left: 1.2rem; }
-    table { width: 100%; border-collapse: collapse; margin-top: 1rem; }
-    th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
-    th { background-color: #f4f4f4; }
-    footer {
-      text-align: center;
-      padding: 1rem;
-      background-color: #2c3e50;
-      color: white;
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body { font-family: var(--font-sans); background: var(--white); color: var(--gray-800); line-height: 1.7; font-size: 15px; }
+    a { color: var(--crimson); text-decoration: none; transition: color 0.2s ease; }
+    a:hover { color: var(--crimson-dark); text-decoration: underline; }
+    .container { max-width: 1100px; margin: 0 auto; padding: 0 32px; }
+
+    header { background: var(--slate); padding: 0; position: sticky; top: 0; z-index: 100; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+    nav { display: flex; justify-content: space-between; align-items: center; padding: 14px 0; }
+    .nav-brand { color: var(--white); font-weight: 600; font-size: 16px; text-decoration: none; letter-spacing: -0.3px; }
+    .nav-brand:hover { color: var(--white); text-decoration: none; }
+    .nav-links { display: flex; gap: 24px; }
+    .nav-links a { color: var(--gray-300); text-decoration: none; font-size: 13px; font-weight: 500; transition: color 0.2s; padding: 4px 0; position: relative; }
+    .nav-links a:hover, .nav-links a.active { color: var(--white); text-decoration: none; }
+    .nav-links a.active::after { content: ''; position: absolute; bottom: -4px; left: 0; right: 0; height: 2px; background: var(--crimson); }
+    .mobile-menu-btn { display: none; background: none; border: none; color: var(--white); font-size: 24px; cursor: pointer; }
+
+    .hero { padding: 70px 0 50px; border-bottom: 1px solid var(--gray-200); background: linear-gradient(180deg, var(--gray-50) 0%, var(--white) 100%); }
+    .hero-grid { display: grid; grid-template-columns: 200px 1fr; gap: 48px; align-items: start; }
+    .profile-photo { width: 200px; height: 240px; object-fit: cover; border-radius: 4px; filter: grayscale(10%); box-shadow: 0 4px 12px rgba(0,0,0,0.1); }
+    .hero-content h1 { font-family: var(--font-serif); font-size: 38px; font-weight: 600; color: var(--gray-900); margin-bottom: 4px; letter-spacing: -0.5px; }
+    .hero-content .title { font-size: 17px; color: var(--crimson); font-weight: 500; margin-bottom: 12px; }
+    .hero-content .affiliation { font-size: 14px; color: var(--gray-600); margin-bottom: 20px; line-height: 1.6; }
+    .hero-content .affiliation a { color: var(--crimson); }
+    .hero-content .bio { font-size: 15px; color: var(--gray-700); line-height: 1.8; margin-bottom: 24px; }
+    .contact-row { display: flex; flex-wrap: wrap; gap: 12px; font-size: 13px; }
+    .contact-row a { color: var(--crimson); text-decoration: none; display: flex; align-items: center; gap: 6px; padding: 6px 12px; border: 1px solid var(--gray-200); border-radius: 4px; transition: all 0.2s; }
+    .contact-row a:hover { border-color: var(--crimson); background: rgba(163,31,52,0.05); text-decoration: none; }
+    .contact-row a.youtube { border-color: #ff0000; color: #ff0000; }
+    .contact-row a.youtube:hover { background: rgba(255,0,0,0.05); }
+
+    .stats-bar { display: grid; grid-template-columns: repeat(5, 1fr); gap: 24px; padding: 28px 0; margin-top: 32px; border-top: 1px solid var(--gray-200); }
+    .stat { text-align: center; }
+    .stat-num { font-family: var(--font-serif); font-size: 36px; font-weight: 600; color: var(--crimson); line-height: 1; }
+    .stat-label { font-size: 11px; color: var(--gray-500); text-transform: uppercase; letter-spacing: 1px; margin-top: 6px; }
+
+    .section { padding: 56px 0; border-bottom: 1px solid var(--gray-200); }
+    .section:last-child { border-bottom: none; }
+    .section-title { font-family: var(--font-serif); font-size: 26px; font-weight: 600; color: var(--gray-900); margin-bottom: 28px; letter-spacing: -0.3px; }
+
+    .research-areas { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .research-card { padding: 28px; background: var(--gray-50); border-radius: 4px; border-left: 3px solid var(--crimson); transition: transform 0.2s ease, box-shadow 0.2s ease; }
+    .research-card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); }
+    .research-card h3 { font-size: 16px; font-weight: 600; color: var(--gray-900); margin-bottom: 10px; }
+    .research-card p { font-size: 13px; color: var(--gray-600); line-height: 1.7; }
+
+    .research-showcase { margin-top: 48px; }
+    .showcase-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 24px; }
+    .showcase-item { border: 1px solid var(--gray-200); border-radius: 8px; overflow: hidden; transition: all 0.3s; }
+    .showcase-item:hover { box-shadow: 0 8px 24px rgba(0,0,0,0.1); transform: translateY(-4px); }
+    .showcase-item img { width: 100%; height: 180px; object-fit: cover; background: var(--gray-100); }
+    .showcase-item .caption { padding: 16px; }
+    .showcase-item .caption h4 { font-size: 14px; font-weight: 600; color: var(--gray-900); margin-bottom: 6px; line-height: 1.4; }
+    .showcase-item .caption p { font-size: 12px; color: var(--gray-500); }
+
+    .timeline-item { display: grid; grid-template-columns: 160px 1fr; gap: 32px; padding: 22px 0; border-bottom: 1px solid var(--gray-100); }
+    .timeline-item:last-child { border-bottom: none; }
+    .timeline-date { font-size: 13px; color: var(--gray-500); font-weight: 500; }
+    .timeline-content h3 { font-size: 16px; font-weight: 600; color: var(--gray-900); margin-bottom: 2px; }
+    .timeline-content .org { font-size: 14px; color: var(--crimson); margin-bottom: 8px; }
+    .timeline-content .org a { color: var(--crimson); }
+    .timeline-content .desc { font-size: 13px; color: var(--gray-600); line-height: 1.7; }
+
+    .tabs { display: flex; gap: 4px; margin-bottom: 28px; border-bottom: 1px solid var(--gray-200); }
+    .tab { padding: 12px 24px; background: transparent; border: none; font-size: 13px; font-weight: 500; font-family: var(--font-sans); color: var(--gray-500); cursor: pointer; border-bottom: 2px solid transparent; margin-bottom: -1px; transition: all 0.2s; }
+    .tab:hover { color: var(--gray-700); }
+    .tab.active { color: var(--crimson); border-bottom-color: var(--crimson); }
+    .tab-content { display: none; }
+    .tab-content.active { display: block; animation: fadeIn 0.3s ease; }
+    @keyframes fadeIn { from { opacity: 0; transform: translateY(8px); } to { opacity: 1; transform: translateY(0); } }
+
+    .pub-year { font-family: var(--font-serif); font-size: 22px; font-weight: 600; color: var(--gray-900); margin: 36px 0 18px; padding-bottom: 10px; border-bottom: 2px solid var(--crimson); }
+    .pub-year:first-child { margin-top: 0; }
+    .pub-item { padding: 18px 0; border-bottom: 1px solid var(--gray-100); display: grid; grid-template-columns: 36px 1fr; gap: 16px; }
+    .pub-item:last-child { border-bottom: none; }
+    .pub-number { font-family: var(--font-serif); font-size: 18px; font-weight: 600; color: var(--crimson); }
+    .pub-item .authors { font-size: 13px; color: var(--gray-600); margin-bottom: 6px; }
+    .pub-item .authors strong { color: var(--gray-900); font-weight: 600; }
+    .pub-item .pub-title { font-size: 15px; font-weight: 500; color: var(--gray-900); margin-bottom: 8px; line-height: 1.5; }
+    .pub-item .venue { font-size: 13px; color: var(--gray-500); font-style: italic; }
+    .pub-item .doi { font-size: 12px; margin-top: 8px; }
+    .pub-item .doi a { color: var(--crimson); text-decoration: none; }
+    .pub-item .doi a:hover { text-decoration: underline; }
+
+    .patent-item { padding: 24px; background: var(--gray-50); border-radius: 4px; border-left: 3px solid var(--crimson); margin-bottom: 16px; }
+    .patent-item h4 { font-size: 16px; font-weight: 600; color: var(--gray-900); margin-bottom: 10px; }
+    .patent-item .meta { font-size: 13px; color: var(--gray-600); line-height: 1.8; }
+
+    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
+    .skill-category h4 { font-size: 13px; font-weight: 600; color: var(--gray-900); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .skill-category p { font-size: 13px; color: var(--gray-600); line-height: 1.8; }
+
+    .awards-list { list-style: none; }
+    .awards-list li { padding: 14px 0; border-bottom: 1px solid var(--gray-100); font-size: 14px; color: var(--gray-700); }
+    .awards-list li:last-child { border-bottom: none; }
+    .awards-list .year { color: var(--crimson); font-weight: 600; margin-right: 14px; display: inline-block; min-width: 50px; }
+
+    .course-item { padding: 16px 0; border-bottom: 1px solid var(--gray-100); }
+    .course-item:last-child { border-bottom: none; }
+    .course-item h4 { font-size: 15px; font-weight: 600; color: var(--gray-900); margin-bottom: 4px; }
+    .course-item h4 a { color: var(--gray-900); }
+    .course-item h4 a:hover { color: var(--crimson); }
+    .course-item .course-meta { font-size: 13px; color: var(--gray-500); }
+    .course-item .course-meta a { color: var(--crimson); }
+
+    .services-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 36px; }
+    .service-category h4 { font-size: 13px; font-weight: 600; color: var(--gray-900); margin-bottom: 14px; text-transform: uppercase; letter-spacing: 0.5px; }
+    .service-category ul { list-style: none; font-size: 13px; color: var(--gray-600); }
+    .service-category li { padding: 7px 0; padding-left: 18px; position: relative; line-height: 1.6; }
+    .service-category li::before { content: '–'; position: absolute; left: 0; color: var(--crimson); }
+
+    .youtube-section { background: var(--gray-50); padding: 32px; border-radius: 8px; margin-top: 32px; border: 1px solid var(--gray-200); }
+    .youtube-section h3 { font-size: 18px; font-weight: 600; color: var(--gray-900); margin-bottom: 12px; display: flex; align-items: center; gap: 10px; }
+    .youtube-section h3 .yt-icon { color: #ff0000; font-size: 24px; }
+    .youtube-section p { font-size: 14px; color: var(--gray-600); margin-bottom: 16px; line-height: 1.7; }
+    .youtube-section .yt-btn { display: inline-flex; align-items: center; gap: 8px; padding: 12px 24px; background: #ff0000; color: white; border-radius: 4px; font-weight: 600; font-size: 14px; transition: all 0.2s; }
+    .youtube-section .yt-btn:hover { background: #cc0000; text-decoration: none; transform: translateY(-1px); }
+
+    footer { background: var(--slate); color: var(--gray-400); padding: 48px 0; text-align: center; font-size: 13px; }
+    footer a { color: var(--gray-300); }
+    footer a:hover { color: var(--white); }
+    .footer-quote { font-family: var(--font-serif); font-size: 18px; font-style: italic; color: var(--gray-400); max-width: 550px; margin: 0 auto 24px; line-height: 1.6; }
+    .footer-quote cite { display: block; font-size: 13px; font-style: normal; color: var(--crimson-light); margin-top: 10px; }
+
+    @media (max-width: 900px) {
+      .hero-grid { grid-template-columns: 1fr; text-align: center; }
+      .profile-photo { margin: 0 auto; }
+      .contact-row { justify-content: center; }
+      .stats-bar { grid-template-columns: repeat(3, 1fr); }
+      .research-areas, .showcase-grid { grid-template-columns: 1fr; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; }
+      .skills-grid, .services-grid { grid-template-columns: 1fr; }
+      .pub-item { grid-template-columns: 30px 1fr; gap: 12px; }
     }
-    a { color: #0077cc; }
-    .profile-img {
-      float: right;
-      width: 120px;
-      height: 120px;
-      border-radius: 60px;
-      margin-left: 20px;
-      object-fit: cover;
+
+    @media (max-width: 600px) {
+      .container { padding: 0 20px; }
+      .nav-links { display: none; position: absolute; top: 100%; left: 0; right: 0; background: var(--slate); flex-direction: column; padding: 20px; gap: 16px; }
+      .nav-links.active { display: flex; }
+      .mobile-menu-btn { display: block; }
+      .hero { padding: 50px 0 40px; }
+      .hero-content h1 { font-size: 28px; }
+      .stats-bar { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+      .stat-num { font-size: 28px; }
+      .section { padding: 40px 0; }
+      .tabs { flex-wrap: wrap; }
+      .tab { padding: 10px 16px; font-size: 12px; }
     }
   </style>
 </head>
 <body>
+
 <header>
-  <nav>
-  <nav>
-    <a href="#home" onclick="showSection('home')">Home</a>
-    <a href="#education" onclick="showSection('education')">Education</a>
-    <a href="#experience" onclick="showSection('experience')">Experience</a>
-    <a href="#publications" onclick="showSection('publications')"> Publications</a>
-    <a href="#teaching" onclick="showSection('teaching')">Teaching</a>
-    <a href="#academic" onclick="showSection('academic')">Academic</a>
-    <a href="#training" onclick="showSection('training')">Events</a>
+  <div class="container">
+    <nav>
+      <a href="#" class="nav-brand">Dr. Muhammad Mohsin</a>
+      <button class="mobile-menu-btn" onclick="toggleMobileMenu()">☰</button>
+      <div class="nav-links" id="navLinks">
+        <a href="#about" class="active" onclick="showSection('about')">About</a>
+        <a href="#research" onclick="showSection('research')">Research</a>
+        <a href="#publications" onclick="showSection('publications')">Publications</a>
+        <a href="#experience" onclick="showSection('experience')">Experience</a>
+        <a href="#teaching" onclick="showSection('teaching')">Teaching</a>
+        <a href="#service" onclick="showSection('service')">Service</a>
+      </div>
+    </nav>
+  </div>
 </header>
-    
-<div class="container">
-<section id="home" class="active">
-  <h2>Dr. Muhammad Mohsin</h2>
-  <img src="asset/Profile.jpeg" alt="Profile Photo" class="profile-img">
-  <p><strong>Muhammad Mohsin</strong> is a Research Fellow at the DIBRIS, University of Genoa, Italy. He received the PhD degree in Computer Science from the University of Genoa, Italy. His research interests include Machine Learning, Deep Learning, Computer Vision, Medical Imaging Analysis, Pattern Recognition, Generative AI, Natural Language Processing. He is also actively engaged in applying Artificial Intelligence to Urban Mining, Electronic Waste Recycling, Circular Economy, and Green Innovation. He is also a member of the IEEE Computer Society. </p>
 
-  <strong>Office:</strong> DIBRIS, University of Genoa, Via Dodecaneso 35, Genoa, 16146, Italy Genoa <br>
-  <strong>Email:</strong> muhammad.mohsin@edu.unige.it<br>
-  
-  <!-- Inspirational Quotation -->
- <blockquote style="font-style: italic; color: #000; font-weight: bold; border-left: 4px solid #ccc; padding-left: 16px; margin-top: 30px;">
-  "The important thing is not to stop questioning. Curiosity has its own reason for existing." <br>
-  — Albert Einstein
-</blockquote>
-  
-<br>
-  <br>
-  <br>
-  <br>
-  <br>
-  <p>
-    <a href="mailto:muhammad.mohsin@edu.unige.it" target="_blank">Mail</a> &nbsp;&nbsp;
-    <a href="https://www.linkedin.com/in/engineermohsiin/" target="_blank">LinkedIn</a> &nbsp;&nbsp;
-    <a href="https://scholar.google.com/citations?hl=en&user=Ht3LV2kAAAAJ" target="_blank">Google Scholar</a> &nbsp;&nbsp;
-    <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank">ResearchGate</a> &nbsp;&nbsp;
-    <a href="https://github.com/drmuhammadmohsin" target="_blank">Github</a>
-  </p>
-</section>
-
-  <section id="education">
-    <h2>Education</h2>
-  <h3>PhD in Computer Science</h3>
-  <p><strong>University of Genoa</strong><br>
-  Department of Informatics, Bioengineering, Robotics and Systems Engineering (DIBRIS),<br>
-  Via Dodecaneso 35, Genoa, Italy.<br>
-  01/2022 – 05/2025</p>
-
-  <p><strong>Thesis Title:</strong> Deep Learning-Powered Computer Vision System for
-Selective Disassembly of Waste Printed Circuit Boards </p>
-
-  <p><strong>Thesis Advisor:</strong></p>
-  <ul>
-    <li> <a href="https://scholar.google.com/citations?user=DxovdUEAAAAJ&hl=en" target="_blank">Francesco Masulli</a>, University of Genoa (UNIGE), Italy</li>
-    <li><a href="https://scholar.google.com/citations?hl=en&user=7nlRez0AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Stefano Rovetta</a>, University of Genoa (UNIGE), Italy</li>
-  </ul>
-
-  <h3>Masters of Science in Computer Engineering</h3>
-  <p><strong>National University of Sciences and Technology</strong><br>
-  10/2017 – 05/2021</p>
-  <p><strong>Thesis Title:</strong> Automatic Prostate Cancer Grading Using Deep Architectures</p>
-
-  <p><strong>Thesis Advisor:</strong></p>
-  <ul>
-    <li> <a href="https://scholar.google.com/citations?user=O5kHUawAAAAJ&hl=en&authuser=1&oi=ao" target="_blank">Arslan Shaukat</a>, National University of Sciences and Technology (NUST), Islamabad, Pakistan</li>
-    <li><a href="https://scholar.google.com/citations?user=2BntV9IAAAAJ&hl=en&authuser=1&oi=ao" target="_blank">Usman Akram</a>,  National University of Sciences and Technology (NUST), Islamabad, Pakistan</li>
-  </ul>
-  <h3>Bachelor of Science in Computer Engineering</h3>
-  <p><strong>University of Engineering and Technology (UET), Taxila</strong><br>
-  Taxila, Pakistan.<br>
-  09/2013 – 07/2017</p>
-  <p><strong>Thesis Title:</strong> Intelligent Monitoring Robot for Navigation and Assistance</p>
-  <p><strong>Thesis Advisor:</strong></p>
-  <ul>
-    <li> <a href="https://scholar.google.com/citations?user=EB-mUJYAAAAJ&hl=en&authuser=1&oi=ao" target="_blank">Muhammad Majid</a>, University of Engineering and Technology (UET), Taxila, Pakistan</li>
-     <li> <a href="https://scholar.google.com.pk/citations?hl=en&user=lWSMCj8AAAAJ&view_op=list_works&sortby=pubdate" target="_blank">Dr. Aasim Raheel</a>, University of Engineering and Technology (UET), Taxila, Pakistan</li>
-  </ul>
-  </section>
- <section id="experience">
-    <h2>Experience</h2>
-    <h3>Research Fellow</h3>
-    <p> <strong> University of Genoa </strong> <br> Department of Informatics, Bioengineering, Robotics and Systems Engineering (DIBRIS), <br>  Via Dodecaneso 35, Genoa, Italy. <br> 01/2025 - Present </p>
-    
-   <h3>Teaching Assistant</h3>
-    <p> <strong> University of Genoa </strong> <br> Department of Informatics, Bioengineering, Robotics and Systems Engineering (DIBRIS), <br>  Via Dodecaneso 35, Genoa, Italy. <br> 01/2025 - Present </p>
-    <h4> Responsibilities:</h4>
-      <ul>
-      I am working as a tutor, lab demonstrator and providing the teaching support activities in the Department of Computer Science, Bioengineering, Robotics and Systems Engineering (DIBRIS), University of Genova, Italy in the following courses:
-<li> <b>2025-2026</b></li>
-1- Introduction to Computer Science and Programming (BSc Computer Engineering) <br>
-2- Data Warehousing (MSc Computer Science) <br>
-3- Fondamenti di Ingengneria del Software (BSc Computer Engineering) <br>
-4- Advance Data Management (MSc Computer Science) <br>
-
-<li><b>2024-2025</b></li>
-1- Introduction to Computer Science and Programming (BSc Computer Engineering) <br>
-2- Data Warehousing (MSc Computer Science)</li>
-      </ul>        
-   <h3>Consultant and Intern</h3>
-    <p> <strong> Vega Research Laboratories (VRLabs) </strong> <br> Disruptive Technologies for the Industry, the City and the Heathcare <br>  Via Fieschi 9 - 16121 Genoa, Italy. <br> 01/2022 - Present </p>
-   
-      <h3>PhD Student</h3>
-     <p> </p><strong> University of Genoa </strong> <br>Department of Informatics, Bioengineering, Robotics and Systems Engineering (DIBRIS), <br>  Via Dodecaneso 35, Genoa, Italy. <br>01/2022 - 05/2025  </p>
-   
-     <h3>Visiting PhD Research Fellow</h3>
-     
-    <p> <strong> Tsinghua University </strong> <br> School of Environment <br>  Beijing, China. <br> 12/2024 - 05/2025  </p>
-   
-<h3>Research Assistant</h3>
-<p><strong>National University of Sciences & Technology (NUST) </strong> <br> College of Electrical and Mechanical Engineering (CEME), <br> Islamabad, Pakistan. <br> 08/2019 - 07/2021 </p>
-
-<h3>Machine Learning Expert (Freelance)</h3>
-<p><strong>Fiverr and Upwork</strong> <br> International Freelance Marketplace. <br> 02/2017 - Present</p>
-<h3>Internee Engineer</h3>
-<p> <strong> National Telecommunication Corporation (NTC)</strong> <br> Multan, Pakistan. <br> 07/2016 - 08/2016</p>
-<h4>Responsibilities:</h4>
-<ul>
-  <li>Worked with NTC, the official Telecom/ICT service provider to the government of Pakistan.</li>
-  <li>Gained practical experience in basic switching concepts and smart data network techniques for improved wireless connectivity.</li>
-  <li>Visited the server room and observed the operation of switching techniques and the power system infrastructure.</li>
-</ul>
-  </section>
-   <section id="research">
-    <h2>Research Activities</h2>
-  </section>
-  <section id="publications">
-    <h2>Research Publications</h2>
-    <h3>Journal Articles</h3>
-   <ul>
-     <li>Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq (2025). A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains. <em>Sensors</em>. <span class="doi-link"> <a href="https://doi.org/10.3390/s25196118" target="_blank">DOI:10.3390/s25196118</a></span></li>
-     <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review. <em>Computers</em>. <span class="doi-link"> <a href="https://doi.org/10.3390/computers14080304" target="_blank">DOI:10.3390/computers14080304</a></span></li>
-    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Extraction of Critical Raw Materials from Waste Printed Circuit Boards Using Machine Learning and Computer Vision. <span class="doi-link"><a href="https://doi.org/10.36227/techrxiv.174494586.62661948" target="_blank">DOI:10.36227/techrxiv.174494586.62661948</a></span></li>
-    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Automated Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT. <em>Computers</em>. <span class="doi-link"> <a href="https://doi.org/10.3390/computers14020062" target="_blank">DOI:10.3390/computers14020062</a></span></li>
-    <li>Fatima Batool, <strong>Muhammad Mohsin</strong>, Belal Mahmoud Alwadi (2025). Green Innovation and Environmental Performance: The Moderating Roles of Governance and Policy. <em>World</em>. <span class="doi-link"> <a href="https://doi.org/10.3390/world6010029" target="_blank">DOI:10.3390/world6010029</a></span></li>
-    <li>Fatima Batool, <strong>Muhammad Mohsin</strong> (2024). Impact of Green Innovation on Business Sustainability and the Mediating Role of Green Intellectual Capital. <em>Educational Administration: Theory and Practice</em>, 30(4). <span class="doi-link"><a href="https://doi.org/10.5281/zenodo.12345678" target="_blank">DOI:10.5281/zenodo.12345678</a></span></li>
-  </ul>
-
-  <h3>Conference Proceedings</h3>
-  <ul>
-    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management <em>(In Press)</em>.</li>  
-    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit. EEE ECIS 2025 </em>. <span class="doi-link"> <a href="https://doi.org/10.1109/ECIS65594.2025.11086768" target="_blank">DOI:10.1109/ECIS65594.2025.11086768</a></span></li></li>
-    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection <em>(In Press)</em>.</li>
-    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2025). Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards. <em>ICASET 2025</em>, Ibn Tofail University (Higher School of Technology), Kenitra, Morocco. <span class="doi-link"><a href="https://doi.org/10.1007/978-3-031-98334-4_13" target="_blank">DOI:10.1007/978-3-031-98334-4_13</a></span></li>
-    <li><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri (2024). Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach. <em>ApplePies Conference</em>, Polytechnic University of Turin. <span class="doi-link"> <a href="https://doi.org/10.1007/978-3-031-84100-2_21" target="_blank">DOI:10.1007/978-3-031-84100-2_21</a></span></li>
-    <li><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Danilo Greco, Alberto Cabri (2024). Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards. <em>IEEE RTSI</em>, Politecnico di Milano. <span class="doi-link"> <a href="https://doi.org/10.1109/RTSI61910.2024.10761364" target="_blank">DOI:10.1109/RTSI61910.2024.10761364</a></span></li>
-    <li><strong>Muhammad Mohsin</strong>, Xianlai Zeng, Stefano Rovetta, Francesco Masulli (2024). Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards. <em>ICWMT19</em>, Hangzhou, China. <span class="doi-link"> <a href="https://doi.org/10.13140/RG.2.2.12345.67890" target="_blank">DOI:10.13140/RG.2.2.12345.67890</a></span></li>
-    <li><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Alberto Cabri (2023). Virtual Mines – Component-level recycling of printed circuit boards using deep learning. <em>WIRN 2023</em>, Vietri sul Mare, Italy. <span class="doi-link"> <a href="https://doi.org/10.1007/978-981-96-0994-9_4" target="_blank">DOI:10.1007/978-981-96-0994-9_4</a></span></li>
-    <li>Alberto Cabri, Francesco Masulli, Stefano Rovetta, <strong>Muhammad Mohsin</strong> (2022). Recovering Critical Raw Materials from WEEE using Artificial Intelligence. <em>MAS2022</em>, Rome, Italy. <span class="doi-link"> <a href="https://doi.org/10.1234/5678.91011" target="_blank">DOI:10.1234/5678.91011</a></span></li>
-    <li><strong>Muhammad Mohsin</strong>, Arslan Shaukat, Usman Akram, Muhammad Kaab Zarrar (2021). Automatic Prostate Cancer Grading Using Deep Architectures. <em>IEEE AICCSA 2021</em>. <span class="doi-link"> <a href="https://doi.org/10.1109/AICCSA53542.2021.9686869" target="_blank">DOI:10.1109/AICCSA53542.2021.9686869</a></span></li>
-    <li>Muhammad Kaab Zarrar, Farhan Hussain, <strong>Muhammad Mohsin</strong>, Rida Sheikh (2019). Latest Trends in Automatic Glioma Tumor Segmentation and Improved CNN Solution. <em>MACS 2019</em>. <span class="doi-link"> <a href="https://doi.org/10.1109/MACS48846.2019.9024815" target="_blank">DOI:10.1109/MACS48846.2019.9024815</a></span></li>
-    <li>Arslan Shaukat, Ammar Younis, Usman Akram, <strong>Muhammad Mohsin</strong>, Zartasha Mustansar (2019). Towards Automatic Recognition of Sounds Observed in Daily Living Activity. <em>IEEE ICCI*CC 2019</em>. <span class="doi-link"> <a href="https://doi.org/10.1109/ICCI-CC.2019.9146067" target="_blank">DOI:10.1109/ICCI-CC.2019.9146067</a></span></li>
-  </ul>
-    <h3>Patents</h3>
-    <ul>
-    <li> Francesco Masulli, <strong>Muhammad Mohsin,</strong> Stefano Rovetta and Alberto Cabri (2025).V-PCB DEMO AND DATASET, Numero registrazione: D000026014, Data pubblicazione: 2025-05-30
-Nazione pubblicazione: ITALIA, filed 01/08/2025, granted 30/05/2025 </li>  
-    
-    </ul>
+<main>
+  <section class="hero" id="about">
+    <div class="container">
+      <div class="hero-grid">
+        <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="profile-photo">
+        <div class="hero-content">
+          <h1>Muhammad Mohsin, PhD</h1>
+          <div class="title">Postdoctoral Researcher</div>
+          <div class="affiliation">
+            <a href="https://dibris.unige.it/en" target="_blank">Department of Informatics, Bioengineering, Robotics and Systems Engineering (DIBRIS)</a><br>
+            <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy
+          </div>
+          <p class="bio">
+            I am a computer scientist specializing in AI-driven sustainable circular economy solutions, with a focus on electronic waste recycling and critical raw materials recovery. My research combines deep learning, computer vision, and edge computing to develop intelligent systems for automated disassembly and sorting of waste electrical and electronic equipment (WEEE). I also work on medical imaging analysis applications.
+          </p>
+          <div class="contact-row">
+            <a href="mailto:muhammad.mohsin@edu.unige.it">✉ Email</a>
+            <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank">📚 Scholar</a>
+            <a href="https://www.linkedin.com/in/engineermohsiin/" target="_blank">💼 LinkedIn</a>
+            <a href="https://github.com/drmuhammadmohsin" target="_blank">💻 GitHub</a>
+            <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank">🔬 ResearchGate</a>
+            <a href="https://www.youtube.com/@drmohsinphd" target="_blank" class="youtube">▶ YouTube</a>
+          </div>
+        </div>
+      </div>
+      <div class="stats-bar">
+        <div class="stat"><div class="stat-num">17</div><div class="stat-label">Publications</div></div>
+        <div class="stat"><div class="stat-num">1</div><div class="stat-label">Patent</div></div>
+        <div class="stat"><div class="stat-num">5+</div><div class="stat-label">Countries</div></div>
+        <div class="stat"><div class="stat-num">8+</div><div class="stat-label">Years Research</div></div>
+        <div class="stat"><div class="stat-num">200+</div><div class="stat-label">ML Projects</div></div>
+      </div>
+    </div>
   </section>
 
-  <section id="teaching">
-    <h2>Courses</h2>
-    <h3>2025-2026</h3>
-    <ul>
-      <li> Introduction to Computer Science and Programming (BSc Computer Engineering)</li>
-      <li> Data Warehousing (MSc Computer Science)</li>
-       <li> Fondamenti di Ingengneria del Software (BSc Computer Engineering)</li>
-      <li> Advance Data Management (MSc Computer Science)</li>
-    </ul>
-    <h3>2024-2025</h3>
-    <ul>
-      <li> Introduction to Computer Science and Programming (BSc Computer Engineering)</li>
-      <li> Data Warehousing (MSc Computer Science)</li>
-    </ul>
-    <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> <br> 
+  <section class="section" id="research" style="display:none;">
+    <div class="container">
+      <h2 class="section-title">Research Interests</h2>
+      <div class="research-areas">
+        <div class="research-card">
+          <h3>Circular Economy & E-Waste</h3>
+          <p>AI-powered solutions for WEEE recycling, critical raw materials recovery, and sustainable electronic waste management through automated disassembly systems.</p>
+        </div>
+        <div class="research-card">
+          <h3>Computer Vision & Deep Learning</h3>
+          <p>Object detection, image segmentation, transformer architectures, and transfer learning for industrial and environmental applications.</p>
+        </div>
+        <div class="research-card">
+          <h3>Medical Imaging Analysis</h3>
+          <p>Deep learning for automated medical image analysis, including cancer grading systems and diagnostic assistance tools.</p>
+        </div>
+      </div>
+
+      <div class="research-showcase">
+        <h2 class="section-title">Research Showcase</h2>
+        <div class="showcase-grid">
+          <div class="showcase-item">
+            <img src="assets/research-pcb-detection.png" alt="PCB Component Detection" onerror="this.src='https://via.placeholder.com/400x200/e2e8f0/475569?text=PCB+Component+Detection'">
+            <div class="caption">
+              <h4>Electronic Component Detection on Waste PCBs</h4>
+              <p>Deep learning-based object detection for automated disassembly</p>
+            </div>
+          </div>
+          <div class="showcase-item">
+            <img src="assets/research-heatmap.png" alt="Heatmap Visualization" onerror="this.src='https://via.placeholder.com/400x200/e2e8f0/475569?text=Heatmap+Visualization'">
+            <div class="caption">
+              <h4>Heatmap Visualization for Deep Learning Analysis</h4>
+              <p>Explainable AI methods for waste PCB classification</p>
+            </div>
+          </div>
+          <div class="showcase-item">
+            <img src="assets/research-recyclability.png" alt="Recyclability Measurement" onerror="this.src='https://via.placeholder.com/400x200/e2e8f0/475569?text=Recyclability+Measurement'">
+            <div class="caption">
+              <h4>Measuring Recyclability of Electronic Components</h4>
+              <p>Multi-criteria algorithms for value assessment</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <h2 class="section-title" style="margin-top:56px;">Current Projects</h2>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2025 – Present</div>
+        <div class="timeline-content">
+          <h3>VALOR Project</h3>
+          <div class="org">EU Interreg Italy-France Maritime</div>
+          <div class="desc">Developing intelligent systems for Critical Raw Material (CRM) recovery from electronic waste. Designing methodologies to convert complex e-waste streams into high-value raw materials.</div>
+        </div>
+      </div>
+      <div class="timeline-item">
+        <div class="timeline-date">Jan 2022 – Dec 2024</div>
+        <div class="timeline-content">
+          <h3>Selective Disassembly of Electronic Components from WEEE using AI</h3>
+          <div class="org">PhD Research Project</div>
+          <div class="desc">Developed computer vision and deep learning-based disassembly methods. Created custom V-PCB dataset for automated sorting systems.</div>
+        </div>
+      </div>
+
+      <div class="youtube-section">
+        <h3><span class="yt-icon">▶</span> YouTube Channel</h3>
+        <p>Follow my YouTube channel for tutorials, research insights, and educational content on Machine Learning, Deep Learning, Computer Vision, and AI applications in circular economy.</p>
+        <a href="https://www.youtube.com/@drmohsinphd" target="_blank" class="yt-btn"><span>▶</span> Subscribe to @drmohsinphd</a>
+      </div>
+    </div>
   </section>
-  <section id="academic">
-  <h2>Academic Services</h2>
-   <h3>Invited Talks</h3>
-  <ul>
-    <li>
-    <strong>Valorization of Waste Electrical and Electronic Equipment: Integrating AI into
-Sustainable WEEE Management</strong> – Invited Speaker at the 4th Global Summit on Artificial Intelligence (<a href="https://artificial-intelligence.hspioa.org/speakers/muhammad-mohsin" target="_blank">GSAI 2025</a>),  10th & 11th of June 2025 (Online).
-  </li>
-  </ul>
-        <h3>Seminars</h3>
-   <ul>
-    <li>Selective Disassembly of Electronic Components from WEEE using Artificial Intelligence – <a href="assets/Seminar-2022.pdf" target="_blank">PDF</a></li>
-    <li>Virtual Mines: A sustainable solution for the electronic industry – <a href="assets/Seminar-2023.pdf" target="_blank">PDF</a></li>
-    <li>Measuring the recyclability of waste electronic components in printed circuit boards – <a href="assets/Seminar-2024.pdf" target="_blank">PDF</a></li>
-    <li>CINECA High-Performance Computing System: Leonardo </li>
-  </ul>
-    <h3>Posters Presentations</h3>
-       <ul>
-    <li>Selective Disassembly of Electronic Components from WEEE using Artificial Intelligence – <a href="http://dx.doi.org/10.13140/RG.2.2.27349.19687" target="_blank">PDF</a></li>
-    <li>V-PCB Dataset: Detection of Electronic Components in Waste from Electrical and Electronic Equipment – <a href="http://dx.doi.org/10.13140/RG.2.2.20216.01284" target="_blank">PDF</a></li>
-    <li>Assessing Recyclability for Automated Waste PCB Disassembly and Sorting – <a href="assets/CSW2024.pdf" target="_blank">PDF</a></li>
-  </ul>
-    <h3>Peer Review Activities</h3>
-  <ul>
-    
-    <li> Peer Reviewer <a href="https://www.editorialmanager.com/pone/default2.aspx" target="_blank">PLOS One</a> , 2025–Present</li>
-    <li>Reviewer at a ICIVIS 2025 The 5th International Conference on Image, Vision and Intelligent Systems (<a href="https://www.icivis.net/" target="_blank">ICIVIS</a>), May 23-25, 2025 – Hangzhou, China.</li>
-    <li>Reviewer at a NeurIPS 2024 Workshop on Algorithmic Fairness through the Lens of Metrics and Evaluation (<a href="https://www.afciworkshop.org/afme2024" target="_blank">AFME</a>), December 14, 2024 – Vancouver Convention Center, British Columbia, Canada.</li>
-       <li>Reviewed conference paper for the Ninth International Conference on Optimization and Applications (<a href="https://ieeexplore.ieee.org/xpl/conhome/10308776/proceeding" target="_blank">ICOA 2023</a>), October 5–6, 2023 – Abu Dhabi, UAE.</li>
-  </ul>
-  <h3>Other Activities</h3>
-  <ul>
-    <li> Editorial & Advisory Board <a href="https://aisfj.org/editorial-advisory-board/" target="_blank"> AI & Sustainable Finance Journal (AISFJ) </a> , 2025–Present</li>
-    <li>Program Committee Member at the Tenth International Conference on Advances in Computation, Communications and Services (<a href="https://www.iaria.org/conferences2025/ComACCSE25.html" target="_blank">ACCSE 2025</a>), April 06–10, 2025 – Valencia, Spain.</li>
-    <li>Program Committee Member at the Asia Conference on Unmanned Systems and Intelligent Control (<a href="https://www.usic.asia/index.html" target="_blank">USIC 2025</a>), November 07-09, 2025 – Hong Kong, China.</li>
-    <li>Program Committee Member at the Ninth International Conference on Advances in Computation, Communications and Services (<a href="https://www.iaria.org/conferences2024/ACCSE24.html" target="_blank">ACCSE 2024</a>), April 14–18, 2024 – Venice, Italy.</li>
-    <li>Program Committee Member at the Eighth International Conference on Advances in Computation, Communications and Services (<a href="https://www.iaria.org/conferences2023/ACCSE23.html" target="_blank">ACCSE 2023</a>), June 26–30, 2023 – Nice, France.</li>
-    <li>Student Committee Member at the Eighth International Conference on Optimization and Applications (<a href="https://icoa2022.dibris.unige.it/" target="_blank">ICOA 2022</a>), October 6–7, 2022 – Sestri Levante, Italy.</li>
-  </ul>
-   
-</section>
- <section id="training">
-  <h2>Events</h2>
 
-  <h3>Summer Schools/Courses</h3>
-  <ul>
-    <li><a href="https://person.dibris.unige.it/masulli-francesco/didattica/ML-CI-PhD/MLCI-2022.html" target="_blank">Machine Learning: A Computational Intelligence Approach (MLCI 2022)</a></li>
-    <li><a href="https://malga.unige.it/education/schools/mlcc2022/" target="_blank">Machine Learning Crash Course (MLCC 2022)</a> – MaLGa, University of Genoa</li>
-    <li><a href="https://malga.unige.it/education/schools/dl2022/" target="_blank">Deep Learning: Hands-on Introduction (DL 2022)</a> – MaLGa, University of Genoa</li>
-    <li><a href="https://malga.unige.it/education/schools/cvcc2022/" target="_blank">Computer Vision Crash Course (CVCC 2022)</a> – MaLGa, University of Genoa</li>
-    <li><a href="https://corsi.unige.it/off.f/2022/ins/53405" target="_blank">High Performance Computing (HPC 2022)</a></li>
-    <li>Paper Writing</li>
-    <li><a href="https://csse.phd.unige.it/courses" target="_blank">Effective Habits and Skills for Successful Young Researchers (EHSSYR 2023)</a></li>
-    <li><a href="https://corsi.unige.it/en/off.f/2023/ins/66571" target="_blank">Trustworthy Artificial Intelligence (TIA 2023)</a></li>
-    <li><a href="https://ds3.ai/" target="_blank">Data Science Summer School (DS3 2023)</a> – Hertie School, Germany</li>
-    <li>Signal Processing for Autonomous Systems – University of Genoa</li>
-  </ul>
+  <section class="section" id="publications" style="display:none;">
+    <div class="container">
+      <h2 class="section-title">Publications</h2>
+      <div class="tabs">
+        <button class="tab active" onclick="switchTab('journals')">Journal Articles (5)</button>
+        <button class="tab" onclick="switchTab('conferences')">Conference Papers (12)</button>
+        <button class="tab" onclick="switchTab('patents')">Patents (1)</button>
+      </div>
+      
+      <div class="tab-content active" id="journals">
+        <div class="pub-year">2025</div>
+        <div class="pub-item"><div class="pub-number">1.</div><div><div class="authors">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq</div><div class="pub-title">A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains</div><div class="venue">MDPI Sensors</div><div class="doi"><a href="https://doi.org/10.3390/s25196118" target="_blank">DOI: 10.3390/s25196118</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">2.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div><div class="pub-title">Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review</div><div class="venue">MDPI Computers</div><div class="doi"><a href="https://doi.org/10.3390/computers14080304" target="_blank">DOI: 10.3390/computers14080304</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">3.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div><div class="pub-title">Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT</div><div class="venue">MDPI Computers</div><div class="doi"><a href="https://doi.org/10.3390/computers14020062" target="_blank">DOI: 10.3390/computers14020062</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">4.</div><div><div class="authors">Fatima Batool, <strong>Muhammad Mohsin</strong>, Belal Mahmoud Alwadi</div><div class="pub-title">Green Innovation and Environmental Performance: The Moderating Roles of Governance and Policy</div><div class="venue">MDPI World</div><div class="doi"><a href="https://doi.org/10.3390/world6010029" target="_blank">DOI: 10.3390/world6010029</a></div></div></div>
+        <div class="pub-year">2024</div>
+        <div class="pub-item"><div class="pub-number">5.</div><div><div class="authors">Fatima Batool, <strong>Muhammad Mohsin</strong></div><div class="pub-title">Impact of Green Innovation on Business Sustainability of Firms and the Mediating Role of Green Intellectual Capital</div><div class="venue">Educational Administration: Theory and Practice, 30(4)</div><div class="doi"><a href="https://doi.org/10.53555/kuey.v30i4.1528" target="_blank">DOI: 10.53555/kuey.v30i4.1528</a></div></div></div>
+      </div>
 
-  <h3>Online Courses | Coursera</h3>
-  <ul>
-    <li><a href="https://www.coursera.org/account/accomplishments/verify/W6L52QYFBNN3" target="_blank">Introduction to Docker: The Basics</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/verify/AQWS6PNNB8M9" target="_blank">Linear Algebra for Machine Learning and Data Science</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/verify/BVHJB46YJLSA" target="_blank">Data Visualization with Python</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/verify/GP8BGKNPEGPX" target="_blank">Docker for Absolute Beginners</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/verify/JWL6REGRZFR3" target="_blank">AI for Everyone</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/verify/3RKQ2WQR98AS" target="_blank">Understanding Research Methods</a></li>
-    <li><a href="https://www.coursera.org/account/accomplishments/verify/5LKV9VM6LYW5" target="_blank">Utilized LinkedIn for Career Search</a></li>
-  </ul>
+      <div class="tab-content" id="conferences">
+        <div class="pub-year">2025</div>
+        <div class="pub-item"><div class="pub-number">1.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div><div class="pub-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management</div><div class="venue">IEEE 9th RTSI, Gammarth, Tunisia</div><div class="doi"><a href="https://doi.org/10.1109/RTSI64020.2025.11212336" target="_blank">DOI: 10.1109/RTSI64020.2025.11212336</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">2.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div><div class="pub-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards</div><div class="venue">IEEE ECIS 2025, Yueyang, China</div><div class="doi"><a href="https://doi.org/10.1109/ECIS65594.2025.11086768" target="_blank">DOI: 10.1109/ECIS65594.2025.11086768</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">3.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div><div class="pub-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection</div><div class="venue">IEEE 9th RTSI, Gammarth, Tunisia</div><div class="doi"><a href="https://doi.org/10.1109/RTSI64020.2025.11212252" target="_blank">DOI: 10.1109/RTSI64020.2025.11212252</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">4.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div><div class="pub-title">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards</div><div class="venue">ICASET 2025, Kenitra, Morocco</div><div class="doi"><a href="https://doi.org/10.1007/978-3-031-98334-4_13" target="_blank">DOI: 10.1007/978-3-031-98334-4_13</a></div></div></div>
+        <div class="pub-year">2024</div>
+        <div class="pub-item"><div class="pub-number">5.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div><div class="pub-title">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach</div><div class="venue">ApplePies 2024, Polytechnic University of Turin</div><div class="doi"><a href="https://doi.org/10.1007/978-3-031-84100-2_21" target="_blank">DOI: 10.1007/978-3-031-84100-2_21</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">6.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Danilo Greco, Alberto Cabri</div><div class="pub-title">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</div><div class="venue">IEEE RTSI 2024, Politecnico di Milano</div><div class="doi"><a href="https://doi.org/10.1109/RTSI61910.2024.10761364" target="_blank">DOI: 10.1109/RTSI61910.2024.10761364</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">7.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Xianlai Zeng, Stefano Rovetta, Francesco Masulli</div><div class="pub-title">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards</div><div class="venue">ICWMT19, Hangzhou, China</div><div class="doi"><a href="https://doi.org/10.48550/arXiv.2406.16593" target="_blank">DOI: 10.48550/arXiv.2406.16593</a></div></div></div>
+        <div class="pub-year">2023</div>
+        <div class="pub-item"><div class="pub-number">8.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Alberto Cabri</div><div class="pub-title">Virtual Mines – Component-level recycling of printed circuit boards using deep learning</div><div class="venue">WIRN 2023, Vietri sul Mare, Italy</div><div class="doi"><a href="https://doi.org/10.48550/arXiv.2406.17162" target="_blank">DOI: 10.48550/arXiv.2406.17162</a></div></div></div>
+        <div class="pub-year">2022</div>
+        <div class="pub-item"><div class="pub-number">9.</div><div><div class="authors">Alberto Cabri, Francesco Masulli, Stefano Rovetta, <strong>Muhammad Mohsin</strong></div><div class="pub-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence</div><div class="venue">MAS2022, Rome, Italy</div></div></div>
+        <div class="pub-year">2021</div>
+        <div class="pub-item"><div class="pub-number">10.</div><div><div class="authors"><strong>Muhammad Mohsin</strong>, Arslan Shaukat, Usman Akram, Muhammad Kaab Zarrar</div><div class="pub-title">Automatic Prostate Cancer Grading Using Deep Architectures</div><div class="venue">IEEE AICCSA 2021, Tangier, Morocco</div><div class="doi"><a href="https://doi.org/10.1109/AICCSA53542.2021.9686869" target="_blank">DOI: 10.1109/AICCSA53542.2021.9686869</a></div></div></div>
+        <div class="pub-year">2019</div>
+        <div class="pub-item"><div class="pub-number">11.</div><div><div class="authors">Arslan Shaukat, Ammar Younis, Usman Akram, <strong>Muhammad Mohsin</strong>, Zartasha Mustansir</div><div class="pub-title">Towards Automatic Recognition Sound Observed in Daily Activity</div><div class="venue">IEEE ICCI*CC 2019, Milan, Italy</div><div class="doi"><a href="https://doi.org/10.1109/ICCICC46617.2019.9146067" target="_blank">DOI: 10.1109/ICCICC46617.2019.9146067</a></div></div></div>
+        <div class="pub-item"><div class="pub-number">12.</div><div><div class="authors">Muhammad Kaab Zarrar, Farhan Hussain, <strong>Muhammad Mohsin</strong>, Rubab Sheikh</div><div class="pub-title">Latest Trends in Automatic Glioma Tumor Segmentation and an Improved CNN-based Solution</div><div class="venue">IEEE MACS 2019, Karachi, Pakistan</div><div class="doi"><a href="https://doi.org/10.1109/MACS48846.2019.9024815" target="_blank">DOI: 10.1109/MACS48846.2019.9024815</a></div></div></div>
+      </div>
 
-  <h3>Conferences and Expo</h3>
-  <ul>
-    <li><a href="https://www.ecomondo.com/" target="_blank">ECOMONDO - The Green Technology Expo 2025</a>, November 4–8, 2025 – Rimini, Italy.</li>
-    <li><a href="https://www.ecomondo.com/" target="_blank">ECOMONDO - The Green Technology Expo 2024</a>, November 4–8, 2024 – Rimini, Italy.</li>
-    <li>IEEE 8th Forum on Research and Technologies for Society and Industry (RTSI 2024), Politecnico di Milano, Italy.</li>
-    <li>International Conference on Applications in Electronics Pervading Industry, Environment and Society (ApplePies 2024), Polytechnic University of Turin</li>
-    <li><a href="https://www.worldaicannes.com/" target="_blank">World Artificial Intelligence Cannes Festival (WAICF 2023)</a>, February 9–11, 2024 – Cannes, France</li>
-    <li><a href="https://www.bcrc.cn/icwmt-eng/col/1642498667703/index.html" target="_blank">ICWMT19</a>, Hangzhou, China</li>
-    <li><a href="https://www.siren-neural-net.it/wirn-2023/" target="_blank">The Italian Workshop on Neural Networks (WIRN 2023) </a>, Vietri sul Mare, Italy</li>
-  </ul>
+      <div class="tab-content" id="patents">
+        <div class="patent-item">
+          <h4>1. V-PCB DEMO AND DATASET</h4>
+          <div class="meta"><strong>Inventors:</strong> Francesco Masulli, Muhammad Mohsin, Stefano Rovetta, Alberto Cabri<br><strong>Registration:</strong> D000026014 · <strong>Country:</strong> Italy<br><strong>Filed:</strong> January 8, 2025 · <strong>Granted:</strong> May 30, 2025</div>
+        </div>
+      </div>
+    </div>
+  </section>
 
-  <h3>Continuing Professional Development Program | Pakistan Engineering Council (CPED 3.5)</h3>
-  <ul>
-    <li>Entrepreneurship Development by Managing Technology Innovation in Water and Wastewater Treatment Projects</li>
-    <li>Self-Discovery with Talent Management: Achieving Excellence in Your Professional Career</li>
-    <li>Indigenous Entrepreneurship: Characteristics, Cases, and Stories</li>
-  </ul>
-</section>
+  <section class="section" id="experience" style="display:none;">
+    <div class="container">
+      <h2 class="section-title">Professional Experience</h2>
+      <div class="timeline-item"><div class="timeline-date">Jan 2025 – Present</div><div class="timeline-content"><h3>Postdoctoral Researcher</h3><div class="org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a></div><div class="desc">Advancing AI techniques for circular economy and critical raw materials recovery from electronic waste.</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Sep 2025 – Present</div><div class="timeline-content"><h3>Cultore della Materia</h3><div class="org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a></div><div class="desc">Contributing to teaching activities, student mentoring, exam support, and academic supervision.</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Oct 2024 – Present</div><div class="timeline-content"><h3>Teaching Assistant</h3><div class="org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a></div><div class="desc">Working as tutor, lab demonstrator and providing teaching support in Computer Science and Data Management courses.</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Aug – Sep 2025</div><div class="timeline-content"><h3>Consultant</h3><div class="org">Vega Research Laboratories (VRLabs)</div><div class="desc">Developed computer vision system for electronic component classification. Implemented clustering algorithms for waste PCB categorization.</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Dec 2023 – May 2024</div><div class="timeline-content"><h3>Visiting PhD Researcher</h3><div class="org">Tsinghua University, School of Environment, Beijing, China</div><div class="desc">Collaborated on e-waste recycling research. Developed multi-criteria algorithms for recyclability measurement.</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Jan 2022 – May 2025</div><div class="timeline-content"><h3>PhD Researcher</h3><div class="org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a> & VRLabs</div><div class="desc">Developed V-PCB dataset and computer vision models for automated selective disassembly of waste PCBs.</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Aug 2019 – Jul 2021</div><div class="timeline-content"><h3>Research Assistant</h3><div class="org">National University of Sciences & Technology (NUST), Pakistan</div><div class="desc">Conducted medical imaging analysis research. Work selected for JEJU National University, South Korea.</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Feb 2017 – Present</div><div class="timeline-content"><h3>Machine Learning Expert (Freelance)</h3><div class="org">Fiverr & Upwork</div><div class="desc">Completed 200+ ML/DL projects with $10,000+ in sales.</div></div></div>
 
-</div>
+      <h2 class="section-title" style="margin-top:56px;">Education</h2>
+      <div class="timeline-item"><div class="timeline-date">Jan 2022 – May 2025</div><div class="timeline-content"><h3>PhD in Computer Science</h3><div class="org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div><div class="desc">Thesis: Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Sep 2017 – Aug 2021</div><div class="timeline-content"><h3>MS in Computer Engineering</h3><div class="org">National University of Sciences & Technology (NUST), Pakistan</div><div class="desc">Thesis: Automatic Prostate Cancer Grading Using Deep Architectures</div></div></div>
+      <div class="timeline-item"><div class="timeline-date">Sep 2013 – Jul 2017</div><div class="timeline-content"><h3>BSc in Computer Engineering</h3><div class="org">University of Engineering and Technology (UET) Taxila, Pakistan</div></div></div>
+
+      <h2 class="section-title" style="margin-top:56px;">Technical Skills</h2>
+      <div class="skills-grid">
+        <div class="skill-category"><h4>AI & Machine Learning</h4><p>TensorFlow, Keras, PyTorch, OpenCV, NLTK, Pandas, NumPy, SciPy, Computer Vision, Deep Learning, Transfer Learning</p></div>
+        <div class="skill-category"><h4>Programming Languages</h4><p>Python, C/C++, Java, R, Shell Scripting, HTML/CSS, JavaScript, SQL, HDL</p></div>
+        <div class="skill-category"><h4>Tools & Platforms</h4><p>Jupyter, Google Colab, PyCharm, VS Code, MATLAB, Git, GitHub, Docker, PostgreSQL</p></div>
+        <div class="skill-category"><h4>Hardware & Embedded</h4><p>Raspberry Pi, Jetson Nano, Arduino, ESP32, FPGAs, Xilinx, FreeCAD</p></div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="teaching" style="display:none;">
+    <div class="container">
+      <h2 class="section-title">Teaching</h2>
+      <p style="font-size: 14px; color: var(--gray-600); margin-bottom: 24px;">Teaching Assistant at <a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</p>
+      
+      <div class="pub-year">2025-2026</div>
+      <div class="course-item"><h4><a href="https://corsi.unige.it/en/off.f/2025/ins/76953" target="_blank">Data Warehousing</a></h4><div class="course-meta">MSc Computer Science · Code: 101798 · <a href="https://corsi.unige.it/en/corsi/10852" target="_blank">UniGe</a></div></div>
+      <div class="course-item"><h4><a href="https://corsi.unige.it/en/off.f/2025/ins/71595" target="_blank">Introduction to Computer Science and Programming</a></h4><div class="course-meta">BSc Computer Engineering · Code: 114602 · <a href="https://corsi.unige.it/en/corsi/8719" target="_blank">UniGe</a></div></div>
+      <div class="course-item"><h4>Advance Data Management</h4><div class="course-meta">MSc Computer Science · <a href="https://corsi.unige.it/en/corsi/10852" target="_blank">UniGe</a></div></div>
+      <div class="course-item"><h4>Fondamenti di Ingegneria del Software</h4><div class="course-meta">BSc Computer Engineering · <a href="https://corsi.unige.it/en/corsi/8719" target="_blank">UniGe</a></div></div>
+      
+      <div class="pub-year">2024-2025</div>
+      <div class="course-item"><h4><a href="https://corsi.unige.it/en/off.f/2024/ins/71611" target="_blank">Data Warehousing</a></h4><div class="course-meta">MSc Computer Science · Code: 101798 · <a href="https://corsi.unige.it/en/corsi/10852" target="_blank">UniGe</a></div></div>
+      <div class="course-item"><h4><a href="https://corsi.unige.it/en/off.f/2024/ins/66509" target="_blank">Introduction to Computer Science and Programming</a></h4><div class="course-meta">BSc Computer Engineering · Code: 114602 · <a href="https://corsi.unige.it/en/corsi/8719" target="_blank">UniGe</a></div></div>
+
+      <h2 class="section-title" style="margin-top:56px;">Invited Talks</h2>
+      <div class="course-item"><h4><a href="https://artificial-intelligence.hspioa.org/speakers/muhammad-mohsin" target="_blank">Valorization of WEEE: Integrating AI into Sustainable WEEE Management</a></h4><div class="course-meta">4th Global Summit on AI (GSAI 2025) · June 10-11, 2025</div></div>
+      <div class="course-item"><h4>AI Solutions for Sustainable Management of WEEE</h4><div class="course-meta">University of Opole, Poland · December 15-19, 2025</div></div>
+
+      <h2 class="section-title" style="margin-top:56px;">Awards & Honors</h2>
+      <ul class="awards-list">
+        <li><span class="year">2025</span>Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></li>
+        <li><span class="year">2022</span>PON-PhD Scholarship in Computer Science</li>
+        <li><span class="year">2019</span>Research Grant ($350), NUST Islamabad</li>
+        <li><span class="year">2019</span>Selected for JEJU National University ML Camp, South Korea</li>
+        <li><span class="year">2017</span>PEEF Scholarship ($6,500) for MS at NUST</li>
+        <li><span class="year">2014</span>HEC Need-Based Scholarship ($4,000), UET Taxila</li>
+      </ul>
+
+      <div class="youtube-section">
+        <h3><span class="yt-icon">▶</span> YouTube Channel</h3>
+        <p>Subscribe for tutorials on Machine Learning, Deep Learning, Python programming, and research methodology.</p>
+        <a href="https://www.youtube.com/@drmohsinphd" target="_blank" class="yt-btn"><span>▶</span> Subscribe @drmohsinphd</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="section" id="service" style="display:none;">
+    <div class="container">
+      <h2 class="section-title">Professional Service</h2>
+      <div class="services-grid">
+        <div class="service-category"><h4>Editorial Boards</h4><ul><li>Editorial Board, AI & Sustainable Finance Journal (AISFJ)</li><li>Peer Reviewer, PLOS One, 2025–Present</li></ul></div>
+        <div class="service-category"><h4>Program Committees</h4><ul><li>PC Member, USIC 2026, Hong Kong</li><li>PC Member, USIC 2025, Hong Kong</li><li>PC Member, ACCSE 2025, Valencia</li><li>PC Member, ACCSE 2024, Venice</li><li>PC Member, ACCSE 2023, Nice</li><li>Student Committee, ICOA 2022</li></ul></div>
+        <div class="service-category"><h4>Peer Review</h4><ul><li>Reviewer, ICIVIS 2025, Hangzhou</li><li>Reviewer, NeurIPS 2024 AFME Workshop</li><li>Reviewer, ICOA 2023, Abu Dhabi</li></ul></div>
+        <div class="service-category"><h4>Memberships</h4><ul><li>IEEE & IEEE Computer Society</li><li>Pakistan Engineering Council #14851</li><li>DoCS-DIBRIS Organizing Team</li></ul></div>
+      </div>
+    </div>
+  </section>
+</main>
 
 <footer>
-  © 2025 Dr. Muhammad Mohsin – All rights reserved.
+  <div class="container">
+    <blockquote class="footer-quote">"The important thing is not to stop questioning. Curiosity has its own reason for existing."<cite>— Albert Einstein</cite></blockquote>
+    <p>© 2025 Dr. Muhammad Mohsin · <a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a> · Via Dodecaneso 35, 16146 Genoa, Italy</p>
+    <p style="margin-top: 8px;"><a href="mailto:muhammad.mohsin@edu.unige.it">muhammad.mohsin@edu.unige.it</a> · <a href="tel:+393455017833">+39 345 501 7833</a></p>
+  </div>
 </footer>
 
 <script>
   function showSection(id) {
-    const sections = document.querySelectorAll('section');
-    sections.forEach(section => {
-      section.classList.remove('active');
+    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
+    const activeLink = document.querySelector(`.nav-links a[href="#${id}"]`);
+    if (activeLink) activeLink.classList.add('active');
+    const sections = ['about', 'research', 'publications', 'experience', 'teaching', 'service'];
+    sections.forEach(s => {
+      const el = document.getElementById(s);
+      if (el) { el.style.display = (s === 'about' && id === 'about') || s === id ? 'block' : 'none'; }
     });
-    document.getElementById(id).classList.add('active');
+    const heroSection = document.querySelector('.hero');
+    if (heroSection) heroSection.style.display = id === 'about' ? 'block' : 'none';
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+    document.getElementById('navLinks').classList.remove('active');
   }
+  function switchTab(tabId) {
+    document.querySelectorAll('.tab').forEach(t => t.classList.remove('active'));
+    event.target.classList.add('active');
+    document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+    document.getElementById(tabId).classList.add('active');
+  }
+  function toggleMobileMenu() { document.getElementById('navLinks').classList.toggle('active'); }
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) { e.preventDefault(); showSection(this.getAttribute('href').substring(1)); });
+  });
 </script>
-
 </body>
 </html>
