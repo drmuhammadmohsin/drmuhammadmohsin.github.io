@@ -75,7 +75,7 @@
     /* ─── HERO ─── */
     .hero {
       padding: 72px 0 60px;
-      background: #ffffff;
+      background: linear-gradient(to bottom right, #ffffff, #fdfbfb);
       border-bottom: 1px solid var(--border);
       position: relative; overflow: hidden;
     }
@@ -115,8 +115,8 @@
     .hero-link {
       display: inline-flex; align-items: center; gap: 7px;
       font-size: 12.5px; font-weight: 600; color: #000;
-      padding: 8px 16px; border: 1.5px solid #000;
-      border-radius: 0; background: #fff;
+      padding: 8px 16px; border: 1.5px solid #e0e0e0;
+      border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);
       transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.5px;
     }
     .hero-link:hover {
@@ -130,15 +130,15 @@
     .hero-photo-wrap { position: relative; }
     .hero-photo {
       width: 220px; height: 270px; object-fit: cover; object-position: center top;
-      border-radius: 0; box-shadow: var(--shadow-lg);
-      border: 4px solid #000;
-      filter: contrast(1.08) brightness(0.97) saturate(0.85);
+      border-radius: 16px; box-shadow: var(--shadow-lg);
+      border: 4px solid #fff;
+      filter: contrast(1.05) brightness(0.98) saturate(0.95);
     }
     .hero-photo-badge {
       position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
       background: var(--red); color: #fff;
-      font-size: 11px; font-weight: 700; letter-spacing: 0.5px;
-      padding: 5px 14px; border-radius: 0; white-space: nowrap;
+      font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px;
+      padding: 6px 16px; border-radius: 20px; white-space: nowrap; box-shadow: 0 4px 10px rgba(163,31,52,0.3);
     }
 
     /* Stats bar */
@@ -710,6 +710,9 @@
 
     <!-- Journal Articles -->
     <div class="pub-section-head">Journal Articles</div>
+
+    <div class="pub-entry"><span class="pub-num">J07</span><div><span class="pub-authors">R Hussain, <strong>Muhammad Mohsin</strong>, D Khan, M Zohaib.</span> "<span class="pub-title-text">A Systematic Review of Deep Learning Approaches for Hepatopancreatic Tumor Segmentation.</span>" <span class="pub-venue">Journal of Imaging, 2026.</span> <span class="pub-doi"><a href="assets/papers pdfs/01_Hepatopancreatic_Tumor_Segmentation.pdf" target="_blank">[PDF Link]</a></span></div></div>
+    <div class="pub-entry"><span class="pub-num">J06</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, S Rovetta, F Masulli, A Cabri.</span> "<span class="pub-title-text">Transition Towards a Circular and Resource-Efficient Economy: An Artificial Intelligence Perspective.</span>" <span class="pub-venue">Applied Sciences, 2026.</span></div></div>
 
     <div class="pub-entry"><span class="pub-num">J05</span><div><span class="pub-authors">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq.</span> "<span class="pub-title-text">A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains.</span>" <span class="pub-venue">MDPI Sensors, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.3390/s25196118" target="_blank">DOI: 10.3390/s25196118</a></span></div></div>
     <div class="pub-entry"><span class="pub-num">J04</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review.</span>" <span class="pub-venue">MDPI Computers, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.3390/computers14080304" target="_blank">DOI: 10.3390/computers14080304</a></span></div></div>
