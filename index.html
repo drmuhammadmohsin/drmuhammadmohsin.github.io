@@ -429,6 +429,195 @@
     .award-text a { color: var(--text-light); }
     .award-text a:hover { color: var(--red); }
 
+    /* ─── NEWS & UPCOMING EVENTS ─── */
+    .news-strip {
+      margin-top: 52px;
+      border-top: 1px solid var(--border);
+      padding-top: 36px;
+    }
+    .news-strip-header {
+      display: flex; align-items: center; justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    .news-strip-label {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--red);
+      display: flex; align-items: center; gap: 8px;
+    }
+    .news-strip-label::before { content: ''; display: block; width: 24px; height: 3px; background: var(--red); }
+    .news-strip-title { font-family: var(--font-serif); font-size: 22px; font-weight: 700; color: #000; margin-bottom: 20px; }
+
+    .news-event-card {
+      display: grid; grid-template-columns: auto 1fr auto;
+      gap: 0; border: 1px solid var(--border);
+      border-left: 4px solid var(--red);
+      background: #fff; overflow: hidden;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+      transition: box-shadow 0.2s, transform 0.2s;
+    }
+    .news-event-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.12); transform: translateY(-2px); }
+
+    .news-event-date-col {
+      background: #000; color: #fff;
+      padding: 20px 22px; display: flex; flex-direction: column;
+      align-items: center; justify-content: center;
+      min-width: 88px; text-align: center;
+    }
+    .news-event-month { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
+    .news-event-day { font-size: 28px; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 4px; }
+    .news-event-year { font-size: 11px; color: rgba(255,255,255,0.45); }
+
+    .news-event-body { padding: 18px 24px; }
+    .news-event-tag {
+      display: inline-flex; align-items: center; gap: 6px;
+      font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
+      color: var(--red); margin-bottom: 8px;
+    }
+    .news-event-tag .pulse {
+      width: 7px; height: 7px; border-radius: 50%; background: var(--red);
+      animation: pulse-dot 1.4s ease-in-out infinite;
+    }
+    @keyframes pulse-dot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%        { opacity: 0.4; transform: scale(0.7); }
+    }
+    .news-event-title { font-size: 15px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 6px; }
+    .news-event-venue { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
+    .news-event-chips { display: flex; flex-wrap: wrap; gap: 6px; }
+    .news-event-chip {
+      font-size: 11.5px; padding: 3px 9px;
+      background: var(--bg-soft); border: 1px solid var(--border);
+      color: var(--slate); font-weight: 500;
+    }
+
+    .news-event-action {
+      padding: 18px 20px; display: flex; flex-direction: column;
+      align-items: flex-end; justify-content: space-between; gap: 10px;
+      border-left: 1px solid var(--border-light);
+    }
+    .news-deadline {
+      text-align: right;
+    }
+    .news-deadline-label { font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 2px; }
+    .news-deadline-val { font-size: 14px; font-weight: 800; color: var(--red); }
+    .news-cfp-btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 9px 16px; background: var(--red); color: #fff;
+      font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
+      text-transform: uppercase; transition: all 0.15s; white-space: nowrap;
+    }
+    .news-cfp-btn:hover { background: var(--red-dark); color: #fff; text-decoration: none; }
+
+    @media (max-width: 640px) {
+      .news-event-card { grid-template-columns: 1fr; }
+      .news-event-date-col { flex-direction: row; gap: 10px; padding: 14px 20px; min-width: unset; justify-content: flex-start; }
+      .news-event-action { border-left: none; border-top: 1px solid var(--border-light); flex-direction: row; align-items: center; }
+    }
+
+    /* ─── CALL FOR PAPERS ─── */
+    .cfp-hero {
+      background: linear-gradient(135deg, #000 0%, #1a0008 50%, #000 100%);
+      border: none; padding: 40px 40px; margin-bottom: 36px;
+      position: relative; overflow: hidden;
+    }
+    .cfp-hero::before {
+      content: ''; position: absolute; top: -60px; right: -60px;
+      width: 220px; height: 220px; border-radius: 50%;
+      background: radial-gradient(circle, rgba(163,31,52,0.3) 0%, transparent 70%);
+    }
+    .cfp-badge {
+      display: inline-flex; align-items: center; gap: 8px;
+      background: var(--red); color: #fff;
+      font-size: 10.5px; font-weight: 800; letter-spacing: 1.5px;
+      text-transform: uppercase; padding: 5px 14px; margin-bottom: 18px;
+    }
+    .cfp-hero h3 {
+      font-family: var(--font-serif); font-size: 24px; font-weight: 700;
+      color: #fff; line-height: 1.3; margin-bottom: 12px; max-width: 680px;
+    }
+    .cfp-hero-meta {
+      font-size: 13.5px; color: rgba(255,255,255,0.65); line-height: 1.8;
+    }
+    .cfp-hero-meta strong { color: rgba(255,255,255,0.9); }
+
+    .cfp-body { display: grid; grid-template-columns: 1fr 280px; gap: 36px; align-items: start; }
+    @media (max-width: 800px) { .cfp-body { grid-template-columns: 1fr; } }
+
+    .cfp-description {
+      font-size: 14.5px; color: var(--text-light); line-height: 1.85;
+      margin-bottom: 24px;
+    }
+    .cfp-topics-label {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
+      color: #000; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
+    }
+    .cfp-topics-label::after { content: ''; flex: 1; height: 2px; background: var(--red); }
+    .cfp-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
+    .cfp-topic {
+      font-size: 12.5px; padding: 6px 13px;
+      background: var(--bg-soft); border: 1.5px solid var(--border);
+      border-left: 3px solid var(--red); color: var(--slate); font-weight: 500;
+      transition: all 0.15s;
+    }
+    .cfp-topic:hover { background: var(--red); color: #fff; border-color: var(--red); }
+
+    .cfp-sidebar { display: flex; flex-direction: column; gap: 16px; }
+    .cfp-date-card {
+      background: #fff; border: 1px solid var(--border);
+      border-top: 3px solid var(--red); padding: 20px 22px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+    }
+    .cfp-date-card h4 {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: var(--red); margin-bottom: 14px;
+    }
+    .cfp-date-row {
+      display: flex; justify-content: space-between; align-items: baseline;
+      padding: 8px 0; border-bottom: 1px solid var(--border-light);
+      font-size: 13.5px;
+    }
+    .cfp-date-row:last-child { border-bottom: none; }
+    .cfp-date-label { color: var(--text-light); }
+    .cfp-date-val { font-weight: 700; color: #000; }
+    .cfp-date-val.highlight { color: var(--red); }
+
+    .cfp-links-card {
+      background: #000; padding: 20px 22px;
+    }
+    .cfp-links-card h4 {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 14px;
+    }
+    .cfp-link-btn {
+      display: flex; align-items: center; gap: 10px;
+      padding: 11px 16px; margin-bottom: 8px;
+      background: rgba(255,255,255,0.06); color: #fff;
+      font-size: 13px; font-weight: 600; transition: all 0.15s;
+      border: 1px solid rgba(255,255,255,0.1);
+    }
+    .cfp-link-btn:last-child { margin-bottom: 0; }
+    .cfp-link-btn:hover { background: var(--red); border-color: var(--red); color: #fff; text-decoration: none; }
+    .cfp-link-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
+
+    .cfp-organizers {
+      background: var(--bg-soft); border: 1px solid var(--border);
+      border-left: 4px solid var(--red); padding: 20px 22px; margin-top: 24px;
+    }
+    .cfp-organizers h4 {
+      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
+      text-transform: uppercase; color: #000; margin-bottom: 14px;
+    }
+    .cfp-org-item {
+      font-size: 13.5px; color: var(--text-light); padding: 6px 0;
+      border-bottom: 1px solid var(--border-light); line-height: 1.5;
+    }
+    .cfp-org-item:last-child { border-bottom: none; }
+    .cfp-org-item strong { color: #000; display: block; font-size: 14px; }
+    .cfp-thanks {
+      font-size: 13px; color: var(--muted); margin-top: 14px;
+      font-style: italic; line-height: 1.7;
+    }
+
     /* ─── SERVICE ─── */
     .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
     .service-col h4 {
@@ -517,6 +706,7 @@
         <a href="#talks" onclick="goTo('talks',this)">Talks</a>
         <a href="#awards" onclick="goTo('awards',this)">Awards</a>
         <a href="#service" onclick="goTo('service',this)">Service</a>
+        <a href="#cfp" onclick="goTo('cfp',this)" style="color:#ffe082;border:1px solid rgba(255,224,130,0.4);border-radius:3px;">📢 CFP</a>
       </div>
     </div>
   </div>
@@ -566,6 +756,45 @@
           <div class="hero-photo-badge">University of Genoa</div>
         </div>
       </div>
+
+      <!-- ── NEWS & UPCOMING EVENTS ── -->
+      <div class="news-strip">
+        <div class="news-strip-label">News &amp; Upcoming Events</div>
+        <div class="news-strip-title">What's Coming Up</div>
+
+        <div class="news-event-card">
+          <div class="news-event-date-col">
+            <div class="news-event-month">Aug</div>
+            <div class="news-event-day">16</div>
+            <div class="news-event-year">2026</div>
+          </div>
+          <div class="news-event-body">
+            <div class="news-event-tag"><span class="pulse"></span> Open Call &nbsp;·&nbsp; Special Session Organizer</div>
+            <div class="news-event-title">"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</div>
+            <div class="news-event-venue">
+              📢 IEEE 10th RTSI 2026 &nbsp;·&nbsp; Aalto University, Espoo, Finland &nbsp;·&nbsp; 16–18 August 2026
+            </div>
+            <div class="news-event-chips">
+              <span class="news-event-chip">AI &amp; Recycling</span>
+              <span class="news-event-chip">Computer Vision</span>
+              <span class="news-event-chip">Robotics</span>
+              <span class="news-event-chip">Edge AI</span>
+              <span class="news-event-chip">Circular Economy</span>
+            </div>
+          </div>
+          <div class="news-event-action">
+            <div class="news-deadline">
+              <span class="news-deadline-label">Submission Deadline</span>
+              <span class="news-deadline-val">05 Jun 2026</span>
+            </div>
+            <a href="#cfp" onclick="goTo('cfp', document.querySelector('[href=\"#cfp\"]')); return false;" class="news-cfp-btn">
+              📄 View CFP
+            </a>
+          </div>
+        </div>
+
+      </div>
+      <!-- ── END NEWS ── -->
 
     </div>
   </div>
@@ -952,6 +1181,93 @@
   </div>
 </section>
 
+<!-- ─── CALL FOR PAPERS ─── -->
+<section class="section" id="cfp" style="display:none;">
+  <div class="container">
+    <div class="section-header">
+      <div class="section-label">IEEE RTSI 2026</div>
+      <h2 class="section-title">Call for Papers — Special Session</h2>
+    </div>
+
+    <div class="cfp-hero">
+      <div class="cfp-badge">📢 Open Call · Submission Deadline: 05 June 2026</div>
+      <h3>"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</h3>
+      <div class="cfp-hero-meta">
+        <strong>IEEE 10th International Forum on Research and Technologies for Society and Industry (RTSI 2026)</strong><br>
+        📍 Aalto University, Espoo, Finland &nbsp;·&nbsp; 🗓️ 16–18 August 2026
+      </div>
+    </div>
+
+    <div class="cfp-body">
+      <div>
+        <p class="cfp-description">
+          Artificial Intelligence is playing an increasingly important role in building smarter and more
+          sustainable recycling systems. This special session will explore how AI, robotics, and data-driven
+          technologies can support efficient waste management, material recovery, and circular economy solutions.
+          We welcome contributions from academia and industry.
+        </p>
+
+        <div class="cfp-topics-label">Topics of Interest</div>
+        <div class="cfp-topics">
+          <span class="cfp-topic">AI-based waste sorting &amp; recycling</span>
+          <span class="cfp-topic">Robotics for automated disassembly</span>
+          <span class="cfp-topic">Computer vision for recycling systems</span>
+          <span class="cfp-topic">Edge AI for real-time processing</span>
+          <span class="cfp-topic">Predictive analytics &amp; recyclability assessment</span>
+          <span class="cfp-topic">Circular supply chains &amp; industrial applications</span>
+        </div>
+
+        <div class="cfp-organizers">
+          <h4>Session Organizers</h4>
+          <div class="cfp-org-item">
+            <strong>Muhammad Mohsin, PhD</strong>
+            Postdoctoral Researcher · Università degli Studi di Genova
+          </div>
+          <div class="cfp-org-item">
+            <strong>Alberto Cabri</strong>
+            Vega Research Laboratories s.r.l.
+          </div>
+          <p class="cfp-thanks">Special thanks to <strong>Francesco Masulli</strong> and <strong>Stefano Rovetta</strong> for their guidance and support.</p>
+        </div>
+      </div>
+
+      <div class="cfp-sidebar">
+        <div class="cfp-date-card">
+          <h4>Important Dates</h4>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Paper Submission</span>
+            <span class="cfp-date-val highlight">05 Jun 2026</span>
+          </div>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Acceptance Notification</span>
+            <span class="cfp-date-val">15 Jun 2026</span>
+          </div>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Conference Dates</span>
+            <span class="cfp-date-val">16–18 Aug 2026</span>
+          </div>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Venue</span>
+            <span class="cfp-date-val">Espoo, Finland</span>
+          </div>
+        </div>
+
+        <div class="cfp-links-card">
+          <h4>Links</h4>
+          <a href="https://lnkd.in/dV2W-hFb" target="_blank" class="cfp-link-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Conference Tracks
+          </a>
+          <a href="https://lnkd.in/diem3buP" target="_blank" class="cfp-link-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Submit Paper
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <!-- ─── SERVICE ─── -->
 <section class="section" id="service" style="display:none;">
   <div class="container">
@@ -1015,7 +1331,7 @@
 </footer>
 
 <script>
-  const SECTIONS = ['about','research','publications','experience','teaching','talks','awards','service'];
+  const SECTIONS = ['about','research','publications','experience','teaching','talks','awards','service','cfp'];
 
   function goTo(id, linkEl) {
     // hide all
