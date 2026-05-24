@@ -561,7 +561,39 @@
     }
     .cfp-topic:hover { background: var(--red); color: #fff; border-color: var(--red); }
 
-    .cfp-sidebar { display: flex; flex-direction: column; gap: 16px; }
+    /* CFP page layout: left heading + right content */
+    .cfp-page-layout {
+      display: grid; grid-template-columns: 240px 1fr;
+      gap: 48px; align-items: start;
+    }
+    .cfp-left-col {
+      position: sticky; top: 80px;
+    }
+    .cfp-left-label {
+      font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
+      text-transform: uppercase; color: var(--red);
+      display: flex; align-items: center; gap: 8px;
+      margin-bottom: 10px;
+    }
+    .cfp-left-label::before { content: ''; display: block; width: 24px; height: 3px; background: var(--red); }
+    .cfp-left-title {
+      font-family: var(--font-serif); font-size: 30px; font-weight: 700;
+      color: #000; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 4px;
+    }
+    .cfp-left-subtitle {
+      font-size: 13px; color: var(--muted); font-weight: 500; margin-bottom: 0;
+    }
+    .cfp-left-divider {
+      width: 100%; height: 3px; background: var(--red);
+      margin: 20px 0;
+    }
+    .cfp-right-col { min-width: 0; }
+    @media (max-width: 860px) {
+      .cfp-page-layout { grid-template-columns: 1fr; }
+      .cfp-left-col { position: static; }
+    }
+
+    
     .cfp-date-card {
       background: #fff; border: 1px solid var(--border);
       border-top: 3px solid var(--red); padding: 20px 22px;
@@ -613,10 +645,6 @@
     }
     .cfp-org-item:last-child { border-bottom: none; }
     .cfp-org-item strong { color: #000; display: block; font-size: 14px; }
-    .cfp-thanks {
-      font-size: 13px; color: var(--muted); margin-top: 14px;
-      font-style: italic; line-height: 1.7;
-    }
 
     /* ─── SERVICE ─── */
     .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
@@ -1184,22 +1212,59 @@
 <!-- ─── CALL FOR PAPERS ─── -->
 <section class="section" id="cfp" style="display:none;">
   <div class="container">
-    <div class="section-header">
-      <div class="section-label">IEEE RTSI 2026</div>
-      <h2 class="section-title">Call for Papers — Special Session</h2>
-    </div>
 
-    <div class="cfp-hero">
-      <div class="cfp-badge">📢 Open Call · Submission Deadline: 05 June 2026</div>
-      <h3>"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</h3>
-      <div class="cfp-hero-meta">
-        <strong>IEEE 10th International Forum on Research and Technologies for Society and Industry (RTSI 2026)</strong><br>
-        📍 Aalto University, Espoo, Finland &nbsp;·&nbsp; 🗓️ 16–18 August 2026
+    <!-- Two-column page layout: left heading | right content -->
+    <div class="cfp-page-layout">
+
+      <!-- LEFT: sticky heading column -->
+      <div class="cfp-left-col">
+        <div class="cfp-left-label">IEEE RTSI 2026</div>
+        <h2 class="cfp-left-title">Call for Papers</h2>
+        <p class="cfp-left-subtitle">Special Session</p>
+        <div class="cfp-left-divider"></div>
+        <div class="cfp-date-card">
+          <h4>Important Dates</h4>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Submission</span>
+            <span class="cfp-date-val highlight">05 Jun 2026</span>
+          </div>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Notification</span>
+            <span class="cfp-date-val">15 Jun 2026</span>
+          </div>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Conference</span>
+            <span class="cfp-date-val">16–18 Aug 2026</span>
+          </div>
+          <div class="cfp-date-row">
+            <span class="cfp-date-label">Venue</span>
+            <span class="cfp-date-val">Espoo, Finland</span>
+          </div>
+        </div>
+        <div class="cfp-links-card" style="margin-top:16px;">
+          <h4>Links</h4>
+          <a href="https://2026.ieee-rtsi.org/track-list/" target="_blank" class="cfp-link-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+            Conference Tracks
+          </a>
+          <a href="https://easychair.org/my/conference?conf=rtsi2026" target="_blank" class="cfp-link-btn">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+            Submit Paper
+          </a>
+        </div>
       </div>
-    </div>
 
-    <div class="cfp-body">
-      <div>
+      <!-- RIGHT: main content -->
+      <div class="cfp-right-col">
+        <div class="cfp-hero">
+          <div class="cfp-badge">📢 Open Call · Submission Deadline: 05 June 2026</div>
+          <h3>"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</h3>
+          <div class="cfp-hero-meta">
+            <strong>IEEE 10th International Forum on Research and Technologies for Society and Industry (RTSI 2026)</strong><br>
+            📍 Aalto University, Espoo, Finland &nbsp;·&nbsp; 🗓️ 16–18 August 2026
+          </div>
+        </div>
+
         <p class="cfp-description">
           Artificial Intelligence is playing an increasingly important role in building smarter and more
           sustainable recycling systems. This special session will explore how AI, robotics, and data-driven
@@ -1227,43 +1292,9 @@
             <strong>Alberto Cabri</strong>
             Vega Research Laboratories s.r.l.
           </div>
-          <p class="cfp-thanks">Special thanks to <strong>Francesco Masulli</strong> and <strong>Stefano Rovetta</strong> for their guidance and support.</p>
         </div>
       </div>
 
-      <div class="cfp-sidebar">
-        <div class="cfp-date-card">
-          <h4>Important Dates</h4>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Paper Submission</span>
-            <span class="cfp-date-val highlight">05 Jun 2026</span>
-          </div>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Acceptance Notification</span>
-            <span class="cfp-date-val">15 Jun 2026</span>
-          </div>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Conference Dates</span>
-            <span class="cfp-date-val">16–18 Aug 2026</span>
-          </div>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Venue</span>
-            <span class="cfp-date-val">Espoo, Finland</span>
-          </div>
-        </div>
-
-        <div class="cfp-links-card">
-          <h4>Links</h4>
-          <a href="https://lnkd.in/dV2W-hFb" target="_blank" class="cfp-link-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-            Conference Tracks
-          </a>
-          <a href="https://lnkd.in/diem3buP" target="_blank" class="cfp-link-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Submit Paper
-          </a>
-        </div>
-      </div>
     </div>
   </div>
 </section>
