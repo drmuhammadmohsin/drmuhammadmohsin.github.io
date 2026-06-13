@@ -1,1416 +1,1625 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="Dr. Muhammad Mohsin - Postdoctoral Researcher specializing in AI-driven circular economy, computer vision, and deep learning for sustainable electronic waste management at University of Genoa.">
   <meta name="keywords" content="Muhammad Mohsin, AI, Machine Learning, Computer Vision, WEEE, Circular Economy, Deep Learning, University of Genoa, DIBRIS">
   <meta name="author" content="Dr. Muhammad Mohsin">
+  
   <title>Dr. Muhammad Mohsin | AI Researcher | University of Genoa</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Merriweather:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400&display=swap" rel="stylesheet">
-  <style>
-    :root {
-      --red: #A31F34;
-      --red-dark: #750e1e;
-      --red-light: #c4354d;
-      --navy: #000000;
-      --navy-2: #111111;
-      --navy-3: #222222;
-      --slate: #333333;
-      --muted: #666666;
-      --border: #cccccc;
-      --border-light: #e8e8e8;
-      --bg: #ffffff;
-      --bg-soft: #f4f4f4;
-      --text: #111111;
-      --text-light: #444444;
-      --text-muted: #888888;
-      --accent-blue: #1d4ed8;
-      --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
-      --font-serif: 'Merriweather', Georgia, serif;
-      --max-w: 1080px;
-      --radius: 2px;
-      --shadow-sm: 0 1px 4px rgba(0,0,0,0.10);
-      --shadow: 0 4px 18px rgba(0,0,0,0.11);
-      --shadow-lg: 0 12px 40px rgba(0,0,0,0.14);
-    }
-
-    *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; font-size: 17px; }
-    body { font-family: var(--font-sans); background: var(--bg); color: var(--text); line-height: 1.7; -webkit-font-smoothing: antialiased; }
-    a { color: var(--red); text-decoration: none; transition: color 0.2s; }
-    a:hover { color: var(--red-dark); text-decoration: underline; }
-    img { max-width: 100%; display: block; }
-    .container { max-width: var(--max-w); margin: 0 auto; padding: 0 40px; }
-
-    /* ─── NAV ─── */
-    nav {
-      position: sticky; top: 0; z-index: 200;
-      background: var(--red);
-      border-bottom: none;
-    }
-    .nav-inner {
-      display: flex; align-items: center; justify-content: space-between;
-      padding: 14px 0;
-    }
-    .nav-brand {
-      font-size: 15px; font-weight: 700; color: #fff; letter-spacing: 0.2px;
-      text-transform: uppercase;
-    }
-    .nav-brand span { color: var(--red-light); }
-    .nav-links { display: flex; gap: 2px; }
-    .nav-links a {
-      font-size: 13px; font-weight: 700; color: rgba(255,255,255,0.9);
-      padding: 7px 14px; border-radius: 0; transition: all 0.15s;
-      letter-spacing: 0.5px; text-transform: uppercase;
-    }
-    .nav-links a:hover, .nav-links a.active {
-      color: #fff; background: rgba(0,0,0,0.2); text-decoration: none;
-    }
-    .nav-links a.active { color: #fff; background: rgba(0,0,0,0.2); }
-    .nav-mobile-btn { display: none; background: none; border: none; color: #fff; font-size: 22px; cursor: pointer; padding: 4px; }
-
-    /* ─── HERO ─── */
-    .hero {
-      padding: 72px 0 60px;
-      background: linear-gradient(to bottom right, #ffffff, #fdfbfb);
-      border-bottom: 1px solid var(--border);
-      position: relative; overflow: hidden;
-    }
-    .hero::before { display: none; }
-    .hero-layout {
-      display: grid; grid-template-columns: 1fr 220px; gap: 64px; align-items: start;
-    }
-    .hero-eyebrow {
-      display: inline-flex; align-items: center; gap: 8px;
-      font-size: 11px; font-weight: 700; letter-spacing: 1.8px;
-      text-transform: uppercase; color: var(--red);
-      margin-bottom: 16px;
-    }
-    .hero-eyebrow::before {
-      content: ''; display: block; width: 28px; height: 3px; background: var(--red);
-    }
-    .hero h1 {
-      font-family: var(--font-serif);
-      font-size: 42px; font-weight: 700; line-height: 1.15;
-      color: #000; letter-spacing: -1.5px;
-      margin-bottom: 10px;
-    }
-    .hero-role {
-      font-size: 16px; font-weight: 500; color: var(--slate);
-      margin-bottom: 6px; line-height: 1.5;
-    }
-    .hero-affil {
-      font-size: 13.5px; color: var(--muted); margin-bottom: 22px; line-height: 1.8;
-    }
-    .hero-affil a { color: var(--red); font-weight: 600; }
-    .hero-bio {
-      font-size: 15px; color: var(--text-light); line-height: 1.9;
-      max-width: 600px; margin-bottom: 28px;
-      border-left: 4px solid var(--red); padding-left: 20px;
-    }
-    .hero-links { display: flex; flex-wrap: wrap; gap: 8px; }
-    .hero-link {
-      display: inline-flex; align-items: center; gap: 7px;
-      font-size: 12.5px; font-weight: 600; color: #000;
-      padding: 8px 16px; border: 1.5px solid #e0e0e0;
-      border-radius: 8px; background: #fff; box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-      transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .hero-link:hover {
-      background: #000; color: #fff;
-      text-decoration: none;
-    }
-    .hero-link svg { width: 14px; height: 14px; flex-shrink: 0; }
-    .hero-link.yt { border-color: #ff0000; color: #ff0000; }
-    .hero-link.yt:hover { background: #ff0000; color: #fff; }
-
-    .hero-photo-wrap { position: relative; }
-    .hero-photo {
-      width: 220px; height: 270px; object-fit: cover; object-position: center top;
-      border-radius: 16px; box-shadow: var(--shadow-lg);
-      border: 4px solid #fff;
-      filter: contrast(1.05) brightness(0.98) saturate(0.95);
-    }
-    .hero-photo-badge {
-      position: absolute; bottom: -12px; left: 50%; transform: translateX(-50%);
-      background: var(--red); color: #fff;
-      font-size: 11.5px; font-weight: 700; letter-spacing: 0.5px;
-      padding: 6px 16px; border-radius: 20px; white-space: nowrap; box-shadow: 0 4px 10px rgba(163,31,52,0.3);
-    }
-
-    /* Stats bar */
-    .stats-strip {
-      display: grid; grid-template-columns: repeat(5, 1fr);
-      gap: 0; margin-top: 52px;
-      border: 2px solid #000;
-      overflow: hidden; background: #000;
-    }
-    .stat-item {
-      padding: 20px 16px; text-align: left; padding-left: 24px;
-      border-right: 1px solid rgba(255,255,255,0.12);
-    }
-    .stat-item:last-child { border-right: none; }
-    .stat-num {
-      font-family: var(--font-sans);
-      font-size: 32px; font-weight: 800; color: var(--red-light);
-      line-height: 1; margin-bottom: 5px; letter-spacing: -1px;
-    }
-    .stat-lbl {
-      font-size: 10.5px; font-weight: 600; color: rgba(255,255,255,0.55);
-      text-transform: uppercase; letter-spacing: 1px;
-    }
-
-    /* ─── SECTIONS ─── */
-    .section { padding: 72px 0; border-bottom: 1px solid var(--border); }
-    .section:last-of-type { border-bottom: none; }
-    .section-header { margin-bottom: 40px; }
-    .section-label {
-      font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--red);
-      margin-bottom: 6px; display: flex; align-items: center; gap: 8px;
-    }
-    .section-label::before {
-      content: ''; display: block; width: 24px; height: 3px; background: var(--red);
-    }
-    .section-title {
-      font-family: var(--font-serif);
-      font-size: 28px; font-weight: 700; color: #000;
-      letter-spacing: -0.5px;
-    }
-
-    /* ─── RESEARCH CARDS ─── */
-    .research-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .r-card {
-      padding: 28px; background: #fff;
-      transition: all 0.2s; position: relative; overflow: hidden;
-    }
-    .r-card::after {
-      content: ''; position: absolute; top: 0; left: 0;
-      width: 4px; height: 100%; background: var(--red);
-    }
-    .r-card:hover { background: var(--bg-soft); }
-    .r-card-icon {
-      width: 40px; height: 40px; background: var(--red);
-      border-radius: 0; display: flex; align-items: center; justify-content: center;
-      margin-bottom: 16px; font-size: 18px;
-    }
-    .r-card h3 { font-size: 15px; font-weight: 700; color: #000; margin-bottom: 10px; }
-    .r-card p { font-size: 13.5px; color: var(--text-light); line-height: 1.75; }
-
-    /* Showcase — MIT style: text left, image right, no borders */
-    .showcase-grid { display: flex; flex-direction: column; gap: 0; margin-top: 48px; border-top: 1px solid var(--border); }
-    .s-card {
-      display: grid; grid-template-columns: 1fr 380px;
-      gap: 48px; padding: 40px 0;
-      border-bottom: 1px solid var(--border);
-      align-items: center;
-      background: #fff;
-    }
-    .s-card-year {
-      font-size: 11px; font-weight: 700; color: var(--red);
-      text-transform: uppercase; letter-spacing: 1.2px;
-      margin-bottom: 12px; display: block;
-    }
-    .s-card-venue {
-      font-size: 12px; font-weight: 600; color: var(--muted);
-      text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 14px;
-    }
-    .s-card-title {
-      font-family: var(--font-sans);
-      font-size: 20px; font-weight: 600; color: #000;
-      line-height: 1.35; margin-bottom: 16px; letter-spacing: -0.3px;
-    }
-    .s-card-authors { font-size: 13.5px; color: var(--text-light); line-height: 1.7; margin-bottom: 18px; }
-    .s-card-authors strong { color: #000; font-weight: 700; }
-    .s-card-doi a {
-      font-size: 13px; color: var(--red); font-weight: 600;
-      text-decoration: underline; text-underline-offset: 3px;
-    }
-    .s-card-doi a:hover { color: var(--red-dark); }
-    .s-card-abstract {
-      background: var(--bg-soft);
-      display: flex; align-items: center; justify-content: center;
-      padding: 24px; aspect-ratio: 16/10; overflow: hidden;
-    }
-    .s-card-abstract svg { width: 100%; height: 100%; }
-
-    /* Projects */
-    .project-list { margin-top: 48px; display: flex; flex-direction: column; gap: 0; }
-    .proj-item {
-      display: grid; grid-template-columns: 170px 1fr;
-      gap: 32px; padding: 24px 0; border-top: 1px solid var(--border-light);
-    }
-    .proj-date { font-size: 12.5px; color: var(--muted); font-weight: 500; padding-top: 2px; }
-    .proj-body h3 { font-size: 15px; font-weight: 600; color: var(--navy); margin-bottom: 4px; }
-    .proj-org { font-size: 13px; color: var(--red); margin-bottom: 8px; font-weight: 500; }
-    .proj-desc { font-size: 13.5px; color: var(--text-light); line-height: 1.75; }
-
-    /* ─── YT BANNER ─── */
-    .yt-banner {
-      margin-top: 48px; padding: 30px 36px;
-      background: #000; border: none;
-      display: flex; align-items: center; gap: 32px;
-      border-left: 6px solid #ff0000;
-    }
-    .yt-icon-wrap {
-      flex-shrink: 0; width: 52px; height: 52px;
-      background: #ff0000; border-radius: 0;
-      display: flex; align-items: center; justify-content: center;
-      font-size: 22px; color: #fff;
-    }
-    .yt-text h3 { font-size: 17px; font-weight: 700; color: #fff; margin-bottom: 6px; }
-    .yt-text p { font-size: 13.5px; color: rgba(255,255,255,0.6); line-height: 1.6; }
-    .yt-btn {
-      flex-shrink: 0; margin-left: auto;
-      display: inline-flex; align-items: center; gap: 8px;
-      padding: 12px 24px; background: #ff0000; color: #fff;
-      border-radius: 0; font-weight: 700; font-size: 13px;
-      transition: all 0.15s; text-transform: uppercase; letter-spacing: 0.5px;
-    }
-    .yt-btn:hover { background: #cc0000; text-decoration: none; color: #fff; }
-
-    /* ─── PUBLICATIONS ─── */
-    .pub-tabs { display: flex; gap: 4px; margin-bottom: 36px; padding-bottom: 0; border-bottom: 1px solid var(--border); }
-    .pub-tab {
-      padding: 11px 22px; background: none; border: none; border-bottom: 2px solid transparent;
-      font-size: 13.5px; font-weight: 500; font-family: var(--font-sans);
-      color: var(--muted); cursor: pointer; margin-bottom: -1px;
-      transition: all 0.2s;
-    }
-    .pub-tab:hover { color: var(--text); }
-    .pub-tab.active { color: var(--red); border-bottom-color: var(--red); }
-    .pub-panel { display: none; }
-    .pub-panel.active { display: block; animation: fadein 0.25s ease; }
-    @keyframes fadein { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-
-    .pub-year-head {
-      font-size: 13px; font-weight: 700; color: var(--muted);
-      text-transform: uppercase; letter-spacing: 1px;
-      margin: 32px 0 16px; padding-bottom: 8px;
-      border-bottom: 1px solid var(--border);
-    }
-    .pub-year-head:first-child { margin-top: 0; }
-    .pub-entry {
-      display: grid; grid-template-columns: 44px 1fr;
-      gap: 14px; padding: 12px 0; border-bottom: 1px solid var(--border-light);
-      font-size: 14px; line-height: 1.75; color: var(--text-light);
-      align-items: baseline;
-    }
-    .pub-entry:last-child { border-bottom: none; }
-    .pub-num {
-      font-size: 11.5px; font-weight: 700; color: var(--red);
-      font-family: var(--font-sans); letter-spacing: 0.5px;
-      padding-top: 2px;
-    }
-    .pub-authors { color: var(--text-light); }
-    .pub-authors strong { color: #000; font-weight: 700; }
-    .pub-title-text { font-weight: 600; color: #000; }
-    .pub-venue { color: var(--muted); font-style: italic; }
-    .pub-doi a { font-size: 13px; color: var(--red); }
-    .pub-doi a:hover { text-decoration: underline; }
-
-    .pub-section-head {
-      font-family: var(--font-sans);
-      font-size: 22px; font-weight: 700; color: #000;
-      padding-bottom: 10px; border-bottom: 3px solid var(--red);
-      display: flex; align-items: center; gap: 12px;
-      letter-spacing: -0.4px;
-    }
-    .pub-count {
-      font-family: var(--font-sans);
-      font-size: 11px; font-weight: 700;
-      background: var(--red); color: #fff;
-      padding: 2px 9px; border-radius: 0;
-    }
-
-    .patent-card {
-      padding: 24px 28px; background: var(--bg-soft);
-      border: 1px solid var(--border); border-radius: 0;
-      border-left: 4px solid var(--red);
-    }
-    .patent-card h4 { font-size: 16px; font-weight: 700; color: #000; margin-bottom: 12px; }
-    .patent-card .pmeta { font-size: 13.5px; color: var(--text-light); line-height: 1.9; }
-
-    /* ─── EXPERIENCE CARDS ─── */
-    .exp-grid { display: grid; grid-template-columns: 1fr; gap: 12px; }
-    .exp-card {
-      background: #fff; border: 1px solid var(--border);
-      border-top: 3px solid var(--red);
-      padding: 22px 24px; position: relative;
-      transition: transform 0.2s ease, box-shadow 0.2s ease;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .exp-card:hover { transform: translateY(-4px); box-shadow: 0 10px 28px rgba(0,0,0,0.10); }
-    .exp-date {
-      display: inline-block; font-size: 10.5px; font-weight: 700;
-      color: #fff; background: #000;
-      padding: 3px 9px; letter-spacing: 0.6px;
-      text-transform: uppercase; margin-bottom: 12px;
-    }
-    .exp-card h3 { font-size: 15px; font-weight: 800; color: #000; margin-bottom: 4px; line-height: 1.3; }
-    .exp-org { font-size: 13px; color: var(--red); font-weight: 600; margin-bottom: 10px; line-height: 1.4; }
-    .exp-org a { color: var(--red); }
-    .exp-desc { font-size: 13px; color: var(--text-light); line-height: 1.75; }
-
-    /* Education — same card style as experience */
-    .edu-list { display: grid; grid-template-columns: 1fr; gap: 12px; }
-    .edu-item {
-      background: #fff; border: 1px solid var(--border);
-      border-top: 3px solid var(--red);
-      padding: 22px 24px;
-      box-shadow: 0 2px 6px rgba(0,0,0,0.05);
-    }
-    .edu-date { display: inline-block; font-size: 10.5px; font-weight: 700; color: #fff; background: #000; padding: 3px 9px; letter-spacing: 0.6px; text-transform: uppercase; margin-bottom: 12px; }
-    .edu-item h3 { font-size: 15px; font-weight: 800; color: #000; margin-bottom: 4px; }
-    .edu-org { font-size: 13px; color: var(--red); font-weight: 600; margin-bottom: 6px; }
-    .edu-org a { color: var(--red); }
-    .edu-desc { font-size: 13px; color: var(--text-light); line-height: 1.7; font-style: italic; }
-
-    /* Skills */
-    .skills-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1px; background: var(--border); border: 1px solid var(--border); }
-    .skill-card {
-      padding: 22px 24px; background: #fff;
-    }
-    .skill-card h4 {
-      font-size: 11px; font-weight: 700; color: #000;
-      text-transform: uppercase; letter-spacing: 1.2px; margin-bottom: 12px;
-      display: flex; align-items: center; gap: 8px;
-    }
-    .skill-card h4::before { content: ''; display: block; width: 16px; height: 3px; background: var(--red); }
-    .skill-tags { display: flex; flex-wrap: wrap; gap: 6px; }
-    .skill-tag {
-      font-size: 12px; padding: 4px 10px;
-      background: var(--bg-soft); border: 1px solid var(--border);
-      border-radius: 0; color: var(--slate); font-weight: 500;
-    }
-
-    /* ─── TEACHING ─── */
-    .course-group-label {
-      font-size: 11px; font-weight: 700; letter-spacing: 1.2px; text-transform: uppercase;
-      color: var(--red); margin: 32px 0 16px; display: flex; align-items: center; gap: 10px;
-    }
-    .course-group-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
-    .course-group-label:first-child { margin-top: 0; }
-    .course-entry {
-      padding: 14px 0; border-bottom: 1px solid var(--border-light);
-      display: flex; align-items: baseline; gap: 12px;
-    }
-    .course-entry:last-of-type { border-bottom: none; }
-    .course-entry h4 { font-size: 14.5px; font-weight: 500; color: var(--navy); }
-    .course-entry h4 a { color: var(--navy); }
-    .course-entry h4 a:hover { color: var(--red); text-decoration: none; }
-    .course-meta { font-size: 12.5px; color: var(--muted); }
-    .course-meta a { color: var(--red); }
-
-    .talks-grid { display: flex; flex-direction: column; gap: 0; }
-    .talk-entry {
-      padding: 16px 0; border-bottom: 1px solid var(--border-light);
-      display: grid; grid-template-columns: 1fr auto; gap: 20px; align-items: start;
-    }
-    .talk-entry:last-child { border-bottom: none; }
-    .talk-title { font-size: 14.5px; font-weight: 500; color: var(--navy); margin-bottom: 4px; }
-    .talk-title a { color: var(--navy); }
-    .talk-title a:hover { color: var(--red); text-decoration: none; }
-    .talk-where { font-size: 13px; color: var(--muted); }
-    .talk-date { font-size: 12px; color: var(--muted); white-space: nowrap; padding-top: 2px; }
-
-    .awards-list { list-style: none; }
-    .award-entry {
-      display: grid; grid-template-columns: 52px 1fr;
-      gap: 16px; padding: 13px 0; border-bottom: 1px solid var(--border-light);
-      align-items: baseline;
-    }
-    .award-entry:last-child { border-bottom: none; }
-    .award-year { font-size: 13px; font-weight: 700; color: var(--red); }
-    .award-text { font-size: 14px; color: var(--text-light); }
-    .award-text a { color: var(--text-light); }
-    .award-text a:hover { color: var(--red); }
-
-    /* ─── NEWS & UPCOMING EVENTS ─── */
-    .news-strip {
-      margin-top: 52px;
-      border-top: 1px solid var(--border);
-      padding-top: 36px;
-    }
-    .news-strip-header {
-      display: flex; align-items: center; justify-content: space-between;
-      margin-bottom: 20px;
-    }
-    .news-strip-label {
-      font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--red);
-      display: flex; align-items: center; gap: 8px;
-    }
-    .news-strip-label::before { content: ''; display: block; width: 24px; height: 3px; background: var(--red); }
-    .news-strip-title { font-family: var(--font-serif); font-size: 22px; font-weight: 700; color: #000; margin-bottom: 20px; }
-
-    .news-event-card {
-      display: grid; grid-template-columns: auto 1fr auto;
-      gap: 0; border: 1px solid var(--border);
-      border-left: 4px solid var(--red);
-      background: #fff; overflow: hidden;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.06);
-      transition: box-shadow 0.2s, transform 0.2s;
-    }
-    .news-event-card:hover { box-shadow: 0 8px 28px rgba(0,0,0,0.12); transform: translateY(-2px); }
-
-    .news-event-date-col {
-      background: #000; color: #fff;
-      padding: 20px 22px; display: flex; flex-direction: column;
-      align-items: center; justify-content: center;
-      min-width: 88px; text-align: center;
-    }
-    .news-event-month { font-size: 11px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 4px; }
-    .news-event-day { font-size: 28px; font-weight: 800; color: #fff; line-height: 1; margin-bottom: 4px; }
-    .news-event-year { font-size: 11px; color: rgba(255,255,255,0.45); }
-
-    .news-event-body { padding: 18px 24px; }
-    .news-event-tag {
-      display: inline-flex; align-items: center; gap: 6px;
-      font-size: 10px; font-weight: 800; letter-spacing: 1.2px; text-transform: uppercase;
-      color: var(--red); margin-bottom: 8px;
-    }
-    .news-event-tag .pulse {
-      width: 7px; height: 7px; border-radius: 50%; background: var(--red);
-      animation: pulse-dot 1.4s ease-in-out infinite;
-    }
-    @keyframes pulse-dot {
-      0%, 100% { opacity: 1; transform: scale(1); }
-      50%        { opacity: 0.4; transform: scale(0.7); }
-    }
-    .news-event-title { font-size: 15px; font-weight: 700; color: #000; line-height: 1.4; margin-bottom: 6px; }
-    .news-event-venue { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 12px; }
-    .news-event-chips { display: flex; flex-wrap: wrap; gap: 6px; }
-    .news-event-chip {
-      font-size: 11.5px; padding: 3px 9px;
-      background: var(--bg-soft); border: 1px solid var(--border);
-      color: var(--slate); font-weight: 500;
-    }
-
-    .news-event-action {
-      padding: 18px 20px; display: flex; flex-direction: column;
-      align-items: flex-end; justify-content: space-between; gap: 10px;
-      border-left: 1px solid var(--border-light);
-    }
-    .news-deadline {
-      text-align: right;
-    }
-    .news-deadline-label { font-size: 9.5px; font-weight: 700; letter-spacing: 1px; text-transform: uppercase; color: var(--muted); display: block; margin-bottom: 2px; }
-    .news-deadline-val { font-size: 14px; font-weight: 800; color: var(--red); }
-    .news-cfp-btn {
-      display: inline-flex; align-items: center; gap: 6px;
-      padding: 9px 16px; background: var(--red); color: #fff;
-      font-size: 12px; font-weight: 700; letter-spacing: 0.4px;
-      text-transform: uppercase; transition: all 0.15s; white-space: nowrap;
-    }
-    .news-cfp-btn:hover { background: var(--red-dark); color: #fff; text-decoration: none; }
-
-    @media (max-width: 640px) {
-      .news-event-card { grid-template-columns: 1fr; }
-      .news-event-date-col { flex-direction: row; gap: 10px; padding: 14px 20px; min-width: unset; justify-content: flex-start; }
-      .news-event-action { border-left: none; border-top: 1px solid var(--border-light); flex-direction: row; align-items: center; }
-    }
-
-    /* ─── CALL FOR PAPERS ─── */
-    .cfp-hero {
-      background: linear-gradient(135deg, #000 0%, #1a0008 50%, #000 100%);
-      border: none; padding: 40px 40px; margin-bottom: 36px;
-      position: relative; overflow: hidden;
-    }
-    .cfp-hero::before {
-      content: ''; position: absolute; top: -60px; right: -60px;
-      width: 220px; height: 220px; border-radius: 50%;
-      background: radial-gradient(circle, rgba(163,31,52,0.3) 0%, transparent 70%);
-    }
-    .cfp-badge {
-      display: inline-flex; align-items: center; gap: 8px;
-      background: var(--red); color: #fff;
-      font-size: 10.5px; font-weight: 800; letter-spacing: 1.5px;
-      text-transform: uppercase; padding: 5px 14px; margin-bottom: 18px;
-    }
-    .cfp-hero h3 {
-      font-family: var(--font-serif); font-size: 24px; font-weight: 700;
-      color: #fff; line-height: 1.3; margin-bottom: 12px; max-width: 680px;
-    }
-    .cfp-hero-meta {
-      font-size: 13.5px; color: rgba(255,255,255,0.65); line-height: 1.8;
-    }
-    .cfp-hero-meta strong { color: rgba(255,255,255,0.9); }
-
-    .cfp-body { display: grid; grid-template-columns: 1fr 280px; gap: 36px; align-items: start; }
-    @media (max-width: 800px) { .cfp-body { grid-template-columns: 1fr; } }
-
-    .cfp-description {
-      font-size: 14.5px; color: var(--text-light); line-height: 1.85;
-      margin-bottom: 24px;
-    }
-    .cfp-topics-label {
-      font-size: 11px; font-weight: 700; letter-spacing: 1.4px; text-transform: uppercase;
-      color: #000; margin-bottom: 14px; display: flex; align-items: center; gap: 10px;
-    }
-    .cfp-topics-label::after { content: ''; flex: 1; height: 2px; background: var(--red); }
-    .cfp-topics { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 28px; }
-    .cfp-topic {
-      font-size: 12.5px; padding: 6px 13px;
-      background: var(--bg-soft); border: 1.5px solid var(--border);
-      border-left: 3px solid var(--red); color: var(--slate); font-weight: 500;
-      transition: all 0.15s;
-    }
-    .cfp-topic:hover { background: var(--red); color: #fff; border-color: var(--red); }
-
-    /* CFP page layout: left heading + right content */
-    .cfp-page-layout {
-      display: grid; grid-template-columns: 240px 1fr;
-      gap: 48px; align-items: start;
-    }
-    .cfp-left-col {
-      position: sticky; top: 80px;
-    }
-    .cfp-left-label {
-      font-size: 10.5px; font-weight: 700; letter-spacing: 2px;
-      text-transform: uppercase; color: var(--red);
-      display: flex; align-items: center; gap: 8px;
-      margin-bottom: 10px;
-    }
-    .cfp-left-label::before { content: ''; display: block; width: 24px; height: 3px; background: var(--red); }
-    .cfp-left-title {
-      font-family: var(--font-serif); font-size: 30px; font-weight: 700;
-      color: #000; line-height: 1.15; letter-spacing: -0.5px; margin-bottom: 4px;
-    }
-    .cfp-left-subtitle {
-      font-size: 13px; color: var(--muted); font-weight: 500; margin-bottom: 0;
-    }
-    .cfp-left-divider {
-      width: 100%; height: 3px; background: var(--red);
-      margin: 20px 0;
-    }
-    .cfp-right-col { min-width: 0; }
-    @media (max-width: 860px) {
-      .cfp-page-layout { grid-template-columns: 1fr; }
-      .cfp-left-col { position: static; }
-    }
-
-    
-    .cfp-date-card {
-      background: #fff; border: 1px solid var(--border);
-      border-top: 3px solid var(--red); padding: 20px 22px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-    }
-    .cfp-date-card h4 {
-      font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: var(--red); margin-bottom: 14px;
-    }
-    .cfp-date-row {
-      display: flex; justify-content: space-between; align-items: baseline;
-      padding: 8px 0; border-bottom: 1px solid var(--border-light);
-      font-size: 13.5px;
-    }
-    .cfp-date-row:last-child { border-bottom: none; }
-    .cfp-date-label { color: var(--text-light); }
-    .cfp-date-val { font-weight: 700; color: #000; }
-    .cfp-date-val.highlight { color: var(--red); }
-
-    .cfp-links-card {
-      background: #000; padding: 20px 22px;
-    }
-    .cfp-links-card h4 {
-      font-size: 10.5px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: rgba(255,255,255,0.55); margin-bottom: 14px;
-    }
-    .cfp-link-btn {
-      display: flex; align-items: center; gap: 10px;
-      padding: 11px 16px; margin-bottom: 8px;
-      background: rgba(255,255,255,0.06); color: #fff;
-      font-size: 13px; font-weight: 600; transition: all 0.15s;
-      border: 1px solid rgba(255,255,255,0.1);
-    }
-    .cfp-link-btn:last-child { margin-bottom: 0; }
-    .cfp-link-btn:hover { background: var(--red); border-color: var(--red); color: #fff; text-decoration: none; }
-    .cfp-link-btn svg { width: 15px; height: 15px; flex-shrink: 0; }
-
-    .cfp-organizers {
-      background: var(--bg-soft); border: 1px solid var(--border);
-      border-left: 4px solid var(--red); padding: 20px 22px; margin-top: 24px;
-    }
-    .cfp-organizers h4 {
-      font-size: 11px; font-weight: 700; letter-spacing: 1.2px;
-      text-transform: uppercase; color: #000; margin-bottom: 14px;
-    }
-    .cfp-org-item {
-      font-size: 13.5px; color: var(--text-light); padding: 6px 0;
-      border-bottom: 1px solid var(--border-light); line-height: 1.5;
-    }
-    .cfp-org-item:last-child { border-bottom: none; }
-    .cfp-org-item strong { color: #000; display: block; font-size: 14px; }
-
-    /* ─── SERVICE ─── */
-    .service-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 28px; }
-    .service-col h4 {
-      font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase;
-      color: #000; margin-bottom: 16px; padding-bottom: 10px;
-      border-bottom: 3px solid var(--red);
-    }
-    .service-col ul { list-style: none; }
-    .service-col li {
-      font-size: 13.5px; color: var(--text-light); padding: 8px 0;
-      border-bottom: 1px solid var(--border-light);
-      padding-left: 16px; position: relative; line-height: 1.6;
-    }
-    .service-col li:last-child { border-bottom: none; }
-    .service-col li::before { content: '–'; position: absolute; left: 0; color: var(--red); }
-
-    /* ─── FOOTER ─── */
-    footer {
-      background: var(--red); color: rgba(255,255,255,0.75);
-      padding: 52px 0; text-align: left; padding-left: 40px;
-      border-top: none;
-    }
-    .footer-quote {
-      font-family: var(--font-serif); font-style: italic;
-      font-size: 18px; color: rgba(255,255,255,0.9);
-      max-width: 520px; margin: 0 0 28px 0; line-height: 1.7;
-    }
-    .footer-quote cite {
-      display: block; font-size: 12.5px; font-style: normal;
-      color: rgba(255,255,255,0.7); margin-top: 10px; font-family: var(--font-sans);
-      font-weight: 600; letter-spacing: 0.5px;
-    }
-    .footer-links { display: flex; justify-content: flex-start; gap: 24px; font-size: 12.5px; margin-bottom: 20px; }
-    .footer-links a { color: rgba(255,255,255,0.75); transition: color 0.15s; }
-    .footer-links a:hover { color: #fff; text-decoration: underline; }
-    .footer-copy { font-size: 12px; color: rgba(255,255,255,0.55); }
-
-    /* ─── RESPONSIVE ─── */
-    @media (max-width: 960px) {
-      .hero-layout { grid-template-columns: 1fr; }
-      .hero-photo-wrap { display: flex; justify-content: flex-start; margin-top: 8px; order: -1; }
-      .hero-photo { width: 160px; height: 196px; }
-      .hero h1 { font-size: 44px; }
-      .stats-strip { grid-template-columns: repeat(3, 1fr); }
-      .stat-item:nth-child(3) { border-right: none; }
-      .research-grid, .showcase-grid { grid-template-columns: 1fr 1fr; }
-      .exp-grid { grid-template-columns: 1fr; }
-      .edu-item { grid-template-columns: 1fr; }
-      .edu-date-col { padding: 12px 18px; flex-direction: row; gap: 8px; align-items: center; }
-      .edu-date-label { display: none; }
-      .service-grid { grid-template-columns: 1fr; }
-      .yt-banner { flex-direction: column; gap: 20px; text-align: left; }
-      .yt-btn { margin: 0 auto; }
-    }
-    @media (max-width: 640px) {
-      .container { padding: 0 20px; }
-      .hero { padding: 50px 0 48px; }
-      .hero h1 { font-size: 34px; }
-      .stats-strip { grid-template-columns: repeat(2, 1fr); }
-      .stat-item:nth-child(2) { border-right: none; }
-      .stat-item:nth-child(4) { border-right: none; }
-      .research-grid, .showcase-grid, .skills-grid { grid-template-columns: 1fr; }
-      .nav-links { display: none; flex-direction: column; position: absolute; top: 100%; left: 0; right: 0; background: var(--red); padding: 16px 20px; gap: 4px; border-bottom: 3px solid var(--red-dark); }
-      .nav-links.open { display: flex; }
-      .nav-mobile-btn { display: block; }
-      .pub-tabs { flex-wrap: wrap; }
-      .proj-item { grid-template-columns: 1fr; gap: 6px; }
-      .talk-entry { grid-template-columns: 1fr; gap: 4px; }
-      .award-entry { grid-template-columns: 48px 1fr; }
-    }
-  </style>
+  
+  <!-- CSS Stylesheet -->
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ─── NAVIGATION ─── -->
-<nav>
-  <div class="container">
-    <div class="nav-inner">
-      <button class="nav-mobile-btn" onclick="document.getElementById('navLinks').classList.toggle('open')">☰</button>
-      <div class="nav-links" id="navLinks">
-        <a href="#about" class="active" onclick="goTo('about',this)">About</a>
-        <a href="#research" onclick="goTo('research',this)">Research</a>
-        <a href="#publications" onclick="goTo('publications',this)">Publications</a>
-        <a href="#experience" onclick="goTo('experience',this)">Experience</a>
-        <a href="#teaching" onclick="goTo('teaching',this)">Teaching</a>
-        <a href="#talks" onclick="goTo('talks',this)">Talks</a>
-        <a href="#awards" onclick="goTo('awards',this)">Awards</a>
-        <a href="#service" onclick="goTo('service',this)">Service</a>
-        <a href="#cfp" onclick="goTo('cfp',this)" style="color:#ffe082;border:1px solid rgba(255,224,130,0.4);border-radius:3px;">📢 CFP</a>
+<div class="app-container">
+  
+  <!-- ==========================================================================
+       MOBILE HEADER (Visible only on screens < 1024px)
+       ========================================================================== -->
+  <header class="mobile-header">
+    <div class="mobile-brand">Dr. Mohsin<span>.AI</span></div>
+    <div class="mobile-controls">
+      <button class="theme-toggle-btn" id="themeToggleMobileBtn" aria-label="Toggle Theme">
+        <span class="theme-icon-wrap">
+          <!-- Default moon icon, JS will update -->
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </span>
+      </button>
+      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <!-- ==========================================================================
+       SIDEBAR NAVIGATION (Fixed Left on desktop, drawer on mobile)
+       ========================================================================== -->
+  <aside class="sidebar" id="sidebar">
+    <!-- Profile Info -->
+    <div class="profile-card">
+      <div class="profile-avatar-wrap">
+        <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="profile-avatar">
+      </div>
+      <h2>Dr. Muhammad Mohsin</h2>
+      <div class="profile-tagline">Postdoctoral Researcher</div>
+      <span class="profile-org-badge">University of Genoa</span>
+    </div>
+
+    <!-- Navigation Menu Links -->
+    <nav class="sidebar-nav">
+      <a href="#about" class="sidebar-link active">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M19 21v-2a4 4 0 0 0-4-4H9a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+        About
+      </a>
+      <a href="#research" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"/><path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"/></svg>
+        Research
+      </a>
+      <a href="#publications" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.5 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V7.5L14.5 2z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/><polyline points="10 9 9 9 8 9"/></svg>
+        Publications
+      </a>
+      <a href="#experience" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="7" width="20" height="14" rx="2" ry="2"/><path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/></svg>
+        Experience
+      </a>
+      <a href="#teaching" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10v6M2 10l10-5 10 5-10 5z"/><path d="M6 12v5c0 2 2 3 6 3s6-1 6-3v-5"/></svg>
+        Teaching
+      </a>
+      <a href="#talks" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+        Talks
+      </a>
+      <a href="#awards" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="7"/><polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"/></svg>
+        Awards
+      </a>
+      <a href="#service" class="sidebar-link">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"/><polyline points="2 17 12 22 22 17"/><polyline points="2 12 12 17 22 12"/></svg>
+        Service
+      </a>
+      <a href="#cfp" class="sidebar-link" style="color:var(--accent-color); border: 1px dashed var(--accent-glowing); background-color: var(--accent-soft);">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+        RTSI CFP
+      </a>
+    </nav>
+
+    <!-- Sidebar footer widgets -->
+    <div class="sidebar-footer">
+      <button class="theme-toggle-btn" id="themeToggleBtn">
+        <span class="theme-icon-wrap">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
+        </span>
+        <span id="themeToggleText">Light Mode</span>
+      </button>
+
+      <div class="sidebar-socials">
+        <a href="mailto:muhammad.mohsin@edu.unige.it" class="social-icon-btn" title="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </a>
+        <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank" class="social-icon-btn" title="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
+        </a>
+        <a href="https://www.linkedin.com/in/drmuhammadmohsin/" target="_blank" class="social-icon-btn" title="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://github.com/drmuhammadmohsin" target="_blank" class="social-icon-btn" title="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        </a>
+        <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank" class="social-icon-btn" title="ResearchGate">
+          <!-- Researchgate SVG -->
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </a>
       </div>
     </div>
-  </div>
-</nav>
+  </aside>
 
-<!-- ─── HERO ─── -->
-<section id="about">
-  <div class="hero">
-    <div class="container">
-      <div class="hero-layout">
-        <div class="hero-text">
-          <div class="hero-eyebrow">Postdoctoral Researcher</div>
-          <h1>Muhammad Mohsin, PhD</h1>
-          <div class="hero-role">AI · Computer Vision · Sustainable Circular Economy</div>
-          <div class="hero-affil">
-            <a href="https://dibris.unige.it/en" target="_blank">DIBRIS – Dept. of Informatics, Bioengineering, Robotics &amp; Systems Engineering</a><br>
-            <a href="https://unige.it/" target="_blank">University of Genoa</a>, Genoa, Italy
-          </div>
-          <p class="hero-bio">
-            I am a computer scientist specializing in AI-driven sustainable circular economy solutions, with a focus on electronic waste recycling and critical raw materials recovery. My research combines deep learning, computer vision, and edge computing to build intelligent systems for automated disassembly and sorting of waste electrical and electronic equipment (WEEE). I also work on medical imaging analysis applications.
-          </p>
-          <div class="hero-links">
-            <a href="mailto:muhammad.mohsin@edu.unige.it" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-              Email
-            </a>
-            <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.422a12.083 12.083 0 01.665 6.479A11.952 11.952 0 0012 20.055a11.952 11.952 0 00-6.824-2.998 12.078 12.078 0 01.665-6.479L12 14z"/></svg>
-              Google Scholar
-            </a>
-            <a href="https://www.linkedin.com/in/drmuhammadmohsin/" target="_blank" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 016 6v7h-4v-7a2 2 0 00-2-2 2 2 0 00-2 2v7h-4v-7a6 6 0 016-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
-              LinkedIn
-            </a>
-            <a href="https://github.com/drmuhammadmohsin" target="_blank" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
-              GitHub
-            </a>
-            <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank" class="hero-link">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
-              ResearchGate
-            </a>
-          </div>
-        </div>
-        <div class="hero-photo-wrap">
-          <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="hero-photo">
-          <div class="hero-photo-badge">University of Genoa</div>
-        </div>
-      </div>
-
-      <!-- ── NEWS & UPCOMING EVENTS ── -->
-      <div class="news-strip">
-        <div class="news-strip-label">News &amp; Upcoming Events</div>
-        <div class="news-strip-title">What's Coming Up</div>
-
-        <div class="news-event-card">
-          <div class="news-event-date-col">
-            <div class="news-event-month">Aug</div>
-            <div class="news-event-day">16</div>
-            <div class="news-event-year">2026</div>
-          </div>
-          <div class="news-event-body">
-            <div class="news-event-tag"><span class="pulse"></span> Open Call &nbsp;·&nbsp; Special Session Organizer</div>
-            <div class="news-event-title">"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</div>
-            <div class="news-event-venue">
-              📢 IEEE 10th RTSI 2026 &nbsp;·&nbsp; Aalto University, Espoo, Finland &nbsp;·&nbsp; 16–18 August 2026
+  <!-- ==========================================================================
+       MAIN SCROLLABLE CONTENT AREA
+       ========================================================================== -->
+  <main class="main-content">
+    <div class="content-wrapper">
+      
+      <!-- ─── ABOUT / HERO ─── -->
+      <section id="about" class="section">
+        <div class="about-hero">
+          <div class="about-text">
+            <span class="about-intro-badge">Postdoctoral Researcher</span>
+            <h1>Dr. Muhammad Mohsin</h1>
+            <div class="about-role-title">AI · Computer Vision · Sustainable Circular Economy</div>
+            
+            <div class="about-affiliation">
+              <a href="https://dibris.unige.it/en" target="_blank">DIBRIS – Department of Informatics, Bioengineering, Robotics &amp; Systems Engineering</a><br>
+              <a href="https://unige.it/" target="_blank">University of Genoa</a>, Genoa, Italy
             </div>
-            <div class="news-event-chips">
-              <span class="news-event-chip">AI &amp; Recycling</span>
-              <span class="news-event-chip">Computer Vision</span>
-              <span class="news-event-chip">Robotics</span>
-              <span class="news-event-chip">Edge AI</span>
-              <span class="news-event-chip">Circular Economy</span>
+            
+            <p class="about-bio">
+              I am a computer scientist specializing in AI-driven sustainable circular economy solutions, with a focus on electronic waste recycling and critical raw materials recovery. My research combines deep learning, computer vision, and edge computing to build intelligent systems for automated disassembly and sorting of waste electrical and electronic equipment (WEEE). I also work on medical imaging analysis applications.
+            </p>
+            
+            <div class="about-ctas">
+              <a href="mailto:muhammad.mohsin@edu.unige.it" class="btn-primary">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                Contact Email
+              </a>
+              <a href="#publications" class="btn-secondary">
+                View Publications
+              </a>
             </div>
           </div>
-          <div class="news-event-action">
-            <div class="news-deadline">
-              <span class="news-deadline-label">Submission Deadline</span>
-              <span class="news-deadline-val">05 Jun 2026</span>
+          
+          <div class="about-photo-wrapper">
+            <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="about-photo">
+          </div>
+        </div>
+
+        <!-- Metric Stats strip -->
+        <div class="stats-container">
+          <div class="stat-card">
+            <div class="stat-number">20+</div>
+            <div class="stat-title">Publications</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">1</div>
+            <div class="stat-title">Patent</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">200+</div>
+            <div class="stat-title">Projects Done</div>
+          </div>
+          <div class="stat-card">
+            <div class="stat-number">5+</div>
+            <div class="stat-title">Years Experience</div>
+          </div>
+        </div>
+
+        <!-- News & Deadline countdown -->
+        <div class="news-deadline-wrapper">
+          <!-- News Column -->
+          <div class="news-widget">
+            <h3 class="widget-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><path d="M16 8h2M16 12h2M16 16h2M6 8h6v8H6z"/></svg>
+              Latest News
+            </h3>
+            
+            <div class="news-timeline-item">
+              <div class="news-date">August 2026</div>
+              <div class="news-content">
+                Organizing a Special Session on <strong>"AI-Powered Innovations for Circular Economy"</strong> at IEEE RTSI 2026, Espoo, Finland.
+              </div>
             </div>
-            <a href="#cfp" onclick="goTo('cfp', document.querySelector('[href=\"#cfp\"]')); return false;" class="news-cfp-btn">
-              📄 View CFP
+
+            <div class="news-timeline-item">
+              <div class="news-date">January 2025</div>
+              <div class="news-content">
+                Co-authored and filed the Italian patent <strong>"V-PCB Demo and Dataset"</strong> for automated component sorting.
+              </div>
+            </div>
+
+            <div class="news-timeline-item">
+              <div class="news-date">January 2025</div>
+              <div class="news-content">
+                Began Postdoctoral Research Fellowship at <strong>DIBRIS, University of Genoa</strong>.
+              </div>
+            </div>
+          </div>
+
+          <!-- Deadline Countdown Card -->
+          <div class="cfp-countdown-card">
+            <span class="cfp-badge-highlight">IEEE RTSI 2026</span>
+            <div class="cfp-session-title">"AI-Powered Innovations for Circular Economy" Special Session</div>
+            <div class="cfp-venue-text">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+              Aalto University, Finland
+            </div>
+            
+            <div class="countdown-timer-grid">
+              <div class="countdown-box">
+                <div class="countdown-num" id="cdDays">00</div>
+                <div class="countdown-lbl">Days</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-num" id="cdHours">00</div>
+                <div class="countdown-lbl">Hours</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-num" id="cdMinutes">00</div>
+                <div class="countdown-lbl">Mins</div>
+              </div>
+              <div class="countdown-box">
+                <div class="countdown-num" id="cdSeconds">00</div>
+                <div class="countdown-lbl">Secs</div>
+              </div>
+            </div>
+
+            <a href="#cfp" class="cfp-action-btn">
+              <span>View CFP Details</span>
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="5" y1="12" x2="19" y2="12"/><polyline points="12 5 19 12 12 19"/></svg>
             </a>
           </div>
         </div>
+      </section>
 
-      </div>
-      <!-- ── END NEWS ── -->
+      <hr class="section-divider">
 
-    </div>
-  </div>
-</section>
-
-<!-- ─── RESEARCH ─── -->
-<section class="section" id="research" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Research Interests</div>
-      <h2 class="section-title">Areas of Focus</h2>
-    </div>
-
-    <div class="research-grid">
-      <div class="r-card">
-        <div class="r-card-icon">♻</div>
-        <h3>Circular Economy &amp; E-Waste</h3>
-        <p>AI-powered solutions for WEEE recycling, critical raw materials recovery, and sustainable electronic waste management through automated disassembly systems.</p>
-      </div>
-      <div class="r-card">
-        <div class="r-card-icon">👁</div>
-        <h3>Computer Vision &amp; Deep Learning</h3>
-        <p>Object detection, image segmentation, transformer architectures, and transfer learning for industrial and environmental applications.</p>
-      </div>
-      <div class="r-card">
-        <div class="r-card-icon">🔬</div>
-        <h3>Medical Imaging Analysis</h3>
-        <p>Deep learning for automated medical image analysis, including cancer grading systems and diagnostic assistance tools.</p>
-      </div>
-    </div>
-
-    <!-- Showcase — Recent Publications -->
-    <div class="section-header" style="margin-top:56px; margin-bottom:0;">
-      <div class="section-label">Recent Work</div>
-      <h2 class="section-title">Recent Publications</h2>
-    </div>
-    <div class="showcase-grid">
-      <!-- Card 1: Zero Trust Review -->
-      <div class="s-card">
-        <div class="s-card-body">
-          <div class="s-card-year">2025</div>
-          <div class="s-card-venue">MDPI Sensors</div>
-          <div class="s-card-title">A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains</div>
-          <div class="s-card-authors">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq</div>
-          <div class="s-card-doi"><a href="https://doi.org/10.3390/s25196118" target="_blank">↗ DOI: 10.3390/s25196118</a></div>
+      <!-- ─── RESEARCH INTERESTS ─── -->
+      <section id="research" class="section">
+        <div class="section-header">
+          <span class="section-badge">Academic focus</span>
+          <h2 class="section-title">Research Interests</h2>
+          <p class="section-desc">Developing artificial intelligence and robotics solutions to drive ecological transitions and advanced diagnostics.</p>
         </div>
-        <div class="s-card-abstract">
-          <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
-            <rect width="180" height="140" fill="#f8f8f8"/>
-            <!-- Shield -->
-            <path d="M90 15 L130 32 L130 75 Q130 105 90 125 Q50 105 50 75 L50 32 Z" fill="none" stroke="#A31F34" stroke-width="3"/>
-            <path d="M90 28 L118 41 L118 74 Q118 96 90 112 Q62 96 62 74 L62 41 Z" fill="rgba(163,31,52,0.08)"/>
-            <!-- Lock -->
-            <rect x="78" y="68" width="24" height="18" rx="2" fill="#A31F34"/>
-            <path d="M83 68 L83 62 Q83 55 90 55 Q97 55 97 62 L97 68" fill="none" stroke="#A31F34" stroke-width="2.5"/>
-            <circle cx="90" cy="77" r="3" fill="#fff"/>
-            <!-- Network nodes -->
-            <circle cx="30" cy="50" r="5" fill="none" stroke="#ccc" stroke-width="1.5"/>
-            <circle cx="150" cy="50" r="5" fill="none" stroke="#ccc" stroke-width="1.5"/>
-            <circle cx="30" cy="95" r="5" fill="none" stroke="#ccc" stroke-width="1.5"/>
-            <circle cx="150" cy="95" r="5" fill="none" stroke="#ccc" stroke-width="1.5"/>
-            <line x1="35" y1="50" x2="50" y2="42" stroke="#ddd" stroke-width="1"/>
-            <line x1="145" y1="50" x2="130" y2="42" stroke="#ddd" stroke-width="1"/>
-            <line x1="35" y1="95" x2="50" y2="88" stroke="#ddd" stroke-width="1"/>
-            <line x1="145" y1="95" x2="130" y2="88" stroke="#ddd" stroke-width="1"/>
-          </svg>
-        </div>
-      </div>
-      <!-- Card 2: AI PCB Recycling Review -->
-      <div class="s-card">
-        <div class="s-card-body">
-          <div class="s-card-year">2025</div>
-          <div class="s-card-venue">MDPI Computers</div>
-          <div class="s-card-title">Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review</div>
-          <div class="s-card-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-          <div class="s-card-doi"><a href="https://doi.org/10.3390/computers14080304" target="_blank">↗ DOI: 10.3390/computers14080304</a></div>
-        </div>
-        <div class="s-card-abstract">
-          <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
-            <rect width="180" height="140" fill="#f8f8f8"/>
-            <!-- PCB board -->
-            <rect x="30" y="30" width="120" height="80" rx="3" fill="none" stroke="#333" stroke-width="2"/>
-            <rect x="30" y="30" width="120" height="80" rx="3" fill="rgba(0,80,40,0.06)"/>
-            <!-- Traces -->
-            <polyline points="50,50 50,65 90,65" fill="none" stroke="#A31F34" stroke-width="1.5"/>
-            <polyline points="130,50 130,65 90,65" fill="none" stroke="#A31F34" stroke-width="1.5"/>
-            <polyline points="60,90 60,80 120,80 120,90" fill="none" stroke="#A31F34" stroke-width="1.5"/>
-            <!-- Components -->
-            <rect x="42" y="42" width="16" height="10" rx="1" fill="#222"/>
-            <rect x="122" y="42" width="16" height="10" rx="1" fill="#222"/>
-            <rect x="78" y="58" width="24" height="14" rx="1" fill="#333"/>
-            <circle cx="90" cy="65" r="3" fill="#A31F34"/>
-            <!-- Recycle arrows -->
-            <text x="90" y="125" text-anchor="middle" font-size="11" fill="#A31F34" font-family="Arial">♻ AI-Driven Recycling</text>
-          </svg>
-        </div>
-      </div>
-      <!-- Card 3: Edge Computing + IoT -->
-      <div class="s-card">
-        <div class="s-card-body">
-          <div class="s-card-year">2025</div>
-          <div class="s-card-venue">MDPI Computers</div>
-          <div class="s-card-title">Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT</div>
-          <div class="s-card-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-          <div class="s-card-doi"><a href="https://doi.org/10.3390/computers14020062" target="_blank">↗ DOI: 10.3390/computers14020062</a></div>
-        </div>
-        <div class="s-card-abstract">
-          <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
-            <rect width="180" height="140" fill="#f8f8f8"/>
-            <!-- Cloud / Edge server -->
-            <rect x="60" y="18" width="60" height="32" rx="4" fill="#333"/>
-            <text x="90" y="38" text-anchor="middle" font-size="9" fill="#fff" font-family="Arial" font-weight="bold">EDGE</text>
-            <!-- IoT devices -->
-            <rect x="15" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
-            <text x="29" y="98" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial">IoT</text>
-            <rect x="76" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
-            <text x="90" y="98" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial">Robot</text>
-            <rect x="137" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
-            <text x="151" y="98" text-anchor="middle" font-size="7" fill="#fff" font-family="Arial">Sensor</text>
-            <!-- Connections -->
-            <line x1="29" y1="85" x2="75" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <line x1="90" y1="85" x2="90" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <line x1="151" y1="85" x2="105" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
-            <!-- PCB at bottom -->
-            <rect x="55" y="118" width="70" height="14" rx="2" fill="#555"/>
-            <text x="90" y="128" text-anchor="middle" font-size="8" fill="#fff" font-family="Arial">Waste PCB</text>
-          </svg>
-        </div>
-      </div>
-    </div>
 
-
-  </div>
-</section>
-
-<!-- ─── PUBLICATIONS ─── -->
-<section class="section" id="publications" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Publications</h2>
-    </div>
-
-    <!-- Journal Articles -->
-    <div class="pub-section-head">Journal Articles</div>
-
-    <div class="pub-entry"><span class="pub-num">J07</span><div><span class="pub-authors">R Hussain, <strong>Muhammad Mohsin</strong>, D Khan, M Zohaib.</span> "<span class="pub-title-text">A Systematic Review of Deep Learning Approaches for Hepatopancreatic Tumor Segmentation.</span>" <span class="pub-venue">Journal of Imaging, 2026.</span> <span class="pub-doi"><a href="assets/papers pdfs/01_Hepatopancreatic_Tumor_Segmentation.pdf" target="_blank">[PDF Link]</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">J06</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, S Rovetta, F Masulli, A Cabri.</span> "<span class="pub-title-text">Transition Towards a Circular and Resource-Efficient Economy: An Artificial Intelligence Perspective.</span>" <span class="pub-venue">Applied Sciences, 2026.</span></div></div>
-
-    <div class="pub-entry"><span class="pub-num">J05</span><div><span class="pub-authors">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq.</span> "<span class="pub-title-text">A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains.</span>" <span class="pub-venue">MDPI Sensors, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.3390/s25196118" target="_blank">DOI: 10.3390/s25196118</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">J04</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review.</span>" <span class="pub-venue">MDPI Computers, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.3390/computers14080304" target="_blank">DOI: 10.3390/computers14080304</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">J03</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT.</span>" <span class="pub-venue">MDPI Computers, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.3390/computers14020062" target="_blank">DOI: 10.3390/computers14020062</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">J02</span><div><span class="pub-authors">Fatima Batool, <strong>Muhammad Mohsin</strong>, Belal Mahmoud Alwadi.</span> "<span class="pub-title-text">Green Innovation and Environmental Performance: The Moderating Roles of Governance and Policy.</span>" <span class="pub-venue">MDPI World, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.3390/world6010029" target="_blank">DOI: 10.3390/world6010029</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">J01</span><div><span class="pub-authors">Fatima Batool, <strong>Muhammad Mohsin</strong>.</span> "<span class="pub-title-text">Impact of Green Innovation on Business Sustainability of Firms and the Mediating Role of Green Intellectual Capital.</span>" <span class="pub-venue">Educational Administration: Theory and Practice, 30(4), 2024.</span> <span class="pub-doi"><a href="https://doi.org/10.53555/kuey.v30i4.1528" target="_blank">DOI: 10.53555/kuey.v30i4.1528</a></span></div></div>
-
-    <!-- Conference Papers -->
-    <div class="pub-section-head" style="margin-top:48px;">Conference Papers</div>
-
-    <div class="pub-entry"><span class="pub-num">C12</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management.</span>" <span class="pub-venue">IEEE 9th RTSI, Gammarth, Tunisia, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.1109/RTSI64020.2025.11212336" target="_blank">DOI: 10.1109/RTSI64020.2025.11212336</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C11</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards.</span>" <span class="pub-venue">IEEE ECIS 2025, Yueyang, China.</span> <span class="pub-doi"><a href="https://doi.org/10.1109/ECIS65594.2025.11086768" target="_blank">DOI: 10.1109/ECIS65594.2025.11086768</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C10</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection.</span>" <span class="pub-venue">IEEE 9th RTSI, Gammarth, Tunisia, 2025.</span> <span class="pub-doi"><a href="https://doi.org/10.1109/RTSI64020.2025.11212252" target="_blank">DOI: 10.1109/RTSI64020.2025.11212252</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C09</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards.</span>" <span class="pub-venue">ICASET 2025, Kenitra, Morocco.</span> <span class="pub-doi"><a href="https://doi.org/10.1007/978-3-031-98334-4_13" target="_blank">DOI: 10.1007/978-3-031-98334-4_13</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C08</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri.</span> "<span class="pub-title-text">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach.</span>" <span class="pub-venue">ApplePies 2024, Polytechnic University of Turin.</span> <span class="pub-doi"><a href="https://doi.org/10.1007/978-3-031-84100-2_21" target="_blank">DOI: 10.1007/978-3-031-84100-2_21</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C07</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Danilo Greco, Alberto Cabri.</span> "<span class="pub-title-text">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards.</span>" <span class="pub-venue">IEEE RTSI 2024, Politecnico di Milano.</span> <span class="pub-doi"><a href="https://doi.org/10.1109/RTSI61910.2024.10761364" target="_blank">DOI: 10.1109/RTSI61910.2024.10761364</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C06</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Xianlai Zeng, Stefano Rovetta, Francesco Masulli.</span> "<span class="pub-title-text">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards.</span>" <span class="pub-venue">ICWMT19, Hangzhou, China, 2024.</span> <span class="pub-doi"><a href="https://doi.org/10.48550/arXiv.2406.16593" target="_blank">DOI: 10.48550/arXiv.2406.16593</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C05</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Alberto Cabri.</span> "<span class="pub-title-text">Virtual Mines – Component-level recycling of printed circuit boards using deep learning.</span>" <span class="pub-venue">WIRN 2023, Vietri sul Mare, Italy.</span> <span class="pub-doi"><a href="https://doi.org/10.48550/arXiv.2406.17162" target="_blank">DOI: 10.48550/arXiv.2406.17162</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C04</span><div><span class="pub-authors">Alberto Cabri, Francesco Masulli, Stefano Rovetta, <strong>Muhammad Mohsin</strong>.</span> "<span class="pub-title-text">Recovering Critical Raw Materials from WEEE using Artificial Intelligence.</span>" <span class="pub-venue">MAS2022, Rome, Italy.</span></div></div>
-    <div class="pub-entry"><span class="pub-num">C03</span><div><span class="pub-authors"><strong>Muhammad Mohsin</strong>, Arslan Shaukat, Usman Akram, Muhammad Kaab Zarrar.</span> "<span class="pub-title-text">Automatic Prostate Cancer Grading Using Deep Architectures.</span>" <span class="pub-venue">IEEE AICCSA 2021, Tangier, Morocco.</span> <span class="pub-doi"><a href="https://doi.org/10.1109/AICCSA53542.2021.9686869" target="_blank">DOI: 10.1109/AICCSA53542.2021.9686869</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C02</span><div><span class="pub-authors">Arslan Shaukat, Ammar Younis, Usman Akram, <strong>Muhammad Mohsin</strong>, Zartasha Mustansir.</span> "<span class="pub-title-text">Towards Automatic Recognition Sound Observed in Daily Activity.</span>" <span class="pub-venue">IEEE ICCI*CC 2019, Milan, Italy.</span> <span class="pub-doi"><a href="https://doi.org/10.1109/ICCICC46617.2019.9146067" target="_blank">DOI: 10.1109/ICCICC46617.2019.9146067</a></span></div></div>
-    <div class="pub-entry"><span class="pub-num">C01</span><div><span class="pub-authors">Muhammad Kaab Zarrar, Farhan Hussain, <strong>Muhammad Mohsin</strong>, Rubab Sheikh.</span> "<span class="pub-title-text">Latest Trends in Automatic Glioma Tumor Segmentation and an Improved CNN-based Solution.</span>" <span class="pub-venue">IEEE MACS 2019, Karachi, Pakistan.</span> <span class="pub-doi"><a href="https://doi.org/10.1109/MACS48846.2019.9024815" target="_blank">DOI: 10.1109/MACS48846.2019.9024815</a></span></div></div>
-
-    <!-- Patent -->
-    <div class="pub-section-head" style="margin-top:48px;">Patents</div>
-    <div class="patent-card" style="margin-top:16px;">
-      <h4><span style="color:var(--red);font-size:12px;font-weight:700;margin-right:10px;">P01</span> V-PCB DEMO AND DATASET</h4>
-      <div class="pmeta">
-        <strong>Inventors:</strong> Francesco Masulli, Muhammad Mohsin, Stefano Rovetta, Alberto Cabri<br>
-        <strong>Registration:</strong> D000026014 &nbsp;·&nbsp; <strong>Country:</strong> Italy<br>
-        <strong>Filed:</strong> January 8, 2025 &nbsp;·&nbsp; <strong>Granted:</strong> May 30, 2025
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── EXPERIENCE ─── -->
-<section class="section" id="experience" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Professional Experience</h2>
-    </div>
-    <div class="exp-grid">
-      <div class="exp-card">
-        <div class="exp-date">Jan 2025 – Present</div>
-        <h3>Postdoctoral Researcher</h3>
-        <div class="exp-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-        <div class="exp-desc">Advancing AI techniques for circular economy and critical raw materials recovery from electronic waste.</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-date">Sep 2025 – Present</div>
-        <h3>Cultore della Materia</h3>
-        <div class="exp-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-        <div class="exp-desc">Contributing to teaching activities, student mentoring, exam support, and academic supervision.</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-date">Oct 2024 – Present</div>
-        <h3>Teaching Assistant</h3>
-        <div class="exp-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-        <div class="exp-desc">Tutor, lab demonstrator, and teaching support in Computer Science and Data Management courses.</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-date">Aug – Sep 2025</div>
-        <h3>Consultant</h3>
-        <div class="exp-org">Vega Research Laboratories (VRLabs)</div>
-        <div class="exp-desc">Developed computer vision system for electronic component classification. Implemented clustering algorithms for waste PCB categorization.</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-date">Dec 2023 – May 2024</div>
-        <h3>Visiting PhD Researcher</h3>
-        <div class="exp-org">Tsinghua University, School of Environment, Beijing, China</div>
-        <div class="exp-desc">Collaborated on e-waste recycling research. Developed multi-criteria algorithms for recyclability measurement.</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-date">Jan 2022 – May 2025</div>
-        <h3>PhD Researcher</h3>
-        <div class="exp-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, University of Genoa &amp; VRLabs</div>
-        <div class="exp-desc">Developed V-PCB dataset and computer vision models for automated selective disassembly of waste PCBs.</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-date">Aug 2019 – Jul 2021</div>
-        <h3>Research Assistant</h3>
-        <div class="exp-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
-        <div class="exp-desc">Conducted medical imaging analysis research. Work selected for JEJU National University, South Korea.</div>
-      </div>
-      <div class="exp-card">
-        <div class="exp-date">Feb 2017 – Present</div>
-        <h3>Machine Learning Expert (Freelance)</h3>
-        <div class="exp-org">Fiverr &amp; Upwork</div>
-        <div class="exp-desc">Completed 200+ ML/DL projects with $10,000+ in total revenue.</div>
-      </div>
-    </div>
-
-    <div class="section-header" style="margin-top:64px; margin-bottom:24px;">
-      <h2 class="section-title">Education</h2>
-    </div>
-    <div class="edu-list">
-      <div class="edu-item">
-        <div class="edu-date">2022 – 2025</div>
-        <h3>PhD in Computer Science</h3>
-        <div class="edu-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-        <div class="edu-desc">Thesis: Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-date">2017 – 2021</div>
-        <h3>MS in Computer Engineering</h3>
-        <div class="edu-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
-        <div class="edu-desc">Thesis: Automatic Prostate Cancer Grading Using Deep Architectures</div>
-      </div>
-      <div class="edu-item">
-        <div class="edu-date">2013 – 2017</div>
-        <h3>BSc in Computer Engineering</h3>
-        <div class="edu-org">University of Engineering and Technology (UET) Taxila, Pakistan</div>
-      </div>
-    </div>
-
-    <div class="section-header" style="margin-top:64px; margin-bottom:28px;">
-      <div class="section-label">Core Competencies</div>
-      <h2 class="section-title">Technical Skills</h2>
-    </div>
-    <div class="skills-grid">
-      <div class="skill-card"><h4>AI &amp; Machine Learning</h4><div class="skill-tags"><span class="skill-tag">TensorFlow</span><span class="skill-tag">Keras</span><span class="skill-tag">PyTorch</span><span class="skill-tag">OpenCV</span><span class="skill-tag">Deep Learning</span><span class="skill-tag">Transfer Learning</span><span class="skill-tag">Computer Vision</span><span class="skill-tag">NLP</span></div></div>
-      <div class="skill-card"><h4>Programming Languages</h4><div class="skill-tags"><span class="skill-tag">Python</span><span class="skill-tag">C/C++</span><span class="skill-tag">Java</span><span class="skill-tag">R</span><span class="skill-tag">MATLAB</span><span class="skill-tag">SQL</span><span class="skill-tag">Shell</span><span class="skill-tag">HDL</span></div></div>
-      <div class="skill-card"><h4>Tools &amp; Platforms</h4><div class="skill-tags"><span class="skill-tag">Jupyter</span><span class="skill-tag">Google Colab</span><span class="skill-tag">VS Code</span><span class="skill-tag">Git</span><span class="skill-tag">Docker</span><span class="skill-tag">PostgreSQL</span><span class="skill-tag">PyCharm</span></div></div>
-      <div class="skill-card"><h4>Hardware &amp; Embedded</h4><div class="skill-tags"><span class="skill-tag">Raspberry Pi</span><span class="skill-tag">Jetson Nano</span><span class="skill-tag">Arduino</span><span class="skill-tag">ESP32</span><span class="skill-tag">FPGAs</span><span class="skill-tag">Xilinx</span><span class="skill-tag">FreeCAD</span></div></div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── TEACHING ─── -->
-<section class="section" id="teaching" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Pedagogy</div>
-      <h2 class="section-title">Teaching</h2>
-    </div>
-    <p style="font-size:14px; color:var(--muted); margin-bottom:32px;">
-      Teaching Assistant at <a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy
-    </p>
-
-    <div class="course-group-label">2025 – 2026</div>
-    <div class="course-entry"><div><h4><a href="https://corsi.unige.it/en/off.f/2025/ins/76953" target="_blank">Data Warehousing</a></h4></div><div class="course-meta">MSc Computer Science · Code: 101798</div></div>
-    <div class="course-entry"><div><h4><a href="https://corsi.unige.it/en/off.f/2025/ins/71595" target="_blank">Introduction to Computer Science and Programming</a></h4></div><div class="course-meta">BSc Computer Engineering · Code: 114602</div></div>
-    <div class="course-entry"><div><h4>Advanced Data Management</h4></div><div class="course-meta">MSc Computer Science</div></div>
-    <div class="course-entry"><div><h4>Fondamenti di Ingegneria del Software</h4></div><div class="course-meta">BSc Computer Engineering</div></div>
-
-    <div class="course-group-label">2024 – 2025</div>
-    <div class="course-entry"><div><h4><a href="https://corsi.unige.it/en/off.f/2024/ins/71611" target="_blank">Data Warehousing</a></h4></div><div class="course-meta">MSc Computer Science · Code: 101798</div></div>
-    <div class="course-entry"><div><h4><a href="https://corsi.unige.it/en/off.f/2024/ins/66509" target="_blank">Introduction to Computer Science and Programming</a></h4></div><div class="course-meta">BSc Computer Engineering · Code: 114602</div></div>
-
-  </div>
-</section>
-
-<!-- ─── TALKS ─── -->
-<section class="section" id="talks" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Presentations & Talks</h2>
-    </div>
-    <div class="talks-grid">
-      <div class="talk-entry">
-        <div><div class="talk-title"><a href="https://artificial-intelligence.hspioa.org/speakers/muhammad-mohsin" target="_blank">Valorization of WEEE: Integrating AI into Sustainable WEEE Management</a></div><div class="talk-where">4th Global Summit on AI (GSAI 2025)</div></div>
-        <div class="talk-date">June 10–11, 2025</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">AI Solutions for Sustainable Management of WEEE</div><div class="talk-where">University of Opole, Poland</div></div>
-        <div class="talk-date">Dec 15–19, 2025</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management.</div><div class="talk-where">IEEE 9th RTSI, Gammarth, Tunisia, 2025</div></div>
-        <div class="talk-date">2025</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards.</div><div class="talk-where">IEEE ECIS 2025, Yueyang, China</div></div>
-        <div class="talk-date">2025</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection.</div><div class="talk-where">IEEE 9th RTSI, Gammarth, Tunisia, 2025</div></div>
-        <div class="talk-date">2025</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards.</div><div class="talk-where">ICASET 2025, Kenitra, Morocco</div></div>
-        <div class="talk-date">2025</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach.</div><div class="talk-where">ApplePies 2024, Polytechnic University of Turin</div></div>
-        <div class="talk-date">2024</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards.</div><div class="talk-where">IEEE RTSI 2024, Politecnico di Milano</div></div>
-        <div class="talk-date">2024</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards.</div><div class="talk-where">ICWMT19, Hangzhou, China, 2024</div></div>
-        <div class="talk-date">2024</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Virtual Mines – Component-level recycling of printed circuit boards using deep learning.</div><div class="talk-where">WIRN 2023, Vietri sul Mare, Italy</div></div>
-        <div class="talk-date">2023</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence.</div><div class="talk-where">MAS2022, Rome, Italy</div></div>
-        <div class="talk-date"></div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Automatic Prostate Cancer Grading Using Deep Architectures.</div><div class="talk-where">IEEE AICCSA 2021, Tangier, Morocco</div></div>
-        <div class="talk-date">2021</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Towards Automatic Recognition Sound Observed in Daily Activity.</div><div class="talk-where">IEEE ICCI*CC 2019, Milan, Italy</div></div>
-        <div class="talk-date">2019</div>
-      </div>
-      <div class="talk-entry">
-        <div><div class="talk-title">Latest Trends in Automatic Glioma Tumor Segmentation and an Improved CNN-based Solution.</div><div class="talk-where">IEEE MACS 2019, Karachi, Pakistan</div></div>
-        <div class="talk-date">2019</div>
-      </div>
-
-    </div>
-  </div>
-</section>
-
-<!-- ─── AWARDS ─── -->
-<section class="section" id="awards" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <h2 class="section-title">Awards &amp; Honors</h2>
-    </div>
-    <ul class="awards-list">
-      <li class="award-entry"><div class="award-year">2026</div><div class="award-text">PostDoc Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genova</a></div></li>
-      <li class="award-entry"><div class="award-year">2025</div><div class="award-text">Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></div></li>
-      <li class="award-entry"><div class="award-year">2022</div><div class="award-text">PON-PhD Scholarship in Computer Science</div></li>
-      <li class="award-entry"><div class="award-year">2019</div><div class="award-text">Research Grant, NUST Islamabad</div></li>
-      <li class="award-entry"><div class="award-year">2019</div><div class="award-text">Selected for JEJU National University ML Camp, South Korea</div></li>
-      <li class="award-entry"><div class="award-year">2017</div><div class="award-text">PEEF Scholarship for MS at NUST</div></li>
-      <li class="award-entry"><div class="award-year">2014</div><div class="award-text">HEC Scholarship, UET Taxila, Pakistan</div></li>
-    </ul>
-  </div>
-</section>
-
-<!-- ─── CALL FOR PAPERS ─── -->
-<section class="section" id="cfp" style="display:none;">
-  <div class="container">
-
-    <!-- Two-column page layout: left heading | right content -->
-    <div class="cfp-page-layout">
-
-      <!-- LEFT: sticky heading column -->
-      <div class="cfp-left-col">
-        <div class="cfp-left-label">IEEE RTSI 2026</div>
-        <h2 class="cfp-left-title">Call for Papers</h2>
-        <p class="cfp-left-subtitle">Special Session</p>
-        <div class="cfp-left-divider"></div>
-        <div class="cfp-date-card">
-          <h4>Important Dates</h4>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Submission</span>
-            <span class="cfp-date-val highlight">05 Jun 2026</span>
+        <div class="research-interests-grid">
+          <!-- CE -->
+          <div class="interest-card">
+            <div class="interest-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
+            </div>
+            <h3>Circular Economy &amp; E-Waste</h3>
+            <p>AI-powered computer vision solutions for WEEE recycling, critical raw materials recovery, and sustainable electronic waste management through automated disassembly systems.</p>
           </div>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Notification</span>
-            <span class="cfp-date-val">15 Jun 2026</span>
+          <!-- CV -->
+          <div class="interest-card">
+            <div class="interest-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <h3>Computer Vision &amp; Deep Learning</h3>
+            <p>Real-time object detection, component segmentation, transformer architectures, multi-stage transfer learning, and explainability heatmaps for industrial recycling pipelines.</p>
           </div>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Conference</span>
-            <span class="cfp-date-val">16–18 Aug 2026</span>
-          </div>
-          <div class="cfp-date-row">
-            <span class="cfp-date-label">Venue</span>
-            <span class="cfp-date-val">Espoo, Finland</span>
+          <!-- Medical -->
+          <div class="interest-card">
+            <div class="interest-icon-box">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+            </div>
+            <h3>Medical Imaging Analysis</h3>
+            <p>Deep learning networks applied to automated tumor segmentation (hepatopancreatic tumors, glioma tumor segmentation) and prostate cancer grading architectures.</p>
           </div>
         </div>
-        <div class="cfp-links-card" style="margin-top:16px;">
-          <h4>Links</h4>
-          <a href="https://2026.ieee-rtsi.org/track-list/" target="_blank" class="cfp-link-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-            Conference Tracks
+
+        <!-- Featured / Recent Work Showcase -->
+        <h3 style="margin-top: 3.5rem; margin-bottom: 1.5rem; font-size: 1.25rem;">Featured Publications</h3>
+        <div class="featured-pubs-grid">
+          <!-- Showcase 1 -->
+          <div class="showcase-pub-card">
+            <div class="showcase-pub-details">
+              <div class="showcase-pub-meta">
+                <span class="showcase-pub-year">2025</span>
+                <span class="showcase-pub-venue">MDPI Sensors</span>
+              </div>
+              <h3>A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains</h3>
+              <div class="showcase-pub-authors">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq</div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3390/s25196118" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
+                  View Publisher Website
+                </a>
+              </div>
+            </div>
+            <div class="showcase-pub-abstract-graphic" aria-hidden="true">
+              <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="140" fill="transparent"/>
+                <path d="M90 15 L130 32 L130 75 Q130 105 90 125 Q50 105 50 75 L50 32 Z" fill="none" stroke="#A31F34" stroke-width="3"/>
+                <path d="M90 28 L118 41 L118 74 Q118 96 90 112 Q62 96 62 74 L62 41 Z" fill="rgba(163,31,52,0.08)"/>
+                <rect x="78" y="68" width="24" height="18" rx="2" fill="#A31F34"/>
+                <path d="M83 68 L83 62 Q83 55 90 55 Q97 55 97 62 L97 68" fill="none" stroke="#A31F34" stroke-width="2.5"/>
+                <circle cx="90" cy="77" r="3" fill="#fff"/>
+                <circle cx="30" cy="50" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
+                <circle cx="150" cy="50" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
+                <circle cx="30" cy="95" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
+                <circle cx="150" cy="95" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
+                <line x1="35" y1="50" x2="50" y2="42" stroke="var(--border-color)" stroke-width="1"/>
+                <line x1="145" y1="50" x2="130" y2="42" stroke="var(--border-color)" stroke-width="1"/>
+                <line x1="35" y1="95" x2="50" y2="88" stroke="var(--border-color)" stroke-width="1"/>
+                <line x1="145" y1="95" x2="130" y2="88" stroke="var(--border-color)" stroke-width="1"/>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Showcase 2 -->
+          <div class="showcase-pub-card">
+            <div class="showcase-pub-details">
+              <div class="showcase-pub-meta">
+                <span class="showcase-pub-year">2025</span>
+                <span class="showcase-pub-venue">MDPI Computers</span>
+              </div>
+              <h3>Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review</h3>
+              <div class="showcase-pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3390/computers14080304" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
+                  View Publisher Website
+                </a>
+              </div>
+            </div>
+            <div class="showcase-pub-abstract-graphic" aria-hidden="true">
+              <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="140" fill="transparent"/>
+                <rect x="30" y="30" width="120" height="80" rx="3" fill="none" stroke="var(--text-primary)" stroke-width="2"/>
+                <rect x="30" y="30" width="120" height="80" rx="3" fill="rgba(163,31,52,0.04)"/>
+                <polyline points="50,50 50,65 90,65" fill="none" stroke="#A31F34" stroke-width="1.5"/>
+                <polyline points="130,50 130,65 90,65" fill="none" stroke="#A31F34" stroke-width="1.5"/>
+                <polyline points="60,90 60,80 120,80 120,90" fill="none" stroke="#A31F34" stroke-width="1.5"/>
+                <rect x="42" y="42" width="16" height="10" rx="1" fill="var(--text-secondary)"/>
+                <rect x="122" y="42" width="16" height="10" rx="1" fill="var(--text-secondary)"/>
+                <rect x="78" y="58" width="24" height="14" rx="1" fill="var(--text-primary)"/>
+                <circle cx="90" cy="65" r="3" fill="#A31F34"/>
+                <text x="90" y="125" text-anchor="middle" font-size="10" fill="#A31F34" font-family="var(--font-sans)" font-weight="700">♻ AI-Driven Recycling</text>
+              </svg>
+            </div>
+          </div>
+
+          <!-- Showcase 3 -->
+          <div class="showcase-pub-card">
+            <div class="showcase-pub-details">
+              <div class="showcase-pub-meta">
+                <span class="showcase-pub-year">2025</span>
+                <span class="showcase-pub-venue">MDPI Computers</span>
+              </div>
+              <h3>Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT</h3>
+              <div class="showcase-pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3390/computers14020062" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
+                  View Publisher Website
+                </a>
+              </div>
+            </div>
+            <div class="showcase-pub-abstract-graphic" aria-hidden="true">
+              <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
+                <rect width="180" height="140" fill="transparent"/>
+                <rect x="60" y="18" width="60" height="32" rx="4" fill="var(--text-primary)"/>
+                <text x="90" y="38" text-anchor="middle" font-size="9" fill="var(--bg-primary)" font-family="var(--font-heading)" font-weight="bold">EDGE</text>
+                <rect x="15" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
+                <text x="29" y="97" text-anchor="middle" font-size="7" fill="#fff" font-family="var(--font-sans)">IoT</text>
+                <rect x="76" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
+                <text x="90" y="97" text-anchor="middle" font-size="7" fill="#fff" font-family="var(--font-sans)">Robot</text>
+                <rect x="137" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
+                <text x="151" y="97" text-anchor="middle" font-size="7" fill="#fff" font-family="var(--font-sans)">Sensor</text>
+                <line x1="29" y1="85" x2="75" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <line x1="90" y1="85" x2="90" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <line x1="151" y1="85" x2="105" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
+                <rect x="55" y="118" width="70" height="14" rx="2" fill="var(--text-secondary)"/>
+                <text x="90" y="128" text-anchor="middle" font-size="8" fill="var(--bg-primary)" font-family="var(--font-sans)">Waste PCB</text>
+              </svg>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ─── PUBLICATIONS ─── -->
+      <section id="publications" class="section">
+        <div class="section-header">
+          <span class="section-badge">Bibliography</span>
+          <h2 class="section-title">Publications</h2>
+          <p class="section-desc">Search and filter patent, conference, and journal papers.</p>
+        </div>
+
+        <!-- Publication Controls Widget -->
+        <div class="publications-controls">
+          <!-- Text Search -->
+          <div class="publications-search-bar">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+            <input type="text" id="pubSearch" placeholder="Search by title, author, venue, or year..." class="publications-search-input">
+          </div>
+          
+          <!-- Tabs filters -->
+          <div class="publications-tabs-row">
+            <button class="pub-filter-btn active" data-filter="all">All <span class="pub-filter-count">0</span></button>
+            <button class="pub-filter-btn" data-filter="journal">Journals <span class="pub-filter-count">0</span></button>
+            <button class="pub-filter-btn" data-filter="conference">Conferences <span class="pub-filter-count">0</span></button>
+            <button class="pub-filter-btn" data-filter="patent">Patents <span class="pub-filter-count">0</span></button>
+          </div>
+        </div>
+
+        <div class="pub-list">
+          
+          <!-- YEAR 2026 -->
+          <div class="pub-list-year-group" data-year="2026">
+            <div class="pub-year-header">2026</div>
+
+            <!-- J07 (Index: 1) -->
+            <div class="pub-entry-item" data-type="journal">
+              <div class="pub-index">1</div>
+              <div class="pub-details">
+                <div class="pub-title">A Systematic Review of Deep Learning Approaches for Hepatopancreatic Tumor Segmentation</div>
+                <div class="pub-authors-list">R Hussain, <strong>Muhammad Mohsin</strong>, D Khan, M Zohaib</div>
+                <div>
+                  <span class="pub-badge-type journal">Journal</span>
+                  <span class="pub-venue-desc">Journal of Imaging, 2026</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="assets/papers pdfs/01_Hepatopancreatic_Tumor_Segmentation.pdf" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                    PDF
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="abs-j07">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    Abstract
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="bib-j07">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    BibTeX
+                  </a>
+                </div>
+                <!-- Abstract Collapsible Panel -->
+                <div class="pub-collapsible-panel" id="abs-j07">
+                  <div class="pub-panel-content">
+                    <div class="pub-panel-title">Abstract</div>
+                    Hepatopancreatic tumors present a critical imaging diagnostic challenge due to varying structures and sizes. This systematic review synthesizes recent developments in artificial intelligence and deep learning methods specifically targeted toward automated segmentation of hepatopancreatic tumors. We review state-of-the-art CNNs and visual transformers (ViTs), contrast dataset benchmarks, and discuss research challenges including pixel imbalances and clinical workflow deployment obstacles.
+                  </div>
+                </div>
+                <!-- BibTeX Collapsible Panel -->
+                <div class="pub-collapsible-panel" id="bib-j07">
+                  <div class="pub-panel-content" style="position:relative;">
+                    <div class="pub-panel-title">BibTeX</div>
+                    <button class="copy-bibtex-btn">Copy</button>
+                    <code class="bibtex-code">@article{hussain2026systematic,
+  title={A Systematic Review of Deep Learning Approaches for Hepatopancreatic Tumor Segmentation},
+  author={Hussain, R and Mohsin, Muhammad and Khan, D and Zohaib, M},
+  journal={Journal of Imaging},
+  year={2026},
+  publisher={MDPI}
+}</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- J06 (Index: 2) -->
+            <div class="pub-entry-item" data-type="journal">
+              <div class="pub-index">2</div>
+              <div class="pub-details">
+                <div class="pub-title">Transition Towards a Circular and Resource-Efficient Economy: An Artificial Intelligence Perspective</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type journal">Journal</span>
+                  <span class="pub-venue-desc">Applied Sciences, 2026</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="#" class="pub-action-link" data-target="abs-j06">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    Abstract
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="bib-j06">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    BibTeX
+                  </a>
+                </div>
+                <div class="pub-collapsible-panel" id="abs-j06">
+                  <div class="pub-panel-content">
+                    <div class="pub-panel-title">Abstract</div>
+                    Transitioning to a circular economy is necessary to mitigate raw materials depletion. This paper investigates artificial intelligence's paradigm-shifting capabilities for optimizing product lifecycles, resource management, sorting efficiency, and waste valuation. By reviewing automated supply chains and disassembly mechanisms, we highlight how AI acts as an enabler for industrial resource efficiency.
+                  </div>
+                </div>
+                <div class="pub-collapsible-panel" id="bib-j06">
+                  <div class="pub-panel-content" style="position:relative;">
+                    <div class="pub-panel-title">BibTeX</div>
+                    <button class="copy-bibtex-btn">Copy</button>
+                    <code class="bibtex-code">@article{mohsin2026transition,
+  title={Transition Towards a Circular and Resource-Efficient Economy: An Artificial Intelligence Perspective},
+  author={Mohsin, Muhammad and Rovetta, Stefano and Masulli, Francesco and Cabri, Alberto},
+  journal={Applied Sciences},
+  year={2026},
+  publisher={MDPI}
+}</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- YEAR 2025 -->
+          <div class="pub-list-year-group" data-year="2025">
+            <div class="pub-year-header">2025</div>
+
+            <!-- P01 (Index: 3) -->
+            <div class="pub-entry-item" data-type="patent">
+              <div class="pub-index">3</div>
+              <div class="pub-details">
+                <div class="pub-title">V-PCB DEMO AND DATASET</div>
+                <div class="pub-authors-list">Francesco Masulli, <strong>Muhammad Mohsin</strong>, Stefano Rovetta, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type patent">Patent</span>
+                  <span class="pub-venue-desc">Registration: D000026014 · Italy (Granted May 30, 2025)</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="#" class="pub-action-link" data-target="abs-p01">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    Abstract
+                  </a>
+                </div>
+                <div class="pub-collapsible-panel" id="abs-p01">
+                  <div class="pub-panel-content">
+                    <div class="pub-panel-title">Patent Description</div>
+                    A system and database model for automated recognition, segmentation, and selective sorting of components on printed circuit boards (PCBs). Utilizes multi-modal convolutional networks trained to identify critical raw materials (CRMs) on recycling conveyor belts, facilitating robotic disassembly.
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- J05 (Index: 4) -->
+            <div class="pub-entry-item" data-type="journal">
+              <div class="pub-index">4</div>
+              <div class="pub-details">
+                <div class="pub-title">A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains</div>
+                <div class="pub-authors-list">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq</div>
+                <div>
+                  <span class="pub-badge-type journal">Journal</span>
+                  <span class="pub-venue-desc">MDPI Sensors, 2025</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.3390/s25196118" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI Link
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="abs-j05">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    Abstract
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="bib-j05">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    BibTeX
+                  </a>
+                </div>
+                <div class="pub-collapsible-panel" id="abs-j05">
+                  <div class="pub-panel-content">
+                    <div class="pub-panel-title">Abstract</div>
+                    Zero Trust Architecture (ZTA) has emerged as a cornerstone in securing enterprise networks under the 'never trust, always verify' paradigm. This review provides a comprehensive analysis of ZTA implementation patterns, engineering challenges, deployment paradigms across cloud, IoT, and industrial networks, and addresses the open research questions in trust score optimization.
+                  </div>
+                </div>
+                <div class="pub-collapsible-panel" id="bib-j05">
+                  <div class="pub-panel-content" style="position:relative;">
+                    <div class="pub-panel-title">BibTeX</div>
+                    <button class="copy-bibtex-btn">Copy</button>
+                    <code class="bibtex-code">@article{mushtaq2025systematic,
+  title={A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains},
+  author={Mushtaq, Sadaf and Mohsin, Muhammad and Mushtaq, Muhammad Mujahid},
+  journal={Sensors},
+  volume={25},
+  number={19},
+  pages={6118},
+  year={2025},
+  publisher={MDPI}
+}</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- J04 (Index: 5) -->
+            <div class="pub-entry-item" data-type="journal">
+              <div class="pub-index">5</div>
+              <div class="pub-details">
+                <div class="pub-title">Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type journal">Journal</span>
+                  <span class="pub-venue-desc">MDPI Computers, 2025</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.3390/computers14080304" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI Link
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="abs-j04">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    Abstract
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="bib-j04">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    BibTeX
+                  </a>
+                </div>
+                <div class="pub-collapsible-panel" id="abs-j04">
+                  <div class="pub-panel-content">
+                    <div class="pub-panel-title">Abstract</div>
+                    Waste-Printed Circuit Boards (WPCBs) are complex and contain critical raw materials alongside toxic elements. This paper reviews key advancements in AI applications for WPCB recycling, including computer vision systems for component detection, automated robotic systems, sorting classification models, and highlights how deep learning boosts recovery yields.
+                  </div>
+                </div>
+                <div class="pub-collapsible-panel" id="bib-j04">
+                  <div class="pub-panel-content" style="position:relative;">
+                    <div class="pub-panel-title">BibTeX</div>
+                    <button class="copy-bibtex-btn">Copy</button>
+                    <code class="bibtex-code">@article{mohsin2025artificial,
+  title={Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review},
+  author={Mohsin, Muhammad and Rovetta, Stefano and Masulli, Francesco and Cabri, Alberto},
+  journal={Computers},
+  volume={14},
+  number={8},
+  pages={304},
+  year={2025},
+  publisher={MDPI}
+}</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- J03 (Index: 6) -->
+            <div class="pub-entry-item" data-type="journal">
+              <div class="pub-index">6</div>
+              <div class="pub-details">
+                <div class="pub-title">Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type journal">Journal</span>
+                  <span class="pub-venue-desc">MDPI Computers, 2025</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.3390/computers14020062" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI Link
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="abs-j03">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
+                    Abstract
+                  </a>
+                  <a href="#" class="pub-action-link" data-target="bib-j03">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
+                    BibTeX
+                  </a>
+                </div>
+                <div class="pub-collapsible-panel" id="abs-j03">
+                  <div class="pub-panel-content">
+                    <div class="pub-panel-title">Abstract</div>
+                    Robotic disassembly requires low-latency processing of video feeds to identify electronic elements. This paper outlines an edge computing and IoT infrastructure framework to process deep learning object detection models directly on-site, decreasing latency, data transmission overheads, and enabling real-time robotic interaction.
+                  </div>
+                </div>
+                <div class="pub-collapsible-panel" id="bib-j03">
+                  <div class="pub-panel-content" style="position:relative;">
+                    <div class="pub-panel-title">BibTeX</div>
+                    <button class="copy-bibtex-btn">Copy</button>
+                    <code class="bibtex-code">@article{mohsin2025automatic,
+  title={Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT},
+  author={Mohsin, Muhammad and Rovetta, Stefano and Masulli, Francesco and Cabri, Alberto},
+  journal={Computers},
+  volume={14},
+  number={2},
+  pages={62},
+  year={2025},
+  publisher={MDPI}
+}</code>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- J02 (Index: 7) -->
+            <div class="pub-entry-item" data-type="journal">
+              <div class="pub-index">7</div>
+              <div class="pub-details">
+                <div class="pub-title">Green Innovation and Environmental Performance: The Moderating Roles of Governance and Policy</div>
+                <div class="pub-authors-list">Fatima Batool, <strong>Muhammad Mohsin</strong>, Belal Mahmoud Alwadi</div>
+                <div>
+                  <span class="pub-badge-type journal">Journal</span>
+                  <span class="pub-venue-desc">MDPI World, 2025</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.3390/world6010029" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C12 (Index: 8) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">8</div>
+              <div class="pub-details">
+                <div class="pub-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">IEEE 9th RTSI, Gammarth, Tunisia, 2025</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1109/RTSI64020.2025.11212336" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C11 (Index: 9) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">9</div>
+              <div class="pub-details">
+                <div class="pub-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">IEEE ECIS 2025, Yueyang, China</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1109/ECIS65594.2025.11086768" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C10 (Index: 10) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">10</div>
+              <div class="pub-details">
+                <div class="pub-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">IEEE 9th RTSI, Gammarth, Tunisia, 2025</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1109/RTSI64020.2025.11212252" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C09 (Index: 11) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">11</div>
+              <div class="pub-details">
+                <div class="pub-title">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">ICASET 2025, Kenitra, Morocco</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1007/978-3-031-98334-4_13" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- YEAR 2024 -->
+          <div class="pub-list-year-group" data-year="2024">
+            <div class="pub-year-header">2024</div>
+
+            <!-- J01 (Index: 12) -->
+            <div class="pub-entry-item" data-type="journal">
+              <div class="pub-index">12</div>
+              <div class="pub-details">
+                <div class="pub-title">Impact of Green Innovation on Business Sustainability of Firms and the Mediating Role of Green Intellectual Capital</div>
+                <div class="pub-authors-list">Fatima Batool, <strong>Muhammad Mohsin</strong></div>
+                <div>
+                  <span class="pub-badge-type journal">Journal</span>
+                  <span class="pub-venue-desc">Educational Administration: Theory and Practice, 30(4), 2024</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.53555/kuey.v30i4.1528" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C08 (Index: 13) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">13</div>
+              <div class="pub-details">
+                <div class="pub-title">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">ApplePies 2024, Polytechnic University of Turin</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1007/978-3-031-84100-2_21" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C07 (Index: 14) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">14</div>
+              <div class="pub-details">
+                <div class="pub-title">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Danilo Greco, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">IEEE RTSI 2024, Politecnico di Milano</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1109/RTSI61910.2024.10761364" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C06 (Index: 15) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">15</div>
+              <div class="pub-details">
+                <div class="pub-title">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Xianlai Zeng, Stefano Rovetta, Francesco Masulli</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">ICWMT19, Hangzhou, China, 2024</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.48550/arXiv.2406.16593" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    arXiv
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- YEAR 2023 -->
+          <div class="pub-list-year-group" data-year="2023">
+            <div class="pub-year-header">2023</div>
+
+            <!-- C05 (Index: 16) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">16</div>
+              <div class="pub-details">
+                <div class="pub-title">Virtual Mines – Component-level recycling of printed circuit boards using deep learning</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Alberto Cabri</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">WIRN 2023, Vietri sul Mare, Italy</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.48550/arXiv.2406.17162" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    arXiv
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- YEAR 2022 -->
+          <div class="pub-list-year-group" data-year="2022">
+            <div class="pub-year-header">2022</div>
+
+            <!-- C04 (Index: 17) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">17</div>
+              <div class="pub-details">
+                <div class="pub-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence</div>
+                <div class="pub-authors-list">Alberto Cabri, Francesco Masulli, Stefano Rovetta, <strong>Muhammad Mohsin</strong></div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">MAS 2022, Rome, Italy</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- YEAR 2021 -->
+          <div class="pub-list-year-group" data-year="2021">
+            <div class="pub-year-header">2021</div>
+
+            <!-- C03 (Index: 18) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">18</div>
+              <div class="pub-details">
+                <div class="pub-title">Automatic Prostate Cancer Grading Using Deep Architectures</div>
+                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Arslan Shaukat, Usman Akram, Muhammad Kaab Zarrar</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">IEEE AICCSA 2021, Tangier, Morocco</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1109/AICCSA53542.2021.9686869" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+          <!-- YEAR 2019 -->
+          <div class="pub-list-year-group" data-year="2019">
+            <div class="pub-year-header">2019</div>
+
+            <!-- C02 (Index: 19) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">19</div>
+              <div class="pub-details">
+                <div class="pub-title">Towards Automatic Recognition Sound Observed in Daily Activity</div>
+                <div class="pub-authors-list">Arslan Shaukat, Ammar Younis, Usman Akram, <strong>Muhammad Mohsin</strong>, Zartasha Mustansir</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">IEEE ICCI*CC 2019, Milan, Italy</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1109/ICCICC46617.2019.9146067" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+            <!-- C01 (Index: 20) -->
+            <div class="pub-entry-item" data-type="conference">
+              <div class="pub-index">20</div>
+              <div class="pub-details">
+                <div class="pub-title">Latest Trends in Automatic Glioma Tumor Segmentation and an Improved CNN-based Solution</div>
+                <div class="pub-authors-list">Muhammad Kaab Zarrar, Farhan Hussain, <strong>Muhammad Mohsin</strong>, Rubab Sheikh</div>
+                <div>
+                  <span class="pub-badge-type conference">Conference</span>
+                  <span class="pub-venue-desc">IEEE MACS 2019, Karachi, Pakistan</span>
+                </div>
+                <div class="pub-actions">
+                  <a href="https://doi.org/10.1109/MACS48846.2019.9024815" target="_blank" class="pub-action-link">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                    DOI
+                  </a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ─── EXPERIENCE & EDUCATION ─── -->
+      <section id="experience" class="section">
+        <div class="timeline-section-split">
+          
+          <!-- Experience Timeline -->
+          <div>
+            <div class="section-header">
+              <span class="section-badge">Career Timeline</span>
+              <h2 class="section-title">Professional Experience</h2>
+            </div>
+            
+            <div class="timeline">
+              <!-- Item 1 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Jan 2025 – Present</span>
+                </div>
+                <h3>Postdoctoral Researcher</h3>
+                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
+                <div class="timeline-desc">Advancing artificial intelligence models for circular economy systems and critical raw materials extraction/sorting from complex electronic waste.</div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Sep 2025 – Present</span>
+                </div>
+                <h3>Cultore della Materia</h3>
+                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
+                <div class="timeline-desc">Academic supervisor, assisting teaching staff, evaluation panels, course examinations, and mentoring student projects in computer engineering.</div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Oct 2024 – Present</span>
+                </div>
+                <h3>Teaching Assistant</h3>
+                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
+                <div class="timeline-desc">Tutor, lab demonstrator, and teaching assistant support in Computer Science and Data Management courses.</div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Aug – Sep 2025</span>
+                </div>
+                <h3>Consultant</h3>
+                <div class="timeline-org">Vega Research Laboratories (VRLabs)</div>
+                <div class="timeline-desc">Developed computer vision models for automated sorting. Implemented custom clustering metrics for sorting electrical components on PCBs.</div>
+              </div>
+
+              <!-- Item 5 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Dec 2023 – May 2024</span>
+                </div>
+                <h3>Visiting PhD Researcher</h3>
+                <div class="timeline-org">Tsinghua University, School of Environment, Beijing, China</div>
+                <div class="timeline-desc">Conducted research on global e-waste material recovery pipelines. Implemented criteria-based sorting matrices.</div>
+              </div>
+
+              <!-- Item 6 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Jan 2022 – May 2025</span>
+                </div>
+                <h3>PhD Researcher</h3>
+                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, University of Genoa &amp; VRLabs</div>
+                <div class="timeline-desc">Developed V-PCB demo and dataset. Created detection mechanisms for electronic assemblies.</div>
+              </div>
+
+              <!-- Item 7 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Aug 2019 – Jul 2021</span>
+                </div>
+                <h3>Research Assistant</h3>
+                <div class="timeline-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
+                <div class="timeline-desc">Developed deep learning segmentation networks for medical scanner imaging. Work selected for Jeju ML camp, South Korea.</div>
+              </div>
+
+              <!-- Item 8 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">Feb 2017 – Present</span>
+                </div>
+                <h3>Machine Learning Expert (Freelance)</h3>
+                <div class="timeline-org">Fiverr &amp; Upwork</div>
+                <div class="timeline-desc">Delivered over 200 custom data science, machine learning, and computer vision projects to international clients.</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Education Timeline -->
+          <div>
+            <div class="section-header">
+              <span class="section-badge">Academic Degrees</span>
+              <h2 class="section-title">Education</h2>
+            </div>
+            
+            <div class="timeline">
+              <!-- Edu 1 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">2022 – 2025</span>
+                </div>
+                <h3>PhD in Computer Science</h3>
+                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
+                <div class="timeline-desc">Thesis: <em>Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</em></div>
+              </div>
+
+              <!-- Edu 2 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">2017 – 2021</span>
+                </div>
+                <h3>MS in Computer Engineering</h3>
+                <div class="timeline-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
+                <div class="timeline-desc">Thesis: <em>Automatic Prostate Cancer Grading Using Deep Architectures</em></div>
+              </div>
+
+              <!-- Edu 3 -->
+              <div class="timeline-item">
+                <div class="timeline-marker"></div>
+                <div class="timeline-info">
+                  <span class="timeline-date">2013 – 2017</span>
+                </div>
+                <h3>BSc in Computer Engineering</h3>
+                <div class="timeline-org">University of Engineering and Technology (UET) Taxila, Pakistan</div>
+              </div>
+            </div>
+
+            <!-- Technical Skills (Rendered right under education on desktop) -->
+            <div class="section-header" style="margin-top: 3.5rem; margin-bottom: 1.5rem;">
+              <span class="section-badge">Toolkit</span>
+              <h2 class="section-title" style="font-size: 1.25rem;">Technical Skills</h2>
+            </div>
+            
+            <div style="display:flex; flex-direction:column; gap:1.25rem;">
+              <!-- AI Category -->
+              <div class="skill-category-card">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
+                  AI &amp; Machine Learning
+                </h4>
+                <div class="skill-chips">
+                  <span class="skill-chip">PyTorch</span>
+                  <span class="skill-chip">TensorFlow</span>
+                  <span class="skill-chip">Keras</span>
+                  <span class="skill-chip">OpenCV</span>
+                  <span class="skill-chip">Computer Vision</span>
+                  <span class="skill-chip">Deep Learning</span>
+                  <span class="skill-chip">Transfer Learning</span>
+                  <span class="skill-chip">NLP</span>
+                </div>
+              </div>
+
+              <!-- Programming Languages -->
+              <div class="skill-category-card">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
+                  Programming Languages
+                </h4>
+                <div class="skill-chips">
+                  <span class="skill-chip">Python</span>
+                  <span class="skill-chip">C/C++</span>
+                  <span class="skill-chip">Java</span>
+                  <span class="skill-chip">SQL</span>
+                  <span class="skill-chip">Shell</span>
+                  <span class="skill-chip">MATLAB</span>
+                  <span class="skill-chip">R</span>
+                  <span class="skill-chip">HDL</span>
+                </div>
+              </div>
+
+              <!-- Tools -->
+              <div class="skill-category-card">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
+                  Tools &amp; Infrastructure
+                </h4>
+                <div class="skill-chips">
+                  <span class="skill-chip">Git</span>
+                  <span class="skill-chip">Docker</span>
+                  <span class="skill-chip">VS Code</span>
+                  <span class="skill-chip">Jupyter</span>
+                  <span class="skill-chip">PostgreSQL</span>
+                  <span class="skill-chip">PyCharm</span>
+                  <span class="skill-chip">FreeCAD</span>
+                </div>
+              </div>
+
+              <!-- Hardware -->
+              <div class="skill-category-card">
+                <h4>
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                  Edge &amp; Hardware
+                </h4>
+                <div class="skill-chips">
+                  <span class="skill-chip">Raspberry Pi</span>
+                  <span class="skill-chip">Jetson Nano</span>
+                  <span class="skill-chip">Arduino</span>
+                  <span class="skill-chip">ESP32</span>
+                  <span class="skill-chip">FPGAs</span>
+                  <span class="skill-chip">Xilinx</span>
+                </div>
+              </div>
+            </div>
+
+          </div>
+
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ─── TEACHING ─── -->
+      <section id="teaching" class="section">
+        <div class="section-header">
+          <span class="section-badge">Pedagogy</span>
+          <h2 class="section-title">Teaching Activities</h2>
+          <p class="section-desc">Tutor and Lab Demonstrator at DIBRIS, University of Genoa, Italy.</p>
+        </div>
+
+        <div class="teaching-grid">
+          <!-- Course 1 -->
+          <div class="course-card">
+            <div class="course-period">2025 – 2026</div>
+            <h4>Data Warehousing</h4>
+            <div class="course-meta-desc">
+              <span>MSc Computer Science</span>
+              <strong>Code: 101798</strong>
+            </div>
+          </div>
+          <!-- Course 2 -->
+          <div class="course-card">
+            <div class="course-period">2025 – 2026</div>
+            <h4>Introduction to Computer Science and Programming</h4>
+            <div class="course-meta-desc">
+              <span>BSc Computer Engineering</span>
+              <strong>Code: 114602</strong>
+            </div>
+          </div>
+          <!-- Course 3 -->
+          <div class="course-card">
+            <div class="course-period">2025 – 2026</div>
+            <h4>Advanced Data Management</h4>
+            <div class="course-meta-desc">
+              <span>MSc Computer Science</span>
+              <strong>Tutor</strong>
+            </div>
+          </div>
+          <!-- Course 4 -->
+          <div class="course-card">
+            <div class="course-period">2025 – 2026</div>
+            <h4>Fondamenti di Ingegneria del Software</h4>
+            <div class="course-meta-desc">
+              <span>BSc Computer Engineering</span>
+              <strong>TA Support</strong>
+            </div>
+          </div>
+          <!-- Course 5 -->
+          <div class="course-card">
+            <div class="course-period">2024 – 2025</div>
+            <h4>Data Warehousing</h4>
+            <div class="course-meta-desc">
+              <span>MSc Computer Science</span>
+              <strong>Code: 101798</strong>
+            </div>
+          </div>
+          <!-- Course 6 -->
+          <div class="course-card">
+            <div class="course-period">2024 – 2025</div>
+            <h4>Introduction to Computer Science and Programming</h4>
+            <div class="course-meta-desc">
+              <span>BSc Computer Engineering</span>
+              <strong>Code: 114602</strong>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ─── TALKS ─── -->
+      <section id="talks" class="section">
+        <div class="section-header">
+          <span class="section-badge">Dissemination</span>
+          <h2 class="section-title">Presentations &amp; Talks</h2>
+          <p class="section-desc">Invited speaker at international conferences, academic seminars, and symposiums.</p>
+        </div>
+
+        <div class="talks-list">
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title"><a href="https://artificial-intelligence.hspioa.org/speakers/muhammad-mohsin" target="_blank">Valorization of WEEE: Integrating AI into Sustainable WEEE Management</a></span>
+              <span class="talk-venue-info">4th Global Summit on AI (GSAI 2025)</span>
+            </div>
+            <span class="talk-date-badge">June 10–11, 2025</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">AI Solutions for Sustainable Management of WEEE</span>
+              <span class="talk-venue-info">University of Opole, Poland</span>
+            </div>
+            <span class="talk-date-badge">Dec 15–19, 2025</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management</span>
+              <span class="talk-venue-info">IEEE 9th RTSI, Gammarth, Tunisia</span>
+            </div>
+            <span class="talk-date-badge">2025</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards</span>
+              <span class="talk-venue-info">IEEE ECIS 2025, Yueyang, China</span>
+            </div>
+            <span class="talk-date-badge">2025</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection</span>
+              <span class="talk-venue-info">IEEE 9th RTSI, Gammarth, Tunisia</span>
+            </div>
+            <span class="talk-date-badge">2025</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards</span>
+              <span class="talk-venue-info">ICASET 2025, Kenitra, Morocco</span>
+            </div>
+            <span class="talk-date-badge">2025</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach</span>
+              <span class="talk-venue-info">ApplePies 2024, Polytechnic University of Turin</span>
+            </div>
+            <span class="talk-date-badge">2024</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</span>
+              <span class="talk-venue-info">IEEE RTSI 2024, Politecnico di Milano</span>
+            </div>
+            <span class="talk-date-badge">2024</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards</span>
+              <span class="talk-venue-info">ICWMT19, Hangzhou, China</span>
+            </div>
+            <span class="talk-date-badge">2024</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Virtual Mines – Component-level recycling of printed circuit boards using deep learning</span>
+              <span class="talk-venue-info">WIRN 2023, Vietri sul Mare, Italy</span>
+            </div>
+            <span class="talk-date-badge">2023</span>
+          </div>
+
+          <div class="talk-item-row">
+            <div class="talk-meta-left">
+              <span class="talk-item-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence</span>
+              <span class="talk-venue-info">MAS 2022, Rome, Italy</span>
+            </div>
+            <span class="talk-date-badge">2022</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ─── AWARDS ─── -->
+      <section id="awards" class="section">
+        <div class="section-header">
+          <span class="section-badge">Recognition</span>
+          <h2 class="section-title">Awards &amp; Honors</h2>
+        </div>
+
+        <div class="awards-grid-list">
+          <div class="award-item-row">
+            <span class="award-item-year">2026</span>
+            <span class="award-item-title">PostDoc Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></span>
+          </div>
+          <div class="award-item-row">
+            <span class="award-item-year">2025</span>
+            <span class="award-item-title">Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></span>
+          </div>
+          <div class="award-item-row">
+            <span class="award-item-year">2022</span>
+            <span class="award-item-title">PON-PhD Scholarship in Computer Science, Italian Ministry of Research</span>
+          </div>
+          <div class="award-item-row">
+            <span class="award-item-year">2019</span>
+            <span class="award-item-title">Research Fellowship Grant, NUST Islamabad, Pakistan</span>
+          </div>
+          <div class="award-item-row">
+            <span class="award-item-year">2019</span>
+            <span class="award-item-title">Selected Participant for Jeju National University ML Camp, South Korea</span>
+          </div>
+          <div class="award-item-row">
+            <span class="award-item-year">2017</span>
+            <span class="award-item-title">PEEF Scholarship for Postgraduate Studies at NUST</span>
+          </div>
+          <div class="award-item-row">
+            <span class="award-item-year">2014</span>
+            <span class="award-item-title">HEC Scholarship (Higher Education Commission), UET Taxila</span>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ─── SERVICE ─── -->
+      <section id="service" class="section">
+        <div class="section-header">
+          <span class="section-badge">Engagement</span>
+          <h2 class="section-title">Professional Service</h2>
+          <p class="section-desc">Active contributions to peer review circles, program committees, and local research organizing committees.</p>
+        </div>
+
+        <div class="service-columns-grid">
+          <!-- Col 1 -->
+          <div class="service-column-card">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
+              Editorial Boards
+            </h4>
+            <ul class="service-item-list">
+              <li>Editorial Board, AI &amp; Sustainable Finance Journal (AISFJ)</li>
+              <li>Reviewer, PLOS One (2025–Present)</li>
+            </ul>
+          </div>
+          
+          <!-- Col 2 -->
+          <div class="service-column-card">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+              Program Committees
+            </h4>
+            <ul class="service-item-list">
+              <li>PC Member, USIC 2026, Hong Kong</li>
+              <li>PC Member, USIC 2025, Hong Kong</li>
+              <li>PC Member, ACCSE 2025, Valencia</li>
+              <li>PC Member, ACCSE 2024, Venice</li>
+              <li>PC Member, ACCSE 2023, Nice</li>
+              <li>Student Committee, ICOA 2022</li>
+            </ul>
+          </div>
+
+          <!-- Col 3 -->
+          <div class="service-column-card">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              Peer Reviewer
+            </h4>
+            <ul class="service-item-list">
+              <li>Reviewer, ICIVIS 2025, Hangzhou</li>
+              <li>Reviewer, NeurIPS 2024 AFME Workshop</li>
+              <li>Reviewer, ICOA 2023, Abu Dhabi</li>
+            </ul>
+          </div>
+
+          <!-- Col 4 -->
+          <div class="service-column-card">
+            <h4>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              Memberships
+            </h4>
+            <ul class="service-item-list">
+              <li>IEEE &amp; IEEE Computer Society</li>
+              <li>Registered Engineer, Pakistan Engineering Council (#14851)</li>
+              <li>DoCS-DIBRIS Organizing Committee</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="section-divider">
+
+      <!-- ─── CALL FOR PAPERS (DETAILED SECTION) ─── -->
+      <section id="cfp" class="section">
+        <div class="section-header">
+          <span class="section-badge">Conference Session</span>
+          <h2 class="section-title">IEEE RTSI 2026 Special Session</h2>
+          <p class="section-desc">Call for Papers details for the 10th International Forum on Research and Technologies for Society and Industry.</p>
+        </div>
+
+        <div class="cfp-section-layout">
+          
+          <div class="cfp-main-info">
+            <div class="cfp-banner-box">
+              <span class="cfp-badge-highlight" style="background-color:#ffe082; color:#111; margin-bottom:1rem;">Special Session</span>
+              <h3>"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</h3>
+              <div class="cfp-banner-forum">
+                IEEE 10th International Forum on Research and Technologies for Society and Industry (RTSI 2026)<br>
+                📍 Aalto University, Espoo, Finland &nbsp;·&nbsp; 🗓️ 16–18 August 2026
+              </div>
+            </div>
+
+            <p class="cfp-description-text">
+              Artificial Intelligence is playing an increasingly important role in building smarter and more sustainable recycling systems. This special session will explore how AI, robotics, and data-driven technologies can support efficient waste management, material recovery, and circular economy solutions. We welcome contributions from academia and industry.
+            </p>
+
+            <div class="cfp-topics-wrapper">
+              <h4>Topics of Interest</h4>
+              <div class="cfp-topics-chips">
+                <span class="cfp-topic-pill">AI-based waste sorting &amp; recycling</span>
+                <span class="cfp-topic-pill">Robotics for automated disassembly</span>
+                <span class="cfp-topic-pill">Computer vision for recycling systems</span>
+                <span class="cfp-topic-pill">Edge AI for real-time processing</span>
+                <span class="cfp-topic-pill">Predictive analytics &amp; recyclability assessment</span>
+                <span class="cfp-topic-pill">Circular supply chains &amp; industrial applications</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- CFP Sidebar cards -->
+          <div class="cfp-side-cards">
+            <!-- Dates Card -->
+            <div class="cfp-dates-card">
+              <div class="cfp-card-title">Important Dates</div>
+              <div class="cfp-dates-list">
+                <div class="cfp-date-row-item">
+                  <span class="cfp-date-label-text">Submission Deadline</span>
+                  <span class="cfp-date-value-text highlight">05 Jun 2026</span>
+                </div>
+                <div class="cfp-date-row-item">
+                  <span class="cfp-date-label-text">Acceptance Notice</span>
+                  <span class="cfp-date-value-text">15 Jun 2026</span>
+                </div>
+                <div class="cfp-date-row-item">
+                  <span class="cfp-date-label-text">Conference Dates</span>
+                  <span class="cfp-date-value-text">16–18 Aug 2026</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Organizers Card -->
+            <div class="cfp-organizers-card">
+              <div class="cfp-card-title">Session Organizers</div>
+              <div class="cfp-organizers-list">
+                <div class="cfp-organizer-item">
+                  <div class="cfp-organizer-name">Dr. Muhammad Mohsin</div>
+                  <div class="cfp-organizer-title">University of Genoa, Italy</div>
+                </div>
+                <div class="cfp-organizer-item">
+                  <div class="cfp-organizer-name">Alberto Cabri</div>
+                  <div class="cfp-organizer-title">Vega Research Laboratories, Italy</div>
+                </div>
+              </div>
+            </div>
+            
+            <!-- Quick Links -->
+            <div style="display:flex; flex-direction:column; gap:0.5rem;">
+              <a href="https://2026.ieee-rtsi.org/track-list/" target="_blank" class="btn-secondary" style="justify-content:center; padding: 0.6rem; font-size:0.85rem;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
+                &nbsp;Conference Tracks
+              </a>
+              <a href="https://easychair.org/my/conference?conf=rtsi2026" target="_blank" class="btn-primary" style="justify-content:center; padding: 0.6rem; font-size:0.85rem; box-shadow:none;">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
+                &nbsp;Submit via EasyChair
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </section>
+
+    </div>
+
+    <!-- ==========================================================================
+         FOOTER
+         ========================================================================== -->
+    <footer class="footer">
+      <div class="footer-content">
+        <blockquote class="footer-quote-box">
+          "The important thing is not to stop questioning. Curiosity has its own reason for existing."
+          <cite>— Albert Einstein</cite>
+        </blockquote>
+        
+        <div class="footer-contact-links">
+          <a href="mailto:muhammad.mohsin@edu.unige.it">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+            muhammad.mohsin@edu.unige.it
           </a>
-          <a href="https://easychair.org/my/conference?conf=rtsi2026" target="_blank" class="cfp-link-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-            Submit Paper
+          <a href="https://dibris.unige.it/en" target="_blank">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
+            DIBRIS, University of Genoa
+          </a>
+          <a href="tel:+393455017833">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+            +39 345 501 7833
           </a>
         </div>
-      </div>
-
-      <!-- RIGHT: main content -->
-      <div class="cfp-right-col">
-        <div class="cfp-hero">
-          <div class="cfp-badge">📢 Open Call · Submission Deadline: 05 June 2026</div>
-          <h3>"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</h3>
-          <div class="cfp-hero-meta">
-            <strong>IEEE 10th International Forum on Research and Technologies for Society and Industry (RTSI 2026)</strong><br>
-            📍 Aalto University, Espoo, Finland &nbsp;·&nbsp; 🗓️ 16–18 August 2026
-          </div>
-        </div>
-
-        <p class="cfp-description">
-          Artificial Intelligence is playing an increasingly important role in building smarter and more
-          sustainable recycling systems. This special session will explore how AI, robotics, and data-driven
-          technologies can support efficient waste management, material recovery, and circular economy solutions.
-          We welcome contributions from academia and industry.
-        </p>
-
-        <div class="cfp-topics-label">Topics of Interest</div>
-        <div class="cfp-topics">
-          <span class="cfp-topic">AI-based waste sorting &amp; recycling</span>
-          <span class="cfp-topic">Robotics for automated disassembly</span>
-          <span class="cfp-topic">Computer vision for recycling systems</span>
-          <span class="cfp-topic">Edge AI for real-time processing</span>
-          <span class="cfp-topic">Predictive analytics &amp; recyclability assessment</span>
-          <span class="cfp-topic">Circular supply chains &amp; industrial applications</span>
-        </div>
-
-        <div class="cfp-organizers">
-          <h4>Session Organizers</h4>
-          <div class="cfp-org-item">
-            <strong>Muhammad Mohsin, PhD</strong>
-            Postdoctoral Researcher · Università degli Studi di Genova
-          </div>
-          <div class="cfp-org-item">
-            <strong>Alberto Cabri</strong>
-            Vega Research Laboratories s.r.l.
-          </div>
+        
+        <div class="footer-credits">
+          © 2026 Dr. Muhammad Mohsin · Via Dodecaneso 35, 16146 Genoa, Italy
         </div>
       </div>
+    </footer>
+  </main>
+</div>
 
-    </div>
-  </div>
-</section>
+<!-- Back to Top Button -->
+<button class="back-to-top" id="backToTopBtn" aria-label="Back to Top">
+  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
+</button>
 
-<!-- ─── SERVICE ─── -->
-<section class="section" id="service" style="display:none;">
-  <div class="container">
-    <div class="section-header">
-      <div class="section-label">Community</div>
-      <h2 class="section-title">Professional Service</h2>
-    </div>
-    <div class="service-grid">
-      <div class="service-col">
-        <h4>Editorial Boards</h4>
-        <ul>
-          <li>Editorial Board, AI &amp; Sustainable Finance Journal (AISFJ)</li>
-          <li>Peer Reviewer, PLOS One, 2025–Present</li>
-        </ul>
-      </div>
-      <div class="service-col">
-        <h4>Program Committees</h4>
-        <ul>
-          <li>PC Member, USIC 2026, Hong Kong</li>
-          <li>PC Member, USIC 2025, Hong Kong</li>
-          <li>PC Member, ACCSE 2025, Valencia</li>
-          <li>PC Member, ACCSE 2024, Venice</li>
-          <li>PC Member, ACCSE 2023, Nice</li>
-          <li>Student Committee, ICOA 2022</li>
-        </ul>
-      </div>
-      <div class="service-col">
-        <h4>Peer Review</h4>
-        <ul>
-          <li>Reviewer, ICIVIS 2025, Hangzhou</li>
-          <li>Reviewer, NeurIPS 2024 AFME Workshop</li>
-          <li>Reviewer, ICOA 2023, Abu Dhabi</li>
-        </ul>
-      </div>
-      <div class="service-col">
-        <h4>Memberships</h4>
-        <ul>
-          <li>IEEE &amp; IEEE Computer Society</li>
-          <li>Pakistan Engineering Council #14851</li>
-          <li>DoCS-DIBRIS Organizing Team</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ─── FOOTER ─── -->
-<footer>
-  <div class="container">
-    <blockquote class="footer-quote">
-      "The important thing is not to stop questioning. Curiosity has its own reason for existing."
-      <cite>— Albert Einstein</cite>
-    </blockquote>
-    <div class="footer-links">
-      <a href="mailto:muhammad.mohsin@edu.unige.it">muhammad.mohsin@edu.unige.it</a>
-      <a href="https://dibris.unige.it/en" target="_blank">DIBRIS, University of Genoa</a>
-      <a href="tel:+393455017833">+39 345 501 7833</a>
-    </div>
-    <div class="footer-copy">© 2025 Dr. Muhammad Mohsin · Via Dodecaneso 35, 16146 Genoa, Italy</div>
-  </div>
-</footer>
-
-<script>
-  const SECTIONS = ['about','research','publications','experience','teaching','talks','awards','service','cfp'];
-
-  function goTo(id, linkEl) {
-    // hide all
-    SECTIONS.forEach(s => {
-      const el = document.getElementById(s);
-      if (!el) return;
-      if (s === 'about') {
-        el.closest('section') ? el.closest('section').style.display = (s === id ? '' : 'none') : null;
-        // about is a div inside hero section
-        const heroSection = document.querySelector('.hero')?.parentElement || document.getElementById('about')?.parentElement;
-      } else {
-        el.style.display = (s === id ? 'block' : 'none');
-      }
-    });
-
-    // handle hero (about)
-    const heroSection = document.getElementById('about');
-    if (heroSection) {
-      heroSection.style.display = (id === 'about') ? 'block' : 'none';
-    }
-
-    // update nav
-    document.querySelectorAll('.nav-links a').forEach(a => a.classList.remove('active'));
-    if (linkEl) linkEl.classList.add('active');
-
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-    document.getElementById('navLinks').classList.remove('open');
-  }
-
-
-  // init: show only about
-  SECTIONS.forEach(s => {
-    if (s !== 'about') {
-      const el = document.getElementById(s);
-      if (el) el.style.display = 'none';
-    }
-  });
-
-  // prevent default anchor jumps
-  document.querySelectorAll('a[href^="#"]').forEach(a => {
-    a.addEventListener('click', e => {
-      const id = a.getAttribute('href').slice(1);
-      if (SECTIONS.includes(id)) {
-        e.preventDefault();
-        goTo(id, a);
-      }
-    });
-  });
-</script>
+<!-- Main JS Application script -->
+<script src="js/main.js"></script>
 </body>
 </html>
