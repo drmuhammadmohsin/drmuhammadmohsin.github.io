@@ -528,10 +528,8 @@ a:hover {
    HERO / ABOUT SECTION
    ========================================================================== */
 .about-hero {
-  display: grid;
-  grid-template-columns: 1.25fr 0.75fr;
-  gap: 3rem;
-  align-items: center;
+  display: block;
+  max-width: 760px;
 }
 
 .about-intro-badge {
