@@ -2,77 +2,55 @@
    Dr. Muhammad Mohsin - Academic Portfolio Redesign Stylesheet
    ========================================================================== */
 
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap');
 
 :root {
-  /* HSL Color System - Deep Ocean Blue */
-  --accent-h: 210;
+  /* HSL Color System - Clean Professional Academic Blue */
+  --accent-h: 212;
   --accent-s: 100%;
-  --accent-l: 52%;
+  --accent-l: 45%;
   --accent-color: hsl(var(--accent-h), var(--accent-s), var(--accent-l));
-  --accent-color-rgb: 10, 132, 255;
-  --accent-hover: hsl(var(--accent-h), var(--accent-s), calc(var(--accent-l) - 7%));
-  --accent-soft: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.1);
-  --accent-soft-hover: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.18);
-  --accent-glowing: hsla(var(--accent-h), var(--accent-s), var(--accent-l), 0.25);
+  --accent-color-rgb: 9, 105, 218;
+  --accent-hover: #0756b3;
+  --accent-soft: rgba(9, 105, 218, 0.08);
+  --accent-soft-hover: rgba(9, 105, 218, 0.15);
+  --accent-glowing: rgba(9, 105, 218, 0.2);
 
   /* Fonts */
   --font-sans: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
-  --font-heading: 'Lora', Georgia, serif;
+  --font-heading: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
   --font-mono: 'JetBrains Mono', monospace;
 
   /* Sizing and Layout */
-  --sidebar-w: 300px;
+  --sidebar-w: 280px;
   --max-w: 960px;
   --radius-sm: 4px;
-  --radius-md: 8px;
-  --radius-lg: 12px;
-  --transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
-  --transition-fast: all 0.12s ease;
+  --radius-md: 6px;
+  --radius-lg: 8px;
+  --transition: all 0.2s ease-in-out;
+  --transition-fast: all 0.1s ease-in-out;
 
   /* Scroll Snap Offset */
   scroll-padding-top: 2rem;
-}
 
-/* Theme Override Variables */
-[data-theme="light"] {
-  --bg-primary: #f0f4fa;
-  --bg-secondary: #e8eef8;
-  --bg-tertiary: #dce5f5;
-  --bg-glass: rgba(240, 244, 250, 0.88);
-  --bg-glass-solid: rgba(232, 238, 248, 0.98);
-  --text-primary: #0a1628;
-  --text-secondary: #1e3a5f;
-  --text-muted: #4a6fa5;
-  --text-light: #7a9cc5;
-  --border-color: #c5d5ea;
-  --border-color-soft: #dce5f5;
-  --card-shadow: 0 1px 3px rgba(10,84,180,0.07), 0 1px 2px rgba(10,84,180,0.04);
-  --card-shadow-hover: 0 4px 18px -2px rgba(10,84,180,0.13), 0 2px 6px -1px rgba(10,84,180,0.07);
-  --scrollbar-thumb: #a8c0e0;
-  --scrollbar-track: #dce5f5;
-  --badge-bg: #d0ddf0;
-  --badge-text: #0a2040;
-}
-
-[data-theme="dark"] {
-  --bg-primary: #07101e;
-  --bg-secondary: #0c1929;
-  --bg-tertiary: #122035;
-  --bg-glass: rgba(7, 16, 30, 0.88);
-  --bg-glass-solid: rgba(12, 25, 41, 0.98);
-  --text-primary: #e4edf8;
-  --text-secondary: #b8cfe8;
-  --text-muted: #7a9cc5;
-  --text-light: #4a6fa5;
-  --border-color: #1a2e48;
-  --border-color-soft: #0f2038;
-  --card-shadow: 0 1px 3px rgba(0,0,0,0.5), 0 1px 2px rgba(0,0,0,0.35);
-  --card-shadow-hover: 0 4px 18px -2px rgba(0,20,60,0.7), 0 2px 6px -1px rgba(0,10,40,0.45);
-  --scrollbar-thumb: #1e3a5f;
-  --scrollbar-track: #0c1929;
-  --badge-bg: #122035;
-  --badge-text: #b8cfe8;
+  /* Main theme variables - permanent light mode */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6f8fa;
+  --bg-tertiary: #ebf0f4;
+  --bg-glass: rgba(255, 255, 255, 0.9);
+  --bg-glass-solid: rgba(255, 255, 255, 0.98);
+  --text-primary: #1a1f26;
+  --text-secondary: #4b5563;
+  --text-muted: #6b7280;
+  --text-light: #9ca3af;
+  --border-color: #d1d5db;
+  --border-color-soft: #e5e7eb;
+  --card-shadow: 0 1px 2px rgba(0,0,0,0.05);
+  --card-shadow-hover: 0 4px 12px rgba(0,0,0,0.05);
+  --scrollbar-thumb: #cdd9e4;
+  --scrollbar-track: #f6f8fa;
+  --badge-bg: #f1f5f9;
+  --badge-text: #334155;
 }
 
 /* ==========================================================================
@@ -231,23 +209,9 @@ a:hover {
   height: 100%;
   object-fit: cover;
   border-radius: 50%;
-  border: 4px solid var(--bg-primary);
+  border: 2px solid var(--border-color);
   box-shadow: var(--card-shadow);
   transition: var(--transition);
-}
-
-.profile-avatar-wrap::after {
-  content: '';
-  position: absolute;
-  inset: -2px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, var(--accent-color), transparent 70%);
-  z-index: -1;
-  animation: rotateGlow 8s linear infinite;
-}
-
-@keyframes rotateGlow {
-  to { transform: rotate(360deg); }
 }
 
 .profile-card h2 {
@@ -386,7 +350,6 @@ a:hover {
   background-color: var(--accent-color);
   color: #fff;
   border-color: var(--accent-color);
-  transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -519,8 +482,10 @@ a:hover {
 /* Standard visual divider */
 .section-divider {
   height: 1px;
-  background: radial-gradient(circle at left, var(--border-color) 0%, transparent 100%);
-  border: none;
+  border-top: 1px solid var(--border-color-soft);
+  border-bottom: none;
+  border-left: none;
+  border-right: none;
   margin-top: 5rem;
 }
 
@@ -592,14 +557,11 @@ a:hover {
   font-weight: 700;
   font-size: 0.9rem;
   transition: var(--transition-fast);
-  box-shadow: 0 4px 14px rgba(var(--accent-color-rgb), 0.3);
 }
 
 .btn-primary:hover {
   background-color: var(--accent-hover);
   color: #fff;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(var(--accent-color-rgb), 0.4);
 }
 
 .btn-secondary {
@@ -618,7 +580,6 @@ a:hover {
 
 .btn-secondary:hover {
   background-color: var(--border-color);
-  transform: translateY(-2px);
 }
 
 /* Showcase photo inside About */
@@ -686,30 +647,10 @@ a:hover {
   padding: 1.5rem;
   text-align: center;
   transition: var(--transition);
-  position: relative;
-  overflow: hidden;
-}
-
-.stat-card::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 3px;
-  background-color: var(--accent-color);
-  opacity: 0;
-  transition: var(--transition);
 }
 
 .stat-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-soft-hover);
-  box-shadow: var(--card-shadow-hover);
-}
-
-.stat-card:hover::before {
-  opacity: 1;
+  border-color: var(--accent-color);
 }
 
 .stat-number {
@@ -823,9 +764,9 @@ a:hover {
 
 /* Glassmorphic Call For Papers Countdown Card */
 .cfp-countdown-card {
-  background: linear-gradient(135deg, var(--bg-secondary) 0%, rgba(var(--accent-color-rgb), 0.03) 100%);
+  background-color: var(--bg-secondary);
   border: 1px solid var(--border-color);
-  border-radius: var(--radius-lg);
+  border-radius: var(--radius-md);
   padding: 2rem;
   box-shadow: var(--card-shadow);
   display: flex;
@@ -833,19 +774,6 @@ a:hover {
   gap: 1.25rem;
   position: relative;
   overflow: hidden;
-}
-
-.cfp-countdown-card::before {
-  content: '';
-  position: absolute;
-  top: -80px;
-  right: -80px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: radial-gradient(circle, var(--accent-soft-hover) 0%, transparent 70%);
-  z-index: 0;
-  pointer-events: none;
 }
 
 .cfp-badge-highlight {
@@ -955,9 +883,7 @@ a:hover {
 }
 
 .interest-card:hover {
-  transform: translateY(-5px);
-  border-color: var(--accent-soft-hover);
-  box-shadow: var(--card-shadow-hover);
+  border-color: var(--accent-color);
 }
 
 .interest-icon-box {
@@ -1092,17 +1018,11 @@ a:hover {
   border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 2rem;
-  display: grid;
-  grid-template-columns: 1fr 180px;
-  gap: 2rem;
-  align-items: center;
   transition: var(--transition);
 }
 
 .showcase-pub-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--accent-soft-hover);
-  box-shadow: var(--card-shadow-hover);
+  border-color: var(--accent-color);
 }
 
 .showcase-pub-meta {
@@ -1554,8 +1474,7 @@ a:hover {
 }
 
 .course-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--accent-soft-hover);
+  border-color: var(--accent-color);
 }
 
 .course-period {
@@ -1746,24 +1665,24 @@ a:hover {
 }
 
 .cfp-banner-box {
-  background: linear-gradient(135deg, #0b0f19 0%, #2a0813 100%);
-  border: 1px solid rgba(255,255,255,0.08);
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
   border-radius: var(--radius-md);
   padding: 2rem;
-  color: #fff;
+  color: var(--text-primary);
 }
 
 .cfp-banner-box h3 {
   font-size: 1.45rem;
   font-weight: 800;
   line-height: 1.35;
-  color: #fff;
+  color: var(--text-primary);
   margin-bottom: 0.75rem;
 }
 
 .cfp-banner-forum {
   font-size: 0.85rem;
-  color: rgba(255,255,255,0.7);
+  color: var(--text-secondary);
   text-transform: uppercase;
   letter-spacing: 0.05em;
   font-weight: 600;

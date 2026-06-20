@@ -4,7 +4,6 @@
 
 document.addEventListener('DOMContentLoaded', () => {
   // Initialize all functions
-  initTheme();
   initMobileMenu();
   initScrollspy();
   initPublicationsFilter();
@@ -12,78 +11,6 @@ document.addEventListener('DOMContentLoaded', () => {
   initBackToTop();
 });
 
-/* ==========================================================================
-   THEME TOGGLER (Light / Dark Mode)
-   ========================================================================== */
-function initTheme() {
-  const themeToggleBtn = document.getElementById('themeToggleBtn');
-  const themeToggleMobileBtn = document.getElementById('themeToggleMobileBtn');
-  
-  if (!themeToggleBtn && !themeToggleMobileBtn) return;
-  
-  // Check stored theme or system preference
-  const storedTheme = localStorage.getItem('theme');
-  const systemPrefersDark = window.matchMedia('(prefers-color-scheme: dark)').matches;
-  
-  let currentTheme = 'light';
-  if (storedTheme === 'dark' || (!storedTheme && systemPrefersDark)) {
-    currentTheme = 'dark';
-  }
-  
-  // Apply initial theme
-  setTheme(currentTheme);
-  
-  // Event listeners
-  if (themeToggleBtn) {
-    themeToggleBtn.addEventListener('click', toggleTheme);
-  }
-  if (themeToggleMobileBtn) {
-    themeToggleMobileBtn.addEventListener('click', toggleTheme);
-  }
-  
-  function toggleTheme() {
-    const activeTheme = document.documentElement.getAttribute('data-theme');
-    const newTheme = activeTheme === 'dark' ? 'light' : 'dark';
-    setTheme(newTheme);
-  }
-  
-  function setTheme(theme) {
-    document.documentElement.setAttribute('data-theme', theme);
-    localStorage.setItem('theme', theme);
-    
-    // Update button icons
-    updateThemeIcons(theme);
-  }
-  
-  function updateThemeIcons(theme) {
-    const sunIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M6.34 17.66l-1.41 1.41M19.07 4.93l-1.41 1.41"/></svg>`;
-    const moonIcon = `<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>`;
-    
-    const targets = [
-      { btn: themeToggleBtn, textId: 'themeToggleText' },
-      { btn: themeToggleMobileBtn, textId: null }
-    ];
-    
-    targets.forEach(target => {
-      if (!target.btn) return;
-      
-      const iconWrap = target.btn.querySelector('.theme-icon-wrap') || target.btn;
-      if (theme === 'dark') {
-        iconWrap.innerHTML = sunIcon;
-        if (target.textId) {
-          const textEl = document.getElementById(target.textId);
-          if (textEl) textEl.textContent = 'Light Mode';
-        }
-      } else {
-        iconWrap.innerHTML = moonIcon;
-        if (target.textId) {
-          const textEl = document.getElementById(target.textId);
-          if (textEl) textEl.textContent = 'Dark Mode';
-        }
-      }
-    });
-  }
-}
 
 /* ==========================================================================
    MOBILE MENU DRAWER

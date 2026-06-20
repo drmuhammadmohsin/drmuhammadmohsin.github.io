@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="en" data-theme="light">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,12 +22,6 @@
   <header class="mobile-header">
     <div class="mobile-brand">Dr. Mohsin<span>.AI</span></div>
     <div class="mobile-controls">
-      <button class="theme-toggle-btn" id="themeToggleMobileBtn" aria-label="Toggle Theme">
-        <span class="theme-icon-wrap">
-          <!-- Default moon icon, JS will update -->
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </span>
-      </button>
       <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
       </button>
@@ -90,13 +84,6 @@
 
     <!-- Sidebar footer widgets -->
     <div class="sidebar-footer">
-      <button class="theme-toggle-btn" id="themeToggleBtn">
-        <span class="theme-icon-wrap">
-          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/></svg>
-        </span>
-        <span id="themeToggleText">Light Mode</span>
-      </button>
-
       <div class="sidebar-socials">
         <a href="mailto:muhammad.mohsin@edu.unige.it" class="social-icon-btn" title="Email">
           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
@@ -132,7 +119,7 @@
             <h1>Dr. Muhammad Mohsin</h1>
             
             <div class="about-affiliation">
-              <a href="https://dibris.unige.it/en" target="_blank">DIBRIS – Department of Informatics, Bioengineering, Robotics &amp; Systems Engineering</a><br>
+              <a href="https://dibris.unige.it/en" target="_blank">DIBRIS – Department of Informatics, Bioengineering, Robotics &amp; Systems Engineering</a>
               <a href="https://unige.it/" target="_blank">University of Genoa</a>, Genoa, Italy
             </div>
             
@@ -293,25 +280,6 @@
                   View Publisher Website
                 </a>
               </div>
-            </div>
-            <div class="showcase-pub-abstract-graphic" aria-hidden="true">
-              <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
-                <rect width="180" height="140" fill="transparent"/>
-                <path d="M90 15 L130 32 L130 75 Q130 105 90 125 Q50 105 50 75 L50 32 Z" fill="none" stroke="#A31F34" stroke-width="3"/>
-                <path d="M90 28 L118 41 L118 74 Q118 96 90 112 Q62 96 62 74 L62 41 Z" fill="rgba(163,31,52,0.08)"/>
-                <rect x="78" y="68" width="24" height="18" rx="2" fill="#A31F34"/>
-                <path d="M83 68 L83 62 Q83 55 90 55 Q97 55 97 62 L97 68" fill="none" stroke="#A31F34" stroke-width="2.5"/>
-                <circle cx="90" cy="77" r="3" fill="#fff"/>
-                <circle cx="30" cy="50" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
-                <circle cx="150" cy="50" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
-                <circle cx="30" cy="95" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
-                <circle cx="150" cy="95" r="5" fill="none" stroke="var(--text-light)" stroke-width="1.5"/>
-                <line x1="35" y1="50" x2="50" y2="42" stroke="var(--border-color)" stroke-width="1"/>
-                <line x1="145" y1="50" x2="130" y2="42" stroke="var(--border-color)" stroke-width="1"/>
-                <line x1="35" y1="95" x2="50" y2="88" stroke="var(--border-color)" stroke-width="1"/>
-                <line x1="145" y1="95" x2="130" y2="88" stroke="var(--border-color)" stroke-width="1"/>
-              </svg>
-            </div>
           </div>
 
           <!-- Showcase 2 -->
@@ -327,23 +295,6 @@
                 <a href="https://doi.org/10.3390/computers14080304" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
                   View Publisher Website
                 </a>
-              </div>
-            </div>
-            <div class="showcase-pub-abstract-graphic" aria-hidden="true">
-              <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
-                <rect width="180" height="140" fill="transparent"/>
-                <rect x="30" y="30" width="120" height="80" rx="3" fill="none" stroke="var(--text-primary)" stroke-width="2"/>
-                <rect x="30" y="30" width="120" height="80" rx="3" fill="rgba(163,31,52,0.04)"/>
-                <polyline points="50,50 50,65 90,65" fill="none" stroke="#A31F34" stroke-width="1.5"/>
-                <polyline points="130,50 130,65 90,65" fill="none" stroke="#A31F34" stroke-width="1.5"/>
-                <polyline points="60,90 60,80 120,80 120,90" fill="none" stroke="#A31F34" stroke-width="1.5"/>
-                <rect x="42" y="42" width="16" height="10" rx="1" fill="var(--text-secondary)"/>
-                <rect x="122" y="42" width="16" height="10" rx="1" fill="var(--text-secondary)"/>
-                <rect x="78" y="58" width="24" height="14" rx="1" fill="var(--text-primary)"/>
-                <circle cx="90" cy="65" r="3" fill="#A31F34"/>
-                <text x="90" y="125" text-anchor="middle" font-size="10" fill="#A31F34" font-family="var(--font-sans)" font-weight="700">♻ AI-Driven Recycling</text>
-              </svg>
-            </div>
           </div>
 
           <!-- Showcase 3 -->
@@ -359,26 +310,6 @@
                 <a href="https://doi.org/10.3390/computers14020062" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
                   View Publisher Website
                 </a>
-              </div>
-            </div>
-            <div class="showcase-pub-abstract-graphic" aria-hidden="true">
-              <svg viewBox="0 0 180 140" xmlns="http://www.w3.org/2000/svg">
-                <rect width="180" height="140" fill="transparent"/>
-                <rect x="60" y="18" width="60" height="32" rx="4" fill="var(--text-primary)"/>
-                <text x="90" y="38" text-anchor="middle" font-size="9" fill="var(--bg-primary)" font-family="var(--font-heading)" font-weight="bold">EDGE</text>
-                <rect x="15" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
-                <text x="29" y="97" text-anchor="middle" font-size="7" fill="#fff" font-family="var(--font-sans)">IoT</text>
-                <rect x="76" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
-                <text x="90" y="97" text-anchor="middle" font-size="7" fill="#fff" font-family="var(--font-sans)">Robot</text>
-                <rect x="137" y="85" width="28" height="20" rx="2" fill="#A31F34"/>
-                <text x="151" y="97" text-anchor="middle" font-size="7" fill="#fff" font-family="var(--font-sans)">Sensor</text>
-                <line x1="29" y1="85" x2="75" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
-                <line x1="90" y1="85" x2="90" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
-                <line x1="151" y1="85" x2="105" y2="50" stroke="#A31F34" stroke-width="1.5" stroke-dasharray="4,2"/>
-                <rect x="55" y="118" width="70" height="14" rx="2" fill="var(--text-secondary)"/>
-                <text x="90" y="128" text-anchor="middle" font-size="8" fill="var(--bg-primary)" font-family="var(--font-sans)">Waste PCB</text>
-              </svg>
-            </div>
           </div>
         </div>
       </section>
