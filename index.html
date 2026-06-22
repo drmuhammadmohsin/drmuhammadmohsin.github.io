@@ -14,79 +14,66 @@
 </head>
 <body>
 
-<div class="app-container">
-  
-  <!-- ==========================================================================
-       MOBILE HEADER (Visible only on screens < 1024px)
-       ========================================================================== -->
-  <header class="mobile-header">
-    <div class="mobile-brand">Dr. Mohsin<span>.AI</span></div>
-    <div class="mobile-controls">
-      <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle Menu">
-        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
-      </button>
-    </div>
-  </header>
-
-  <!-- ==========================================================================
-       SIDEBAR NAVIGATION (Fixed Left on desktop, drawer on mobile)
-       ========================================================================== -->
-  <aside class="sidebar" id="sidebar">
-    <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="sidebar-photo">
-    <div class="sidebar-name">Dr. Muhammad Mohsin</div>
-    <div class="sidebar-title-text">Postdoctoral Research Fellow<br>University of Genoa</div>
-
-    <nav class="sidebar-nav">
-      <a href="#about"        class="sidebar-link active">About</a>
-      <a href="#research"     class="sidebar-link">Research</a>
-      <a href="#publications" class="sidebar-link">Publications</a>
-      <a href="#experience"   class="sidebar-link">Experience</a>
-      <a href="#teaching"     class="sidebar-link">Teaching</a>
-      <a href="#talks"        class="sidebar-link">Talks</a>
-      <a href="#awards"       class="sidebar-link">Awards</a>
-      <a href="#service"      class="sidebar-link">Service</a>
-      <a href="#cfp"          class="sidebar-link">RTSI CFP</a>
+<!-- ── Top navigation bar ── -->
+<header class="top-nav" id="topNav">
+  <div class="nav-inner">
+    <a href="#about" class="nav-name">Dr. Muhammad Mohsin</a>
+    <nav class="nav-links" id="navLinks">
+      <a href="#about">About</a>
+      <a href="#research">Research</a>
+      <a href="#publications">Publications</a>
+      <a href="#experience">Experience</a>
+      <a href="#teaching">Teaching</a>
+      <a href="#talks">Talks</a>
+      <a href="#awards">Awards</a>
+      <a href="#service">Service</a>
+      <a href="#cfp">CFP</a>
     </nav>
+    <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6"  x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+    </button>
+  </div>
+  <!-- Mobile dropdown -->
+  <nav class="nav-mobile" id="navMobile">
+    <a href="#about">About</a>
+    <a href="#research">Research</a>
+    <a href="#publications">Publications</a>
+    <a href="#experience">Experience</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#talks">Talks</a>
+    <a href="#awards">Awards</a>
+    <a href="#service">Service</a>
+    <a href="#cfp">CFP</a>
+  </nav>
+</header>
 
-    <div class="sidebar-socials">
-      <a href="mailto:muhammad.mohsin@edu.unige.it" class="sidebar-social-link">Email</a>
-      <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank" class="sidebar-social-link">Google Scholar</a>
-      <a href="https://www.linkedin.com/in/drmuhammadmohsin/" target="_blank" class="sidebar-social-link">LinkedIn</a>
-      <a href="https://github.com/drmuhammadmohsin" target="_blank" class="sidebar-social-link">GitHub</a>
-      <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank" class="sidebar-social-link">ResearchGate</a>
-    </div>
-  </aside>
+<main>
+  <div class="content-wrapper">
 
-  <!-- ==========================================================================
-       MAIN SCROLLABLE CONTENT AREA
-       ========================================================================== -->
-  <main class="main-content">
-    <div class="content-wrapper">
-      
-      <!-- ─── ABOUT / HERO ─── -->
-      <section id="about" class="section">
-        <div class="about-hero">
+    <!-- ─── ABOUT ─── -->
+    <section id="about" class="section">
+      <div class="about-grid">
+        <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="about-photo">
+        <div class="about-body">
           <h1>Dr. Muhammad Mohsin</h1>
-
-          <div class="about-affiliation">
-            Postdoctoral Research Fellow ·
-            <a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>,
-            <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy
-          </div>
-
+          <p class="about-position">Postdoctoral Research Fellow</p>
+          <p class="about-affil">
+            <a href="https://dibris.unige.it/en" target="_blank">DIBRIS – Department of Informatics, Bioengineering, Robotics &amp; Systems Engineering</a><br>
+            <a href="https://unige.it/" target="_blank">University of Genoa</a>, Genoa, Italy
+          </p>
           <p class="about-bio">
             I am a computer scientist specializing in AI-driven sustainable circular economy solutions, with a focus on electronic waste recycling and critical raw materials recovery. My research combines deep learning, computer vision, and edge computing to build intelligent systems for automated disassembly and sorting of waste electrical and electronic equipment (WEEE). I also work on medical imaging analysis applications.
           </p>
-
-          <div class="about-contact-links">
-            <a href="mailto:muhammad.mohsin@edu.unige.it">Email</a>
-            <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank">Google Scholar</a>
-            <a href="https://www.linkedin.com/in/drmuhammadmohsin/" target="_blank">LinkedIn</a>
-            <a href="https://github.com/drmuhammadmohsin" target="_blank">GitHub</a>
+          <div class="about-links">
+            <a href="mailto:muhammad.mohsin@edu.unige.it">Email</a> /
+            <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank">Google Scholar</a> /
+            <a href="https://www.linkedin.com/in/drmuhammadmohsin/" target="_blank">LinkedIn</a> /
+            <a href="https://github.com/drmuhammadmohsin" target="_blank">GitHub</a> /
             <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank">ResearchGate</a>
           </div>
         </div>
-      </section>
+      </div>
+    </section>
 
       <hr class="section-divider">
 
@@ -1398,8 +1385,8 @@
         </div>
       </div>
     </footer>
-  </main>
-</div>
+  </div>
+</main>
 
 <!-- Back to Top Button -->
 <button class="back-to-top" id="backToTopBtn" aria-label="Back to Top">

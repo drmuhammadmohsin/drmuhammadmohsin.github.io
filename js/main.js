@@ -12,48 +12,29 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 /* ==========================================================================
-   MOBILE MENU DRAWER
+   MOBILE MENU (top nav burger)
    ========================================================================== */
 function initMobileMenu() {
-  const menuToggle = document.getElementById('mobileMenuToggle');
-  const sidebar = document.getElementById('sidebar');
-  
-  if (!menuToggle || !sidebar) return;
-  
-  // Create overlay if not exists
-  let overlay = document.querySelector('.sidebar-overlay');
-  if (!overlay) {
-    overlay = document.createElement('div');
-    overlay.className = 'sidebar-overlay';
-    document.querySelector('.app-container').appendChild(overlay);
-  }
-  
-  menuToggle.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', closeMenu);
-  
-  // Close menu when clicking sidebar links
-  const sidebarLinks = sidebar.querySelectorAll('.sidebar-link');
-  sidebarLinks.forEach(link => {
-    link.addEventListener('click', closeMenu);
+  const burger  = document.getElementById('navBurger');
+  const mobile  = document.getElementById('navMobile');
+  if (!burger || !mobile) return;
+
+  burger.addEventListener('click', () => {
+    mobile.classList.toggle('open');
   });
-  
-  function toggleMenu() {
-    sidebar.classList.toggle('open');
-    overlay.classList.toggle('active');
-  }
-  
-  function closeMenu() {
-    sidebar.classList.remove('open');
-    overlay.classList.remove('active');
-  }
+
+  // Close when a link is tapped
+  mobile.querySelectorAll('a').forEach(a => {
+    a.addEventListener('click', () => mobile.classList.remove('open'));
+  });
 }
 
 /* ==========================================================================
    SCROLLSPY (Highlight nav as you scroll) & SMOOTH SCROLLING
    ========================================================================== */
 function initScrollspy() {
-  const sections = document.querySelectorAll('section.section, #about');
-  const navLinks = document.querySelectorAll('.sidebar-link');
+  const sections = document.querySelectorAll('section.section');
+  const navLinks = document.querySelectorAll('.nav-links a, .nav-mobile a');
   
   if (sections.length === 0 || navLinks.length === 0) return;
   
