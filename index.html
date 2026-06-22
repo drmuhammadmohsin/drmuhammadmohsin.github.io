@@ -1,357 +1,257 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light">
+<html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="Dr. Muhammad Mohsin - Postdoctoral Research Fellow specializing in AI-driven circular economy, computer vision, and deep learning for sustainable electronic waste management at University of Genoa.">
-  <meta name="keywords" content="Muhammad Mohsin, AI, Machine Learning, Computer Vision, WEEE, Circular Economy, Deep Learning, University of Genoa, DIBRIS">
-  <meta name="author" content="Dr. Muhammad Mohsin">
-  
+  <meta name="description" content="Dr. Muhammad Mohsin - Postdoctoral Research Fellow specializing in AI-driven circular economy, computer vision, and deep learning at University of Genoa.">
   <title>Dr. Muhammad Mohsin | AI Researcher | University of Genoa</title>
-  
-  <!-- CSS Stylesheet -->
   <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
 
-<!-- ── Top navigation bar ── -->
-<header class="top-nav" id="topNav">
+<!-- ── Top navigation ── -->
+<header class="top-nav">
   <div class="nav-inner">
-    <a href="#about" class="nav-name">Dr. Muhammad Mohsin</a>
+    <a class="nav-brand nav-link" data-section="about">Dr. Muhammad Mohsin</a>
     <nav class="nav-links" id="navLinks">
-      <a href="#about">About</a>
-      <a href="#research">Research</a>
-      <a href="#publications">Publications</a>
-      <a href="#experience">Experience</a>
-      <a href="#teaching">Teaching</a>
-      <a href="#talks">Talks</a>
-      <a href="#awards">Awards</a>
-      <a href="#service">Service</a>
-      <a href="#cfp">CFP</a>
+      <a class="nav-link" data-section="about">About</a>
+      <a class="nav-link" data-section="research">Research</a>
+      <a class="nav-link" data-section="publications">Publications</a>
+      <a class="nav-link" data-section="experience">Experience</a>
+      <a class="nav-link" data-section="teaching">Teaching</a>
+      <a class="nav-link" data-section="talks">Talks</a>
+      <a class="nav-link" data-section="awards">Awards</a>
+      <a class="nav-link" data-section="service">Service</a>
+      <a class="nav-link" data-section="cfp">CFP</a>
     </nav>
     <button class="nav-burger" id="navBurger" aria-label="Toggle menu">
-      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6"  x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="3" y1="6" x2="21" y2="6"/><line x1="3" y1="12" x2="21" y2="12"/><line x1="3" y1="18" x2="21" y2="18"/></svg>
     </button>
   </div>
-  <!-- Mobile dropdown -->
   <nav class="nav-mobile" id="navMobile">
-    <a href="#about">About</a>
-    <a href="#research">Research</a>
-    <a href="#publications">Publications</a>
-    <a href="#experience">Experience</a>
-    <a href="#teaching">Teaching</a>
-    <a href="#talks">Talks</a>
-    <a href="#awards">Awards</a>
-    <a href="#service">Service</a>
-    <a href="#cfp">CFP</a>
+    <a class="nav-link" data-section="about">About</a>
+    <a class="nav-link" data-section="research">Research</a>
+    <a class="nav-link" data-section="publications">Publications</a>
+    <a class="nav-link" data-section="experience">Experience</a>
+    <a class="nav-link" data-section="teaching">Teaching</a>
+    <a class="nav-link" data-section="talks">Talks</a>
+    <a class="nav-link" data-section="awards">Awards</a>
+    <a class="nav-link" data-section="service">Service</a>
+    <a class="nav-link" data-section="cfp">CFP</a>
   </nav>
 </header>
 
-<main>
-  <div class="content-wrapper">
+<!-- ── Page body: left profile + right content ── -->
+<div class="page-body">
 
-    <!-- ─── ABOUT ─── -->
-    <section id="about" class="section">
-      <div class="about-grid">
-        <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="about-photo">
-        <div class="about-body">
-          <h1>Dr. Muhammad Mohsin</h1>
-          <p class="about-position">Postdoctoral Research Fellow</p>
-          <p class="about-affil">
-            <a href="https://dibris.unige.it/en" target="_blank">DIBRIS – Department of Informatics, Bioengineering, Robotics &amp; Systems Engineering</a><br>
-            <a href="https://unige.it/" target="_blank">University of Genoa</a>, Genoa, Italy
-          </p>
-          <p class="about-bio">
-            I am a computer scientist specializing in AI-driven sustainable circular economy solutions, with a focus on electronic waste recycling and critical raw materials recovery. My research combines deep learning, computer vision, and edge computing to build intelligent systems for automated disassembly and sorting of waste electrical and electronic equipment (WEEE). I also work on medical imaging analysis applications.
-          </p>
-          <div class="about-links">
-            <a href="mailto:muhammad.mohsin@edu.unige.it">Email</a> /
-            <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank">Google Scholar</a> /
-            <a href="https://www.linkedin.com/in/drmuhammadmohsin/" target="_blank">LinkedIn</a> /
-            <a href="https://github.com/drmuhammadmohsin" target="_blank">GitHub</a> /
-            <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank">ResearchGate</a>
-          </div>
+  <!-- Left profile column (always visible) -->
+  <aside class="left-col">
+    <img src="asset/Profile.jpeg" alt="Dr. Muhammad Mohsin" class="profile-img">
+    <div class="profile-name">Dr. Muhammad Mohsin</div>
+    <div class="profile-title">Postdoctoral Research Fellow</div>
+    <div class="profile-org">University of Genoa, Italy</div>
+    <ul class="profile-links">
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2a8 8 0 0 0-8 8c0 5.25 8 12 8 12s8-6.75 8-12a8 8 0 0 0-8-8z"/><circle cx="12" cy="10" r="3"/></svg>
+        Genoa, Italy
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        <a href="mailto:muhammad.mohsin@edu.unige.it">Email</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14l6.16-3.42a12.08 12.08 0 01.665 6.48A11.95 11.95 0 0012 20.06a11.95 11.95 0 00-6.824-3a12.08 12.08 0 01.665-6.48L12 14z"/></svg>
+        <a href="https://scholar.google.com/citations?user=Ht3LV2kAAAAJ" target="_blank">Google Scholar</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6zM2 9h4v12H2z"/><circle cx="4" cy="4" r="2"/></svg>
+        <a href="https://www.linkedin.com/in/drmuhammadmohsin/" target="_blank">LinkedIn</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.477 2 2 6.477 2 12c0 4.42 2.865 8.17 6.839 9.49.5.092.682-.217.682-.482 0-.237-.008-.866-.013-1.7-2.782.604-3.369-1.34-3.369-1.34-.454-1.156-1.11-1.464-1.11-1.464-.908-.62.069-.608.069-.608 1.003.07 1.531 1.03 1.531 1.03.892 1.529 2.341 1.087 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.11-4.555-4.943 0-1.091.39-1.984 1.029-2.683-.103-.253-.446-1.27.098-2.647 0 0 .84-.269 2.75 1.025A9.578 9.578 0 0112 6.836c.85.004 1.705.114 2.504.336 1.909-1.294 2.747-1.025 2.747-1.025.546 1.377.202 2.394.1 2.647.64.699 1.028 1.592 1.028 2.683 0 3.842-2.339 4.687-4.566 4.935.359.309.678.919.678 1.852 0 1.336-.012 2.415-.012 2.743 0 .267.18.578.688.48C19.138 20.167 22 16.418 22 12c0-5.523-4.477-10-10-10z"/></svg>
+        <a href="https://github.com/drmuhammadmohsin" target="_blank">GitHub</a>
+      </li>
+      <li>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        <a href="https://www.researchgate.net/profile/Muhammad-Mohsin-51" target="_blank">ResearchGate</a>
+      </li>
+    </ul>
+  </aside>
+
+  <!-- Right content: one section shown at a time -->
+  <main class="right-col">
+
+    <!-- ── ABOUT ── -->
+    <div id="page-about" class="page-section active">
+      <h2>About me</h2>
+      <p>
+        I am a Postdoctoral Research Fellow at <a href="https://dibris.unige.it/en" target="_blank">DIBRIS – Department of Informatics, Bioengineering, Robotics &amp; Systems Engineering</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy.
+      </p>
+      <p>
+        I am a computer scientist specializing in AI-driven sustainable circular economy solutions, with a focus on electronic waste recycling and critical raw materials recovery. My research combines deep learning, computer vision, and edge computing to build intelligent systems for automated disassembly and sorting of waste electrical and electronic equipment (WEEE). I also work on medical imaging analysis applications.
+      </p>
+      <p>
+        I received my PhD in Computer Science from the University of Genoa (2025), where I developed the <em>V-PCB Demo and Dataset</em> — a patented framework for component-level recycling of printed circuit boards using deep learning. I hold an MS in Computer Engineering from <a href="https://www.nust.edu.pk/" target="_blank">NUST</a>, Pakistan (2021) and a BSc in Computer Engineering from UET Taxila (2017).
+      </p>
+      <p>
+        I have been an invited speaker at international venues including the Global Summit on AI (2025), IEEE RTSI, IEEE ECIS, and the University of Opole, Poland. I organize a Special Session on <em>"AI-Powered Innovations for Circular Economy"</em> at <a class="nav-link" data-section="cfp" style="cursor:pointer;">IEEE RTSI 2026</a>, Espoo, Finland.
+      </p>
+    </div>
+
+    <!-- ── RESEARCH ── -->
+    <div id="page-research" class="page-section">
+      <h2>Research Interests</h2>
+      <p>My research develops artificial intelligence and robotics solutions for ecological transitions and advanced diagnostics. Current focus areas:</p>
+
+      <div class="research-interests-grid">
+        <div class="interest-card">
+          <h3>Circular Economy &amp; E-Waste</h3>
+          <p>AI-powered computer vision solutions for WEEE recycling, critical raw materials recovery, and sustainable electronic waste management through automated disassembly systems.</p>
+        </div>
+        <div class="interest-card">
+          <h3>Computer Vision &amp; Deep Learning</h3>
+          <p>Real-time object detection, component segmentation, transformer architectures, multi-stage transfer learning, and explainability heatmaps for industrial recycling pipelines.</p>
+        </div>
+        <div class="interest-card">
+          <h3>Medical Imaging Analysis</h3>
+          <p>Deep learning networks applied to automated tumor segmentation (hepatopancreatic tumors, glioma) and prostate cancer grading architectures.</p>
         </div>
       </div>
-    </section>
+    </div>
 
-      <hr class="section-divider">
+    <!-- ── PUBLICATIONS ── -->
+    <div id="page-publications" class="page-section">
+      <h2>Publications</h2>
 
-      <!-- ─── RESEARCH INTERESTS ─── -->
-      <section id="research" class="section">
-        <div class="section-header">
-          <span class="section-badge">Academic focus</span>
-          <h2 class="section-title">Research Interests</h2>
-          <p class="section-desc">Developing artificial intelligence and robotics solutions to drive ecological transitions and advanced diagnostics.</p>
+      <div class="publications-controls">
+        <div class="publications-search-bar">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+          <input type="text" id="pubSearch" placeholder="Search by title, author, venue, or year..." class="publications-search-input">
         </div>
-
-        <div class="research-interests-grid">
-          <!-- CE -->
-          <div class="interest-card">
-            <div class="interest-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21.5 2v6h-6M21.34 15.57a10 10 0 1 1-.57-8.38l5.67-5.67"/></svg>
-            </div>
-            <h3>Circular Economy &amp; E-Waste</h3>
-            <p>AI-powered computer vision solutions for WEEE recycling, critical raw materials recovery, and sustainable electronic waste management through automated disassembly systems.</p>
-          </div>
-          <!-- CV -->
-          <div class="interest-card">
-            <div class="interest-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
-            </div>
-            <h3>Computer Vision &amp; Deep Learning</h3>
-            <p>Real-time object detection, component segmentation, transformer architectures, multi-stage transfer learning, and explainability heatmaps for industrial recycling pipelines.</p>
-          </div>
-          <!-- Medical -->
-          <div class="interest-card">
-            <div class="interest-icon-box">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
-            </div>
-            <h3>Medical Imaging Analysis</h3>
-            <p>Deep learning networks applied to automated tumor segmentation (hepatopancreatic tumors, glioma tumor segmentation) and prostate cancer grading architectures.</p>
-          </div>
+        <div class="publications-tabs-row">
+          <button class="pub-filter-btn active" data-filter="all">All <span class="pub-filter-count">0</span></button>
+          <button class="pub-filter-btn" data-filter="journal">Journals <span class="pub-filter-count">0</span></button>
+          <button class="pub-filter-btn" data-filter="conference">Conferences <span class="pub-filter-count">0</span></button>
+          <button class="pub-filter-btn" data-filter="patent">Patents <span class="pub-filter-count">0</span></button>
         </div>
+      </div>
 
-        <!-- Featured / Recent Work Showcase -->
-        <h3 style="margin-top: 3.5rem; margin-bottom: 1.5rem; font-size: 1.25rem;">Featured Publications</h3>
-        <div class="featured-pubs-grid">
-          <!-- Showcase 1 -->
-          <div class="showcase-pub-card">
-            <div class="showcase-pub-details">
-              <div class="showcase-pub-meta">
-                <span class="showcase-pub-year">2025</span>
-                <span class="showcase-pub-venue">MDPI Sensors</span>
-              </div>
-              <h3>A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains</h3>
-              <div class="showcase-pub-authors">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq</div>
+      <div class="pub-list">
+
+        <!-- YEAR 2026 -->
+        <div class="pub-list-year-group" data-year="2026">
+          <div class="pub-year-header">2026</div>
+
+          <div class="pub-entry-item" data-type="journal">
+            <div class="pub-index">1</div>
+            <div class="pub-details">
+              <div class="pub-title">A Systematic Review of Deep Learning Approaches for Hepatopancreatic Tumor Segmentation</div>
+              <div class="pub-authors-list">R Hussain, <strong>Muhammad Mohsin</strong>, D Khan, M Zohaib</div>
+              <div><span class="pub-venue-desc">Journal of Imaging, 2026</span></div>
               <div class="pub-actions">
-                <a href="https://doi.org/10.3390/s25196118" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
-                  View Publisher Website
-                </a>
+                <a href="assets/papers pdfs/01_Hepatopancreatic_Tumor_Segmentation.pdf" target="_blank" class="pub-action-link">PDF</a>
+                <a href="#" class="pub-action-link" data-target="abs-j07">Abstract</a>
+                <a href="#" class="pub-action-link" data-target="bib-j07">BibTeX</a>
               </div>
-          </div>
-
-          <!-- Showcase 2 -->
-          <div class="showcase-pub-card">
-            <div class="showcase-pub-details">
-              <div class="showcase-pub-meta">
-                <span class="showcase-pub-year">2025</span>
-                <span class="showcase-pub-venue">MDPI Computers</span>
+              <div class="pub-collapsible-panel" id="abs-j07">
+                <div class="pub-panel-content">
+                  <div class="pub-panel-title">Abstract</div>
+                  Hepatopancreatic tumors present a critical imaging diagnostic challenge due to varying structures and sizes. This systematic review synthesizes recent developments in artificial intelligence and deep learning methods specifically targeted toward automated segmentation of hepatopancreatic tumors. We review state-of-the-art CNNs and visual transformers (ViTs), contrast dataset benchmarks, and discuss research challenges including pixel imbalances and clinical workflow deployment obstacles.
+                </div>
               </div>
-              <h3>Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review</h3>
-              <div class="showcase-pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-              <div class="pub-actions">
-                <a href="https://doi.org/10.3390/computers14080304" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
-                  View Publisher Website
-                </a>
-          </div>
-
-          <!-- Showcase 3 -->
-          <div class="showcase-pub-card">
-            <div class="showcase-pub-details">
-              <div class="showcase-pub-meta">
-                <span class="showcase-pub-year">2025</span>
-                <span class="showcase-pub-venue">MDPI Computers</span>
-              </div>
-              <h3>Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT</h3>
-              <div class="showcase-pub-authors"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-              <div class="pub-actions">
-                <a href="https://doi.org/10.3390/computers14020062" target="_blank" class="btn-primary" style="padding: 0.4rem 0.9rem; font-size: 0.8rem; box-shadow: none;">
-                  View Publisher Website
-                </a>
-          </div>
-        </div>
-      </section>
-
-      <hr class="section-divider">
-
-      <!-- ─── PUBLICATIONS ─── -->
-      <section id="publications" class="section">
-        <div class="section-header">
-          <span class="section-badge">Bibliography</span>
-          <h2 class="section-title">Publications</h2>
-          <p class="section-desc">Search and filter patent, conference, and journal papers.</p>
-        </div>
-
-        <!-- Publication Controls Widget -->
-        <div class="publications-controls">
-          <!-- Text Search -->
-          <div class="publications-search-bar">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
-            <input type="text" id="pubSearch" placeholder="Search by title, author, venue, or year..." class="publications-search-input">
-          </div>
-          
-          <!-- Tabs filters -->
-          <div class="publications-tabs-row">
-            <button class="pub-filter-btn active" data-filter="all">All <span class="pub-filter-count">0</span></button>
-            <button class="pub-filter-btn" data-filter="journal">Journals <span class="pub-filter-count">0</span></button>
-            <button class="pub-filter-btn" data-filter="conference">Conferences <span class="pub-filter-count">0</span></button>
-            <button class="pub-filter-btn" data-filter="patent">Patents <span class="pub-filter-count">0</span></button>
-          </div>
-        </div>
-
-        <div class="pub-list">
-          
-          <!-- YEAR 2026 -->
-          <div class="pub-list-year-group" data-year="2026">
-            <div class="pub-year-header">2026</div>
-
-            <!-- J07 (Index: 1) -->
-            <div class="pub-entry-item" data-type="journal">
-              <div class="pub-index">1</div>
-              <div class="pub-details">
-                <div class="pub-title">A Systematic Review of Deep Learning Approaches for Hepatopancreatic Tumor Segmentation</div>
-                <div class="pub-authors-list">R Hussain, <strong>Muhammad Mohsin</strong>, D Khan, M Zohaib</div>
-                <div>
-                  <span class="pub-badge-type journal">Journal</span>
-                  <span class="pub-venue-desc">Journal of Imaging, 2026</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="assets/papers pdfs/01_Hepatopancreatic_Tumor_Segmentation.pdf" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
-                    PDF
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="abs-j07">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    Abstract
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="bib-j07">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                    BibTeX
-                  </a>
-                </div>
-                <!-- Abstract Collapsible Panel -->
-                <div class="pub-collapsible-panel" id="abs-j07">
-                  <div class="pub-panel-content">
-                    <div class="pub-panel-title">Abstract</div>
-                    Hepatopancreatic tumors present a critical imaging diagnostic challenge due to varying structures and sizes. This systematic review synthesizes recent developments in artificial intelligence and deep learning methods specifically targeted toward automated segmentation of hepatopancreatic tumors. We review state-of-the-art CNNs and visual transformers (ViTs), contrast dataset benchmarks, and discuss research challenges including pixel imbalances and clinical workflow deployment obstacles.
-                  </div>
-                </div>
-                <!-- BibTeX Collapsible Panel -->
-                <div class="pub-collapsible-panel" id="bib-j07">
-                  <div class="pub-panel-content" style="position:relative;">
-                    <div class="pub-panel-title">BibTeX</div>
-                    <button class="copy-bibtex-btn">Copy</button>
-                    <code class="bibtex-code">@article{hussain2026systematic,
+              <div class="pub-collapsible-panel" id="bib-j07">
+                <div class="pub-panel-content" style="position:relative;">
+                  <div class="pub-panel-title">BibTeX</div>
+                  <button class="copy-bibtex-btn">Copy</button>
+                  <code class="bibtex-code">@article{hussain2026systematic,
   title={A Systematic Review of Deep Learning Approaches for Hepatopancreatic Tumor Segmentation},
   author={Hussain, R and Mohsin, Muhammad and Khan, D and Zohaib, M},
   journal={Journal of Imaging},
   year={2026},
   publisher={MDPI}
 }</code>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- J06 (Index: 2) -->
-            <div class="pub-entry-item" data-type="journal">
-              <div class="pub-index">2</div>
-              <div class="pub-details">
-                <div class="pub-title">Transition Towards a Circular and Resource-Efficient Economy: An Artificial Intelligence Perspective</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type journal">Journal</span>
-                  <span class="pub-venue-desc">Applied Sciences, 2026</span>
+          <div class="pub-entry-item" data-type="journal">
+            <div class="pub-index">2</div>
+            <div class="pub-details">
+              <div class="pub-title">Transition Towards a Circular and Resource-Efficient Economy: An Artificial Intelligence Perspective</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">Applied Sciences, 2026</span></div>
+              <div class="pub-actions">
+                <a href="#" class="pub-action-link" data-target="abs-j06">Abstract</a>
+                <a href="#" class="pub-action-link" data-target="bib-j06">BibTeX</a>
+              </div>
+              <div class="pub-collapsible-panel" id="abs-j06">
+                <div class="pub-panel-content">
+                  <div class="pub-panel-title">Abstract</div>
+                  Transitioning to a circular economy is necessary to mitigate raw materials depletion. This paper investigates artificial intelligence's paradigm-shifting capabilities for optimizing product lifecycles, resource management, sorting efficiency, and waste valuation. By reviewing automated supply chains and disassembly mechanisms, we highlight how AI acts as an enabler for industrial resource efficiency.
                 </div>
-                <div class="pub-actions">
-                  <a href="#" class="pub-action-link" data-target="abs-j06">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    Abstract
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="bib-j06">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                    BibTeX
-                  </a>
-                </div>
-                <div class="pub-collapsible-panel" id="abs-j06">
-                  <div class="pub-panel-content">
-                    <div class="pub-panel-title">Abstract</div>
-                    Transitioning to a circular economy is necessary to mitigate raw materials depletion. This paper investigates artificial intelligence's paradigm-shifting capabilities for optimizing product lifecycles, resource management, sorting efficiency, and waste valuation. By reviewing automated supply chains and disassembly mechanisms, we highlight how AI acts as an enabler for industrial resource efficiency.
-                  </div>
-                </div>
-                <div class="pub-collapsible-panel" id="bib-j06">
-                  <div class="pub-panel-content" style="position:relative;">
-                    <div class="pub-panel-title">BibTeX</div>
-                    <button class="copy-bibtex-btn">Copy</button>
-                    <code class="bibtex-code">@article{mohsin2026transition,
+              </div>
+              <div class="pub-collapsible-panel" id="bib-j06">
+                <div class="pub-panel-content" style="position:relative;">
+                  <div class="pub-panel-title">BibTeX</div>
+                  <button class="copy-bibtex-btn">Copy</button>
+                  <code class="bibtex-code">@article{mohsin2026transition,
   title={Transition Towards a Circular and Resource-Efficient Economy: An Artificial Intelligence Perspective},
   author={Mohsin, Muhammad and Rovetta, Stefano and Masulli, Francesco and Cabri, Alberto},
   journal={Applied Sciences},
   year={2026},
   publisher={MDPI}
 }</code>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </div>
 
+        <!-- YEAR 2025 -->
+        <div class="pub-list-year-group" data-year="2025">
+          <div class="pub-year-header">2025</div>
+
+          <div class="pub-entry-item" data-type="patent">
+            <div class="pub-index">3</div>
+            <div class="pub-details">
+              <div class="pub-title">V-PCB DEMO AND DATASET</div>
+              <div class="pub-authors-list">Francesco Masulli, <strong>Muhammad Mohsin</strong>, Stefano Rovetta, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">Registration: D000026014 · Italy (Granted May 30, 2025)</span></div>
+              <div class="pub-actions">
+                <a href="#" class="pub-action-link" data-target="abs-p01">Abstract</a>
+              </div>
+              <div class="pub-collapsible-panel" id="abs-p01">
+                <div class="pub-panel-content">
+                  <div class="pub-panel-title">Patent Description</div>
+                  A system and database model for automated recognition, segmentation, and selective sorting of components on printed circuit boards (PCBs). Utilizes multi-modal convolutional networks trained to identify critical raw materials (CRMs) on recycling conveyor belts, facilitating robotic disassembly.
+                </div>
+              </div>
+            </div>
           </div>
 
-          <!-- YEAR 2025 -->
-          <div class="pub-list-year-group" data-year="2025">
-            <div class="pub-year-header">2025</div>
-
-            <!-- P01 (Index: 3) -->
-            <div class="pub-entry-item" data-type="patent">
-              <div class="pub-index">3</div>
-              <div class="pub-details">
-                <div class="pub-title">V-PCB DEMO AND DATASET</div>
-                <div class="pub-authors-list">Francesco Masulli, <strong>Muhammad Mohsin</strong>, Stefano Rovetta, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type patent">Patent</span>
-                  <span class="pub-venue-desc">Registration: D000026014 · Italy (Granted May 30, 2025)</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="#" class="pub-action-link" data-target="abs-p01">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    Abstract
-                  </a>
-                </div>
-                <div class="pub-collapsible-panel" id="abs-p01">
-                  <div class="pub-panel-content">
-                    <div class="pub-panel-title">Patent Description</div>
-                    A system and database model for automated recognition, segmentation, and selective sorting of components on printed circuit boards (PCBs). Utilizes multi-modal convolutional networks trained to identify critical raw materials (CRMs) on recycling conveyor belts, facilitating robotic disassembly.
-                  </div>
+          <div class="pub-entry-item" data-type="journal">
+            <div class="pub-index">4</div>
+            <div class="pub-details">
+              <div class="pub-title">A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains</div>
+              <div class="pub-authors-list">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq</div>
+              <div><span class="pub-venue-desc">MDPI Sensors, 2025</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3390/s25196118" target="_blank" class="pub-action-link">DOI</a>
+                <a href="#" class="pub-action-link" data-target="abs-j05">Abstract</a>
+                <a href="#" class="pub-action-link" data-target="bib-j05">BibTeX</a>
+              </div>
+              <div class="pub-collapsible-panel" id="abs-j05">
+                <div class="pub-panel-content">
+                  <div class="pub-panel-title">Abstract</div>
+                  Zero Trust Architecture (ZTA) has emerged as a cornerstone in securing enterprise networks under the 'never trust, always verify' paradigm. This review provides a comprehensive analysis of ZTA implementation patterns, engineering challenges, deployment paradigms across cloud, IoT, and industrial networks, and addresses the open research questions in trust score optimization.
                 </div>
               </div>
-            </div>
-
-            <!-- J05 (Index: 4) -->
-            <div class="pub-entry-item" data-type="journal">
-              <div class="pub-index">4</div>
-              <div class="pub-details">
-                <div class="pub-title">A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains</div>
-                <div class="pub-authors-list">Sadaf Mushtaq, <strong>Muhammad Mohsin</strong>, Muhammad Mujahid Mushtaq</div>
-                <div>
-                  <span class="pub-badge-type journal">Journal</span>
-                  <span class="pub-venue-desc">MDPI Sensors, 2025</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.3390/s25196118" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI Link
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="abs-j05">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    Abstract
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="bib-j05">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                    BibTeX
-                  </a>
-                </div>
-                <div class="pub-collapsible-panel" id="abs-j05">
-                  <div class="pub-panel-content">
-                    <div class="pub-panel-title">Abstract</div>
-                    Zero Trust Architecture (ZTA) has emerged as a cornerstone in securing enterprise networks under the 'never trust, always verify' paradigm. This review provides a comprehensive analysis of ZTA implementation patterns, engineering challenges, deployment paradigms across cloud, IoT, and industrial networks, and addresses the open research questions in trust score optimization.
-                  </div>
-                </div>
-                <div class="pub-collapsible-panel" id="bib-j05">
-                  <div class="pub-panel-content" style="position:relative;">
-                    <div class="pub-panel-title">BibTeX</div>
-                    <button class="copy-bibtex-btn">Copy</button>
-                    <code class="bibtex-code">@article{mushtaq2025systematic,
+              <div class="pub-collapsible-panel" id="bib-j05">
+                <div class="pub-panel-content" style="position:relative;">
+                  <div class="pub-panel-title">BibTeX</div>
+                  <button class="copy-bibtex-btn">Copy</button>
+                  <code class="bibtex-code">@article{mushtaq2025systematic,
   title={A Systematic Literature Review on the Implementation and Challenges of Zero Trust Architecture Across Domains},
   author={Mushtaq, Sadaf and Mohsin, Muhammad and Mushtaq, Muhammad Mujahid},
   journal={Sensors},
@@ -361,46 +261,33 @@
   year={2025},
   publisher={MDPI}
 }</code>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- J04 (Index: 5) -->
-            <div class="pub-entry-item" data-type="journal">
-              <div class="pub-index">5</div>
-              <div class="pub-details">
-                <div class="pub-title">Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type journal">Journal</span>
-                  <span class="pub-venue-desc">MDPI Computers, 2025</span>
+          <div class="pub-entry-item" data-type="journal">
+            <div class="pub-index">5</div>
+            <div class="pub-details">
+              <div class="pub-title">Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">MDPI Computers, 2025</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3390/computers14080304" target="_blank" class="pub-action-link">DOI</a>
+                <a href="#" class="pub-action-link" data-target="abs-j04">Abstract</a>
+                <a href="#" class="pub-action-link" data-target="bib-j04">BibTeX</a>
+              </div>
+              <div class="pub-collapsible-panel" id="abs-j04">
+                <div class="pub-panel-content">
+                  <div class="pub-panel-title">Abstract</div>
+                  Waste-Printed Circuit Boards (WPCBs) are complex and contain critical raw materials alongside toxic elements. This paper reviews key advancements in AI applications for WPCB recycling, including computer vision systems for component detection, automated robotic systems, sorting classification models, and highlights how deep learning boosts recovery yields.
                 </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.3390/computers14080304" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI Link
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="abs-j04">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    Abstract
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="bib-j04">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                    BibTeX
-                  </a>
-                </div>
-                <div class="pub-collapsible-panel" id="abs-j04">
-                  <div class="pub-panel-content">
-                    <div class="pub-panel-title">Abstract</div>
-                    Waste-Printed Circuit Boards (WPCBs) are complex and contain critical raw materials alongside toxic elements. This paper reviews key advancements in AI applications for WPCB recycling, including computer vision systems for component detection, automated robotic systems, sorting classification models, and highlights how deep learning boosts recovery yields.
-                  </div>
-                </div>
-                <div class="pub-collapsible-panel" id="bib-j04">
-                  <div class="pub-panel-content" style="position:relative;">
-                    <div class="pub-panel-title">BibTeX</div>
-                    <button class="copy-bibtex-btn">Copy</button>
-                    <code class="bibtex-code">@article{mohsin2025artificial,
+              </div>
+              <div class="pub-collapsible-panel" id="bib-j04">
+                <div class="pub-panel-content" style="position:relative;">
+                  <div class="pub-panel-title">BibTeX</div>
+                  <button class="copy-bibtex-btn">Copy</button>
+                  <code class="bibtex-code">@article{mohsin2025artificial,
   title={Artificial Intelligence Approach for Waste-Printed Circuit Board Recycling: A Systematic Review},
   author={Mohsin, Muhammad and Rovetta, Stefano and Masulli, Francesco and Cabri, Alberto},
   journal={Computers},
@@ -410,46 +297,33 @@
   year={2025},
   publisher={MDPI}
 }</code>
-                  </div>
                 </div>
               </div>
             </div>
+          </div>
 
-            <!-- J03 (Index: 6) -->
-            <div class="pub-entry-item" data-type="journal">
-              <div class="pub-index">6</div>
-              <div class="pub-details">
-                <div class="pub-title">Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type journal">Journal</span>
-                  <span class="pub-venue-desc">MDPI Computers, 2025</span>
+          <div class="pub-entry-item" data-type="journal">
+            <div class="pub-index">6</div>
+            <div class="pub-details">
+              <div class="pub-title">Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">MDPI Computers, 2025</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3390/computers14020062" target="_blank" class="pub-action-link">DOI</a>
+                <a href="#" class="pub-action-link" data-target="abs-j03">Abstract</a>
+                <a href="#" class="pub-action-link" data-target="bib-j03">BibTeX</a>
+              </div>
+              <div class="pub-collapsible-panel" id="abs-j03">
+                <div class="pub-panel-content">
+                  <div class="pub-panel-title">Abstract</div>
+                  Robotic disassembly requires low-latency processing of video feeds to identify electronic elements. This paper outlines an edge computing and IoT infrastructure framework to process deep learning object detection models directly on-site, decreasing latency, data transmission overheads, and enabling real-time robotic interaction.
                 </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.3390/computers14020062" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI Link
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="abs-j03">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><line x1="12" y1="16" x2="12" y2="12"/><line x1="12" y1="8" x2="12.01" y2="8"/></svg>
-                    Abstract
-                  </a>
-                  <a href="#" class="pub-action-link" data-target="bib-j03">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/><rect x="8" y="2" width="8" height="4" rx="1" ry="1"/></svg>
-                    BibTeX
-                  </a>
-                </div>
-                <div class="pub-collapsible-panel" id="abs-j03">
-                  <div class="pub-panel-content">
-                    <div class="pub-panel-title">Abstract</div>
-                    Robotic disassembly requires low-latency processing of video feeds to identify electronic elements. This paper outlines an edge computing and IoT infrastructure framework to process deep learning object detection models directly on-site, decreasing latency, data transmission overheads, and enabling real-time robotic interaction.
-                  </div>
-                </div>
-                <div class="pub-collapsible-panel" id="bib-j03">
-                  <div class="pub-panel-content" style="position:relative;">
-                    <div class="pub-panel-title">BibTeX</div>
-                    <button class="copy-bibtex-btn">Copy</button>
-                    <code class="bibtex-code">@article{mohsin2025automatic,
+              </div>
+              <div class="pub-collapsible-panel" id="bib-j03">
+                <div class="pub-panel-content" style="position:relative;">
+                  <div class="pub-panel-title">BibTeX</div>
+                  <button class="copy-bibtex-btn">Copy</button>
+                  <code class="bibtex-code">@article{mohsin2025automatic,
   title={Automatic Disassembly of Waste Printed Circuit Boards: The Role of Edge Computing and IoT},
   author={Mohsin, Muhammad and Rovetta, Stefano and Masulli, Francesco and Cabri, Alberto},
   journal={Computers},
@@ -459,941 +333,462 @@
   year={2025},
   publisher={MDPI}
 }</code>
-                  </div>
                 </div>
-              </div>
-            </div>
-
-            <!-- J02 (Index: 7) -->
-            <div class="pub-entry-item" data-type="journal">
-              <div class="pub-index">7</div>
-              <div class="pub-details">
-                <div class="pub-title">Green Innovation and Environmental Performance: The Moderating Roles of Governance and Policy</div>
-                <div class="pub-authors-list">Fatima Batool, <strong>Muhammad Mohsin</strong>, Belal Mahmoud Alwadi</div>
-                <div>
-                  <span class="pub-badge-type journal">Journal</span>
-                  <span class="pub-venue-desc">MDPI World, 2025</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.3390/world6010029" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C12 (Index: 8) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">8</div>
-              <div class="pub-details">
-                <div class="pub-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">IEEE 9th RTSI, Gammarth, Tunisia, 2025</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1109/RTSI64020.2025.11212336" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C11 (Index: 9) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">9</div>
-              <div class="pub-details">
-                <div class="pub-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">IEEE ECIS 2025, Yueyang, China</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1109/ECIS65594.2025.11086768" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C10 (Index: 10) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">10</div>
-              <div class="pub-details">
-                <div class="pub-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">IEEE 9th RTSI, Gammarth, Tunisia, 2025</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1109/RTSI64020.2025.11212252" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C09 (Index: 11) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">11</div>
-              <div class="pub-details">
-                <div class="pub-title">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">ICASET 2025, Kenitra, Morocco</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1007/978-3-031-98334-4_13" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- YEAR 2024 -->
-          <div class="pub-list-year-group" data-year="2024">
-            <div class="pub-year-header">2024</div>
-
-            <!-- J01 (Index: 12) -->
-            <div class="pub-entry-item" data-type="journal">
-              <div class="pub-index">12</div>
-              <div class="pub-details">
-                <div class="pub-title">Impact of Green Innovation on Business Sustainability of Firms and the Mediating Role of Green Intellectual Capital</div>
-                <div class="pub-authors-list">Fatima Batool, <strong>Muhammad Mohsin</strong></div>
-                <div>
-                  <span class="pub-badge-type journal">Journal</span>
-                  <span class="pub-venue-desc">Educational Administration: Theory and Practice, 30(4), 2024</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.53555/kuey.v30i4.1528" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C08 (Index: 13) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">13</div>
-              <div class="pub-details">
-                <div class="pub-title">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">ApplePies 2024, Polytechnic University of Turin</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1007/978-3-031-84100-2_21" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C07 (Index: 14) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">14</div>
-              <div class="pub-details">
-                <div class="pub-title">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Danilo Greco, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">IEEE RTSI 2024, Politecnico di Milano</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1109/RTSI61910.2024.10761364" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C06 (Index: 15) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">15</div>
-              <div class="pub-details">
-                <div class="pub-title">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Xianlai Zeng, Stefano Rovetta, Francesco Masulli</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">ICWMT19, Hangzhou, China, 2024</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.48550/arXiv.2406.16593" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    arXiv
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- YEAR 2023 -->
-          <div class="pub-list-year-group" data-year="2023">
-            <div class="pub-year-header">2023</div>
-
-            <!-- C05 (Index: 16) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">16</div>
-              <div class="pub-details">
-                <div class="pub-title">Virtual Mines – Component-level recycling of printed circuit boards using deep learning</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Alberto Cabri</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">WIRN 2023, Vietri sul Mare, Italy</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.48550/arXiv.2406.17162" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    arXiv
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- YEAR 2022 -->
-          <div class="pub-list-year-group" data-year="2022">
-            <div class="pub-year-header">2022</div>
-
-            <!-- C04 (Index: 17) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">17</div>
-              <div class="pub-details">
-                <div class="pub-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence</div>
-                <div class="pub-authors-list">Alberto Cabri, Francesco Masulli, Stefano Rovetta, <strong>Muhammad Mohsin</strong></div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">MAS 2022, Rome, Italy</span>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- YEAR 2021 -->
-          <div class="pub-list-year-group" data-year="2021">
-            <div class="pub-year-header">2021</div>
-
-            <!-- C03 (Index: 18) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">18</div>
-              <div class="pub-details">
-                <div class="pub-title">Automatic Prostate Cancer Grading Using Deep Architectures</div>
-                <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Arslan Shaukat, Usman Akram, Muhammad Kaab Zarrar</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">IEEE AICCSA 2021, Tangier, Morocco</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1109/AICCSA53542.2021.9686869" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-          <!-- YEAR 2019 -->
-          <div class="pub-list-year-group" data-year="2019">
-            <div class="pub-year-header">2019</div>
-
-            <!-- C02 (Index: 19) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">19</div>
-              <div class="pub-details">
-                <div class="pub-title">Towards Automatic Recognition Sound Observed in Daily Activity</div>
-                <div class="pub-authors-list">Arslan Shaukat, Ammar Younis, Usman Akram, <strong>Muhammad Mohsin</strong>, Zartasha Mustansir</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">IEEE ICCI*CC 2019, Milan, Italy</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1109/ICCICC46617.2019.9146067" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-            <!-- C01 (Index: 20) -->
-            <div class="pub-entry-item" data-type="conference">
-              <div class="pub-index">20</div>
-              <div class="pub-details">
-                <div class="pub-title">Latest Trends in Automatic Glioma Tumor Segmentation and an Improved CNN-based Solution</div>
-                <div class="pub-authors-list">Muhammad Kaab Zarrar, Farhan Hussain, <strong>Muhammad Mohsin</strong>, Rubab Sheikh</div>
-                <div>
-                  <span class="pub-badge-type conference">Conference</span>
-                  <span class="pub-venue-desc">IEEE MACS 2019, Karachi, Pakistan</span>
-                </div>
-                <div class="pub-actions">
-                  <a href="https://doi.org/10.1109/MACS48846.2019.9024815" target="_blank" class="pub-action-link">
-                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
-                    DOI
-                  </a>
-                </div>
-              </div>
-            </div>
-
-          </div>
-
-        </div>
-      </section>
-
-      <hr class="section-divider">
-
-      <!-- ─── EXPERIENCE & EDUCATION ─── -->
-      <section id="experience" class="section">
-        <div class="timeline-section-split">
-          
-          <!-- Experience Timeline -->
-          <div>
-            <div class="section-header">
-              <span class="section-badge">Career Timeline</span>
-              <h2 class="section-title">Professional Experience</h2>
-            </div>
-            
-            <div class="timeline">
-              <!-- Item 1 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Jan 2025 – Present</span>
-                </div>
-                <h3>Postdoctoral Researcher</h3>
-                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-                <div class="timeline-desc">Advancing artificial intelligence models for circular economy systems and critical raw materials extraction/sorting from complex electronic waste.</div>
-              </div>
-
-              <!-- Item 2 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Sep 2025 – Present</span>
-                </div>
-                <h3>Cultore della Materia</h3>
-                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-                <div class="timeline-desc">Academic supervisor, assisting teaching staff, evaluation panels, course examinations, and mentoring student projects in computer engineering.</div>
-              </div>
-
-              <!-- Item 3 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Oct 2024 – Present</span>
-                </div>
-                <h3>Teaching Assistant</h3>
-                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-                <div class="timeline-desc">Tutor, lab demonstrator, and teaching assistant support in Computer Science and Data Management courses.</div>
-              </div>
-
-              <!-- Item 4 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Aug – Sep 2025</span>
-                </div>
-                <h3>Senior AI Consultant</h3>
-                <div class="timeline-org">Vega Research Laboratories (VRLabs)</div>
-                <div class="timeline-desc">Developed computer vision models for automated sorting. Implemented custom clustering metrics for sorting electrical components on PCBs.</div>
-              </div>
-
-              <!-- Item 5 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Dec 2023 – May 2024</span>
-                </div>
-                <h3>Visiting PhD Researcher</h3>
-                <div class="timeline-org">Tsinghua University, School of Environment, Beijing, China</div>
-                <div class="timeline-desc">Conducted research on global e-waste material recovery pipelines. Implemented criteria-based sorting matrices.</div>
-              </div>
-
-              <!-- Item 6 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Jan 2022 – May 2025</span>
-                </div>
-                <h3>PhD Researcher</h3>
-                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, University of Genoa &amp; VRLabs</div>
-                <div class="timeline-desc">Developed V-PCB demo and dataset. Created detection mechanisms for electronic assemblies.</div>
-              </div>
-
-              <!-- Item 7 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Aug 2019 – Jul 2021</span>
-                </div>
-                <h3>Research Assistant</h3>
-                <div class="timeline-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
-                <div class="timeline-desc">Developed deep learning segmentation networks for medical scanner imaging. Work selected for Jeju ML camp, South Korea.</div>
-              </div>
-
-              <!-- Item 8 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">Feb 2017 – Present</span>
-                </div>
-                <h3>Machine Learning Expert (Freelance)</h3>
-                <div class="timeline-org">Fiverr &amp; Upwork</div>
-                <div class="timeline-desc">Delivered over 200 custom data science, machine learning, and computer vision projects to international clients.</div>
               </div>
             </div>
           </div>
 
-          <!-- Education Timeline -->
-          <div>
-            <div class="section-header">
-              <span class="section-badge">Academic Degrees</span>
-              <h2 class="section-title">Education</h2>
-            </div>
-            
-            <div class="timeline">
-              <!-- Edu 1 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">2022 – 2025</span>
-                </div>
-                <h3>PhD in Computer Science</h3>
-                <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
-                <div class="timeline-desc">Thesis: <em>Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</em></div>
-              </div>
-
-              <!-- Edu 2 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">2017 – 2021</span>
-                </div>
-                <h3>MS in Computer Engineering</h3>
-                <div class="timeline-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
-                <div class="timeline-desc">Thesis: <em>Automatic Prostate Cancer Grading Using Deep Architectures</em></div>
-              </div>
-
-              <!-- Edu 3 -->
-              <div class="timeline-item">
-                <div class="timeline-marker"></div>
-                <div class="timeline-info">
-                  <span class="timeline-date">2013 – 2017</span>
-                </div>
-                <h3>BSc in Computer Engineering</h3>
-                <div class="timeline-org">University of Engineering and Technology (UET) Taxila, Pakistan</div>
+          <div class="pub-entry-item" data-type="journal">
+            <div class="pub-index">7</div>
+            <div class="pub-details">
+              <div class="pub-title">Green Innovation and Environmental Performance: The Moderating Roles of Governance and Policy</div>
+              <div class="pub-authors-list">Fatima Batool, <strong>Muhammad Mohsin</strong>, Belal Mahmoud Alwadi</div>
+              <div><span class="pub-venue-desc">MDPI World, 2025</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.3390/world6010029" target="_blank" class="pub-action-link">DOI</a>
               </div>
             </div>
-
-            <!-- Technical Skills (Rendered right under education on desktop) -->
-            <div class="section-header" style="margin-top: 3.5rem; margin-bottom: 1.5rem;">
-              <span class="section-badge">Toolkit</span>
-              <h2 class="section-title" style="font-size: 1.25rem;">Technical Skills</h2>
-            </div>
-            
-            <div style="display:flex; flex-direction:column; gap:1.25rem;">
-              <!-- AI Category -->
-              <div class="skill-category-card">
-                <h4>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><path d="M2 12h20"/></svg>
-                  AI &amp; Machine Learning
-                </h4>
-                <div class="skill-chips">
-                  <span class="skill-chip">PyTorch</span>
-                  <span class="skill-chip">TensorFlow</span>
-                  <span class="skill-chip">Keras</span>
-                  <span class="skill-chip">OpenCV</span>
-                  <span class="skill-chip">Computer Vision</span>
-                  <span class="skill-chip">Deep Learning</span>
-                  <span class="skill-chip">Transfer Learning</span>
-                  <span class="skill-chip">NLP</span>
-                </div>
-              </div>
-
-              <!-- Programming Languages -->
-              <div class="skill-category-card">
-                <h4>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg>
-                  Programming Languages
-                </h4>
-                <div class="skill-chips">
-                  <span class="skill-chip">Python</span>
-                  <span class="skill-chip">C/C++</span>
-                  <span class="skill-chip">Java</span>
-                  <span class="skill-chip">SQL</span>
-                  <span class="skill-chip">Shell</span>
-                  <span class="skill-chip">MATLAB</span>
-                  <span class="skill-chip">R</span>
-                  <span class="skill-chip">HDL</span>
-                </div>
-              </div>
-
-              <!-- Tools -->
-              <div class="skill-category-card">
-                <h4>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>
-                  Tools &amp; Infrastructure
-                </h4>
-                <div class="skill-chips">
-                  <span class="skill-chip">Git</span>
-                  <span class="skill-chip">Docker</span>
-                  <span class="skill-chip">VS Code</span>
-                  <span class="skill-chip">Jupyter</span>
-                  <span class="skill-chip">PostgreSQL</span>
-                  <span class="skill-chip">PyCharm</span>
-                  <span class="skill-chip">FreeCAD</span>
-                </div>
-              </div>
-
-              <!-- Hardware -->
-              <div class="skill-category-card">
-                <h4>
-                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/><line x1="7" y1="2" x2="7" y2="22"/><line x1="17" y1="2" x2="17" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
-                  Edge &amp; Hardware
-                </h4>
-                <div class="skill-chips">
-                  <span class="skill-chip">Raspberry Pi</span>
-                  <span class="skill-chip">Jetson Nano</span>
-                  <span class="skill-chip">Arduino</span>
-                  <span class="skill-chip">ESP32</span>
-                  <span class="skill-chip">FPGAs</span>
-                  <span class="skill-chip">Xilinx</span>
-                </div>
-              </div>
-            </div>
-
           </div>
 
-        </div>
-      </section>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">8</div>
+            <div class="pub-details">
+              <div class="pub-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">IEEE 9th RTSI, Gammarth, Tunisia, 2025</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/RTSI64020.2025.11212336" target="_blank" class="pub-action-link">DOI</a>
+              </div>
+            </div>
+          </div>
 
-      <hr class="section-divider">
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">9</div>
+            <div class="pub-details">
+              <div class="pub-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">IEEE ECIS 2025, Yueyang, China</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/ECIS65594.2025.11086768" target="_blank" class="pub-action-link">DOI</a>
+              </div>
+            </div>
+          </div>
 
-      <!-- ─── TEACHING ─── -->
-      <section id="teaching" class="section">
-        <div class="section-header">
-          <span class="section-badge">Pedagogy</span>
-          <h2 class="section-title">Teaching Activities</h2>
-          <p class="section-desc">Tutor and Lab Demonstrator at DIBRIS, University of Genoa, Italy.</p>
-        </div>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">10</div>
+            <div class="pub-details">
+              <div class="pub-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">IEEE 9th RTSI, Gammarth, Tunisia, 2025</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/RTSI64020.2025.11212252" target="_blank" class="pub-action-link">DOI</a>
+              </div>
+            </div>
+          </div>
 
-        <div class="teaching-grid">
-          <!-- Course 1 -->
-          <div class="course-card">
-            <div class="course-period">2025 – 2026</div>
-            <h4>Data Warehousing</h4>
-            <div class="course-meta-desc">
-              <span>MSc Computer Science</span>
-              <strong>Code: 101798</strong>
-            </div>
-          </div>
-          <!-- Course 2 -->
-          <div class="course-card">
-            <div class="course-period">2025 – 2026</div>
-            <h4>Introduction to Computer Science and Programming</h4>
-            <div class="course-meta-desc">
-              <span>BSc Computer Engineering</span>
-              <strong>Code: 114602</strong>
-            </div>
-          </div>
-          <!-- Course 3 -->
-          <div class="course-card">
-            <div class="course-period">2025 – 2026</div>
-            <h4>Advanced Data Management</h4>
-            <div class="course-meta-desc">
-              <span>MSc Computer Science</span>
-              <strong>Tutor</strong>
-            </div>
-          </div>
-          <!-- Course 4 -->
-          <div class="course-card">
-            <div class="course-period">2025 – 2026</div>
-            <h4>Fondamenti di Ingegneria del Software</h4>
-            <div class="course-meta-desc">
-              <span>BSc Computer Engineering</span>
-              <strong>TA Support</strong>
-            </div>
-          </div>
-          <!-- Course 5 -->
-          <div class="course-card">
-            <div class="course-period">2024 – 2025</div>
-            <h4>Data Warehousing</h4>
-            <div class="course-meta-desc">
-              <span>MSc Computer Science</span>
-              <strong>Code: 101798</strong>
-            </div>
-          </div>
-          <!-- Course 6 -->
-          <div class="course-card">
-            <div class="course-period">2024 – 2025</div>
-            <h4>Introduction to Computer Science and Programming</h4>
-            <div class="course-meta-desc">
-              <span>BSc Computer Engineering</span>
-              <strong>Code: 114602</strong>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">11</div>
+            <div class="pub-details">
+              <div class="pub-title">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">ICASET 2025, Kenitra, Morocco</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1007/978-3-031-98334-4_13" target="_blank" class="pub-action-link">DOI</a>
+              </div>
             </div>
           </div>
         </div>
-      </section>
 
-      <hr class="section-divider">
+        <!-- YEAR 2024 -->
+        <div class="pub-list-year-group" data-year="2024">
+          <div class="pub-year-header">2024</div>
 
-      <!-- ─── TALKS ─── -->
-      <section id="talks" class="section">
-        <div class="section-header">
-          <span class="section-badge">Dissemination</span>
-          <h2 class="section-title">Presentations &amp; Talks</h2>
-          <p class="section-desc">Invited speaker at international conferences, academic seminars, and symposiums.</p>
-        </div>
-
-        <div class="talks-list">
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title"><a href="https://artificial-intelligence.hspioa.org/speakers/muhammad-mohsin" target="_blank">Valorization of WEEE: Integrating AI into Sustainable WEEE Management</a></span>
-              <span class="talk-venue-info">4th Global Summit on AI (GSAI 2025)</span>
-            </div>
-            <span class="talk-date-badge">June 10–11, 2025</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">AI Solutions for Sustainable Management of WEEE</span>
-              <span class="talk-venue-info">University of Opole, Poland</span>
-            </div>
-            <span class="talk-date-badge">Dec 15–19, 2025</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management</span>
-              <span class="talk-venue-info">IEEE 9th RTSI, Gammarth, Tunisia</span>
-            </div>
-            <span class="talk-date-badge">2025</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards</span>
-              <span class="talk-venue-info">IEEE ECIS 2025, Yueyang, China</span>
-            </div>
-            <span class="talk-date-badge">2025</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection</span>
-              <span class="talk-venue-info">IEEE 9th RTSI, Gammarth, Tunisia</span>
-            </div>
-            <span class="talk-date-badge">2025</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Adaptive Multi-Stage Transfer Learning Approach for Electronic Component Detection in Waste Printed Circuit Boards</span>
-              <span class="talk-venue-info">ICASET 2025, Kenitra, Morocco</span>
-            </div>
-            <span class="talk-date-badge">2025</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach</span>
-              <span class="talk-venue-info">ApplePies 2024, Polytechnic University of Turin</span>
-            </div>
-            <span class="talk-date-badge">2024</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</span>
-              <span class="talk-venue-info">IEEE RTSI 2024, Politecnico di Milano</span>
-            </div>
-            <span class="talk-date-badge">2024</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards</span>
-              <span class="talk-venue-info">ICWMT19, Hangzhou, China</span>
-            </div>
-            <span class="talk-date-badge">2024</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Virtual Mines – Component-level recycling of printed circuit boards using deep learning</span>
-              <span class="talk-venue-info">WIRN 2023, Vietri sul Mare, Italy</span>
-            </div>
-            <span class="talk-date-badge">2023</span>
-          </div>
-
-          <div class="talk-item-row">
-            <div class="talk-meta-left">
-              <span class="talk-item-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence</span>
-              <span class="talk-venue-info">MAS 2022, Rome, Italy</span>
-            </div>
-            <span class="talk-date-badge">2022</span>
-          </div>
-        </div>
-      </section>
-
-      <hr class="section-divider">
-
-      <!-- ─── AWARDS ─── -->
-      <section id="awards" class="section">
-        <div class="section-header">
-          <span class="section-badge">Recognition</span>
-          <h2 class="section-title">Awards &amp; Honors</h2>
-        </div>
-
-        <div class="awards-grid-list">
-          <div class="award-item-row">
-            <span class="award-item-year">2026</span>
-            <span class="award-item-title">PostDoc Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></span>
-          </div>
-          <div class="award-item-row">
-            <span class="award-item-year">2025</span>
-            <span class="award-item-title">Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></span>
-          </div>
-          <div class="award-item-row">
-            <span class="award-item-year">2022</span>
-            <span class="award-item-title">PON-PhD Scholarship in Computer Science, Italian Ministry of Research</span>
-          </div>
-          <div class="award-item-row">
-            <span class="award-item-year">2019</span>
-            <span class="award-item-title">Research Fellowship Grant, NUST Islamabad, Pakistan</span>
-          </div>
-          <div class="award-item-row">
-            <span class="award-item-year">2019</span>
-            <span class="award-item-title">Selected Participant for Jeju National University ML Camp, South Korea</span>
-          </div>
-          <div class="award-item-row">
-            <span class="award-item-year">2017</span>
-            <span class="award-item-title">PEEF Scholarship for Postgraduate Studies at NUST</span>
-          </div>
-          <div class="award-item-row">
-            <span class="award-item-year">2014</span>
-            <span class="award-item-title">HEC Scholarship (Higher Education Commission), UET Taxila</span>
-          </div>
-        </div>
-      </section>
-
-      <hr class="section-divider">
-
-      <!-- ─── SERVICE ─── -->
-      <section id="service" class="section">
-        <div class="section-header">
-          <span class="section-badge">Engagement</span>
-          <h2 class="section-title">Professional Service</h2>
-          <p class="section-desc">Active contributions to peer review circles, program committees, and local research organizing committees.</p>
-        </div>
-
-        <div class="service-columns-grid">
-          <!-- Col 1 -->
-          <div class="service-column-card">
-            <h4>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/></svg>
-              Editorial Boards
-            </h4>
-            <ul class="service-item-list">
-              <li>Editorial Board, AI &amp; Sustainable Finance Journal (AISFJ)</li>
-              <li>Reviewer, PLOS One (2025–Present)</li>
-            </ul>
-          </div>
-          
-          <!-- Col 2 -->
-          <div class="service-column-card">
-            <h4>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
-              Program Committees
-            </h4>
-            <ul class="service-item-list">
-              <li>PC Member, USIC 2026, Hong Kong</li>
-              <li>PC Member, USIC 2025, Hong Kong</li>
-              <li>PC Member, ACCSE 2025, Valencia</li>
-              <li>PC Member, ACCSE 2024, Venice</li>
-              <li>PC Member, ACCSE 2023, Nice</li>
-              <li>Student Committee, ICOA 2022</li>
-            </ul>
-          </div>
-
-          <!-- Col 3 -->
-          <div class="service-column-card">
-            <h4>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
-              Peer Reviewer
-            </h4>
-            <ul class="service-item-list">
-              <li>Reviewer, ICIVIS 2025, Hangzhou</li>
-              <li>Reviewer, NeurIPS 2024 AFME Workshop</li>
-              <li>Reviewer, ICOA 2023, Abu Dhabi</li>
-            </ul>
-          </div>
-
-          <!-- Col 4 -->
-          <div class="service-column-card">
-            <h4>
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
-              Memberships
-            </h4>
-            <ul class="service-item-list">
-              <li>IEEE &amp; IEEE Computer Society</li>
-              <li>Registered Engineer, Pakistan Engineering Council (#14851)</li>
-              <li>DoCS-DIBRIS Organizing Committee</li>
-            </ul>
-          </div>
-        </div>
-      </section>
-
-      <hr class="section-divider">
-
-      <!-- ─── CALL FOR PAPERS (DETAILED SECTION) ─── -->
-      <section id="cfp" class="section">
-        <div class="section-header">
-          <span class="section-badge">Conference Session</span>
-          <h2 class="section-title">IEEE RTSI 2026 Special Session</h2>
-          <p class="section-desc">Call for Papers details for the 10th International Forum on Research and Technologies for Society and Industry.</p>
-        </div>
-
-        <div class="cfp-section-layout">
-          
-          <div class="cfp-main-info">
-            <div class="cfp-banner-box">
-              <span class="cfp-badge-highlight" style="background-color:#ffe082; color:#111; margin-bottom:1rem;">Special Session</span>
-              <h3>"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</h3>
-              <div class="cfp-banner-forum">
-                IEEE 10th International Forum on Research and Technologies for Society and Industry (RTSI 2026)<br>
-                📍 Aalto University, Espoo, Finland &nbsp;·&nbsp; 🗓️ 16–18 August 2026
-              </div>
-            </div>
-
-            <p class="cfp-description-text">
-              Artificial Intelligence is playing an increasingly important role in building smarter and more sustainable recycling systems. This special session will explore how AI, robotics, and data-driven technologies can support efficient waste management, material recovery, and circular economy solutions. We welcome contributions from academia and industry.
-            </p>
-
-            <div class="cfp-topics-wrapper">
-              <h4>Topics of Interest</h4>
-              <div class="cfp-topics-chips">
-                <span class="cfp-topic-pill">AI-based waste sorting &amp; recycling</span>
-                <span class="cfp-topic-pill">Robotics for automated disassembly</span>
-                <span class="cfp-topic-pill">Computer vision for recycling systems</span>
-                <span class="cfp-topic-pill">Edge AI for real-time processing</span>
-                <span class="cfp-topic-pill">Predictive analytics &amp; recyclability assessment</span>
-                <span class="cfp-topic-pill">Circular supply chains &amp; industrial applications</span>
+          <div class="pub-entry-item" data-type="journal">
+            <div class="pub-index">12</div>
+            <div class="pub-details">
+              <div class="pub-title">Impact of Green Innovation on Business Sustainability of Firms and the Mediating Role of Green Intellectual Capital</div>
+              <div class="pub-authors-list">Fatima Batool, <strong>Muhammad Mohsin</strong></div>
+              <div><span class="pub-venue-desc">Educational Administration: Theory and Practice, 30(4), 2024</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.53555/kuey.v30i4.1528" target="_blank" class="pub-action-link">DOI</a>
               </div>
             </div>
           </div>
 
-          <!-- CFP Sidebar cards -->
-          <div class="cfp-side-cards">
-            <!-- Dates Card -->
-            <div class="cfp-dates-card">
-              <div class="cfp-card-title">Important Dates</div>
-              <div class="cfp-dates-list">
-                <div class="cfp-date-row-item">
-                  <span class="cfp-date-label-text">Submission Deadline</span>
-                  <span class="cfp-date-value-text highlight">05 Jun 2026</span>
-                </div>
-                <div class="cfp-date-row-item">
-                  <span class="cfp-date-label-text">Acceptance Notice</span>
-                  <span class="cfp-date-value-text">15 Jun 2026</span>
-                </div>
-                <div class="cfp-date-row-item">
-                  <span class="cfp-date-label-text">Conference Dates</span>
-                  <span class="cfp-date-value-text">16–18 Aug 2026</span>
-                </div>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">13</div>
+            <div class="pub-details">
+              <div class="pub-title">Real-Time Detection of Electronic Components in Waste Printed Circuit Boards: A Transformer-Based Approach</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Stefano Rovetta, Francesco Masulli, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">ApplePies 2024, Polytechnic University of Turin</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1007/978-3-031-84100-2_21" target="_blank" class="pub-action-link">DOI</a>
               </div>
-            </div>
-
-            <!-- Organizers Card -->
-            <div class="cfp-organizers-card">
-              <div class="cfp-card-title">Session Organizers</div>
-              <div class="cfp-organizers-list">
-                <div class="cfp-organizer-item">
-                  <div class="cfp-organizer-name">Dr. Muhammad Mohsin</div>
-                  <div class="cfp-organizer-title">University of Genoa, Italy</div>
-                </div>
-                <div class="cfp-organizer-item">
-                  <div class="cfp-organizer-name">Alberto Cabri</div>
-                  <div class="cfp-organizer-title">Vega Research Laboratories, Italy</div>
-                </div>
-              </div>
-            </div>
-            
-            <!-- Quick Links -->
-            <div style="display:flex; flex-direction:column; gap:0.5rem;">
-              <a href="https://2026.ieee-rtsi.org/track-list/" target="_blank" class="btn-secondary" style="justify-content:center; padding: 0.6rem; font-size:0.85rem;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 007.54.54l3-3a5 5 0 00-7.07-7.07l-1.72 1.71"/><path d="M14 11a5 5 0 00-7.54-.54l-3 3a5 5 0 007.07 7.07l1.71-1.71"/></svg>
-                &nbsp;Conference Tracks
-              </a>
-              <a href="https://easychair.org/my/conference?conf=rtsi2026" target="_blank" class="btn-primary" style="justify-content:center; padding: 0.6rem; font-size:0.85rem; box-shadow:none;">
-                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="17 8 12 3 7 8"/><line x1="12" y1="3" x2="12" y2="15"/></svg>
-                &nbsp;Submit via EasyChair
-              </a>
             </div>
           </div>
 
-        </div>
-      </section>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">14</div>
+            <div class="pub-details">
+              <div class="pub-title">Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Danilo Greco, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">IEEE RTSI 2024, Politecnico di Milano</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/RTSI61910.2024.10761364" target="_blank" class="pub-action-link">DOI</a>
+              </div>
+            </div>
+          </div>
 
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">15</div>
+            <div class="pub-details">
+              <div class="pub-title">Measuring the Recyclability of Electronic Components to Assist Automatic and Sorting Waste Printed Circuit Boards</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Xianlai Zeng, Stefano Rovetta, Francesco Masulli</div>
+              <div><span class="pub-venue-desc">ICWMT19, Hangzhou, China, 2024</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.48550/arXiv.2406.16593" target="_blank" class="pub-action-link">arXiv</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- YEAR 2023 -->
+        <div class="pub-list-year-group" data-year="2023">
+          <div class="pub-year-header">2023</div>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">16</div>
+            <div class="pub-details">
+              <div class="pub-title">Virtual Mines – Component-level recycling of printed circuit boards using deep learning</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Francesco Masulli, Stefano Rovetta, Alberto Cabri</div>
+              <div><span class="pub-venue-desc">WIRN 2023, Vietri sul Mare, Italy</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.48550/arXiv.2406.17162" target="_blank" class="pub-action-link">arXiv</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- YEAR 2022 -->
+        <div class="pub-list-year-group" data-year="2022">
+          <div class="pub-year-header">2022</div>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">17</div>
+            <div class="pub-details">
+              <div class="pub-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence</div>
+              <div class="pub-authors-list">Alberto Cabri, Francesco Masulli, Stefano Rovetta, <strong>Muhammad Mohsin</strong></div>
+              <div><span class="pub-venue-desc">MAS 2022, Rome, Italy</span></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- YEAR 2021 -->
+        <div class="pub-list-year-group" data-year="2021">
+          <div class="pub-year-header">2021</div>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">18</div>
+            <div class="pub-details">
+              <div class="pub-title">Automatic Prostate Cancer Grading Using Deep Architectures</div>
+              <div class="pub-authors-list"><strong>Muhammad Mohsin</strong>, Arslan Shaukat, Usman Akram, Muhammad Kaab Zarrar</div>
+              <div><span class="pub-venue-desc">IEEE AICCSA 2021, Tangier, Morocco</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/AICCSA53542.2021.9686869" target="_blank" class="pub-action-link">DOI</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- YEAR 2019 -->
+        <div class="pub-list-year-group" data-year="2019">
+          <div class="pub-year-header">2019</div>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">19</div>
+            <div class="pub-details">
+              <div class="pub-title">Towards Automatic Recognition Sound Observed in Daily Activity</div>
+              <div class="pub-authors-list">Arslan Shaukat, Ammar Younis, Usman Akram, <strong>Muhammad Mohsin</strong>, Zartasha Mustansir</div>
+              <div><span class="pub-venue-desc">IEEE ICCI*CC 2019, Milan, Italy</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/ICCICC46617.2019.9146067" target="_blank" class="pub-action-link">DOI</a>
+              </div>
+            </div>
+          </div>
+          <div class="pub-entry-item" data-type="conference">
+            <div class="pub-index">20</div>
+            <div class="pub-details">
+              <div class="pub-title">Latest Trends in Automatic Glioma Tumor Segmentation and an Improved CNN-based Solution</div>
+              <div class="pub-authors-list">Muhammad Kaab Zarrar, Farhan Hussain, <strong>Muhammad Mohsin</strong>, Rubab Sheikh</div>
+              <div><span class="pub-venue-desc">IEEE MACS 2019, Karachi, Pakistan</span></div>
+              <div class="pub-actions">
+                <a href="https://doi.org/10.1109/MACS48846.2019.9024815" target="_blank" class="pub-action-link">DOI</a>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
-    <!-- ==========================================================================
-         FOOTER
-         ========================================================================== -->
-    <footer class="footer">
-      <div class="footer-content">
-        <blockquote class="footer-quote-box">
-          "The important thing is not to stop questioning. Curiosity has its own reason for existing."
-          <cite>— Albert Einstein</cite>
-        </blockquote>
-        
-        <div class="footer-contact-links">
-          <a href="mailto:muhammad.mohsin@edu.unige.it">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
-            muhammad.mohsin@edu.unige.it
-          </a>
-          <a href="https://dibris.unige.it/en" target="_blank">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 19a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h5l2 3h9a2 2 0 0 1 2 2z"/></svg>
-            DIBRIS, University of Genoa
-          </a>
-          <a href="tel:+393455017833">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
-            +39 345 501 7833
-          </a>
+
+    <!-- ── EXPERIENCE ── -->
+    <div id="page-experience" class="page-section">
+      <div class="timeline-section-split">
+        <div>
+          <h2>Professional Experience</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Jan 2025 – Present</span>
+              <h3>Postdoctoral Researcher</h3>
+              <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
+              <div class="timeline-desc">Advancing AI models for circular economy systems and critical raw materials extraction from complex electronic waste.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Sep 2025 – Present</span>
+              <h3>Cultore della Materia</h3>
+              <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, University of Genoa, Italy</div>
+              <div class="timeline-desc">Academic supervisor, assisting evaluation panels, course examinations, and mentoring student projects.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Oct 2024 – Present</span>
+              <h3>Teaching Assistant</h3>
+              <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, University of Genoa, Italy</div>
+              <div class="timeline-desc">Tutor and lab demonstrator in Computer Science and Data Management courses.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Aug – Sep 2025</span>
+              <h3>Senior AI Consultant</h3>
+              <div class="timeline-org">Vega Research Laboratories (VRLabs)</div>
+              <div class="timeline-desc">Developed computer vision models for automated sorting of electrical components on PCBs.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Dec 2023 – May 2024</span>
+              <h3>Visiting PhD Researcher</h3>
+              <div class="timeline-org">Tsinghua University, School of Environment, Beijing, China</div>
+              <div class="timeline-desc">Research on global e-waste material recovery pipelines and criteria-based sorting matrices.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Jan 2022 – May 2025</span>
+              <h3>PhD Researcher</h3>
+              <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, University of Genoa &amp; VRLabs</div>
+              <div class="timeline-desc">Developed V-PCB demo and dataset. Created detection mechanisms for electronic assemblies.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Aug 2019 – Jul 2021</span>
+              <h3>Research Assistant</h3>
+              <div class="timeline-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
+              <div class="timeline-desc">Deep learning segmentation networks for medical imaging. Selected for Jeju ML Camp, South Korea.</div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">Feb 2017 – Present</span>
+              <h3>Machine Learning Expert (Freelance)</h3>
+              <div class="timeline-org">Fiverr &amp; Upwork</div>
+              <div class="timeline-desc">200+ custom data science, machine learning, and computer vision projects for international clients.</div>
+            </div>
+          </div>
         </div>
-        
-        <div class="footer-credits">
-          © 2026 Dr. Muhammad Mohsin · Via Dodecaneso 35, 16146 Genoa, Italy
+
+        <div>
+          <h2>Education</h2>
+          <div class="timeline">
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">2022 – 2025</span>
+              <h3>PhD in Computer Science</h3>
+              <div class="timeline-org"><a href="https://dibris.unige.it/en" target="_blank">DIBRIS</a>, <a href="https://unige.it/" target="_blank">University of Genoa</a>, Italy</div>
+              <div class="timeline-desc">Thesis: <em>Deep Learning-Powered Computer Vision System for Selective Disassembly of Waste Printed Circuit Boards</em></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">2017 – 2021</span>
+              <h3>MS in Computer Engineering</h3>
+              <div class="timeline-org">NUST — National University of Sciences &amp; Technology, Pakistan</div>
+              <div class="timeline-desc">Thesis: <em>Automatic Prostate Cancer Grading Using Deep Architectures</em></div>
+            </div>
+            <div class="timeline-item">
+              <div class="timeline-marker"></div>
+              <span class="timeline-date">2013 – 2017</span>
+              <h3>BSc in Computer Engineering</h3>
+              <div class="timeline-org">University of Engineering and Technology (UET) Taxila, Pakistan</div>
+            </div>
+          </div>
+
+          <h2 style="margin-top:2.5rem;">Technical Skills</h2>
+          <div style="display:flex;flex-direction:column;gap:1rem;margin-top:1rem;">
+            <div class="skill-category-card">
+              <h4>AI &amp; Machine Learning</h4>
+              <div class="skill-chips">
+                <span class="skill-chip">PyTorch</span><span class="skill-chip">TensorFlow</span><span class="skill-chip">Keras</span><span class="skill-chip">OpenCV</span><span class="skill-chip">Deep Learning</span><span class="skill-chip">Transfer Learning</span><span class="skill-chip">NLP</span>
+              </div>
+            </div>
+            <div class="skill-category-card">
+              <h4>Programming</h4>
+              <div class="skill-chips">
+                <span class="skill-chip">Python</span><span class="skill-chip">C/C++</span><span class="skill-chip">Java</span><span class="skill-chip">SQL</span><span class="skill-chip">MATLAB</span><span class="skill-chip">R</span><span class="skill-chip">HDL</span>
+              </div>
+            </div>
+            <div class="skill-category-card">
+              <h4>Tools &amp; Infrastructure</h4>
+              <div class="skill-chips">
+                <span class="skill-chip">Git</span><span class="skill-chip">Docker</span><span class="skill-chip">Jupyter</span><span class="skill-chip">PostgreSQL</span><span class="skill-chip">FreeCAD</span>
+              </div>
+            </div>
+            <div class="skill-category-card">
+              <h4>Edge &amp; Hardware</h4>
+              <div class="skill-chips">
+                <span class="skill-chip">Raspberry Pi</span><span class="skill-chip">Jetson Nano</span><span class="skill-chip">Arduino</span><span class="skill-chip">ESP32</span><span class="skill-chip">FPGAs</span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-    </footer>
-  </div>
-</main>
+    </div>
 
-<!-- Back to Top Button -->
-<button class="back-to-top" id="backToTopBtn" aria-label="Back to Top">
-  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="18 15 12 9 6 15"/></svg>
-</button>
+    <!-- ── TEACHING ── -->
+    <div id="page-teaching" class="page-section">
+      <h2>Teaching Activities</h2>
+      <p style="margin-bottom:1.5rem;color:#586069;font-size:0.875rem;">Tutor and Lab Demonstrator at DIBRIS, University of Genoa, Italy.</p>
+      <div class="teaching-grid">
+        <div class="course-card"><div class="course-period">2025–2026</div><h4>Data Warehousing</h4><div class="course-meta-desc"><span>MSc Computer Science</span><strong>Code: 101798</strong></div></div>
+        <div class="course-card"><div class="course-period">2025–2026</div><h4>Introduction to Computer Science and Programming</h4><div class="course-meta-desc"><span>BSc Computer Engineering</span><strong>Code: 114602</strong></div></div>
+        <div class="course-card"><div class="course-period">2025–2026</div><h4>Advanced Data Management</h4><div class="course-meta-desc"><span>MSc Computer Science</span><strong>Tutor</strong></div></div>
+        <div class="course-card"><div class="course-period">2025–2026</div><h4>Fondamenti di Ingegneria del Software</h4><div class="course-meta-desc"><span>BSc Computer Engineering</span><strong>TA Support</strong></div></div>
+        <div class="course-card"><div class="course-period">2024–2025</div><h4>Data Warehousing</h4><div class="course-meta-desc"><span>MSc Computer Science</span><strong>Code: 101798</strong></div></div>
+        <div class="course-card"><div class="course-period">2024–2025</div><h4>Introduction to Computer Science and Programming</h4><div class="course-meta-desc"><span>BSc Computer Engineering</span><strong>Code: 114602</strong></div></div>
+      </div>
+    </div>
 
-<!-- Main JS Application script -->
+    <!-- ── TALKS ── -->
+    <div id="page-talks" class="page-section">
+      <h2>Presentations &amp; Talks</h2>
+      <div class="talks-list">
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title"><a href="https://artificial-intelligence.hspioa.org/speakers/muhammad-mohsin" target="_blank">Valorization of WEEE: Integrating AI into Sustainable WEEE Management</a></span><span class="talk-venue-info">4th Global Summit on AI (GSAI 2025)</span></div><span class="talk-date-badge">Jun 2025</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">AI Solutions for Sustainable Management of WEEE</span><span class="talk-venue-info">University of Opole, Poland</span></div><span class="talk-date-badge">Dec 2025</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Valorization of Waste Electrical and Electronic Equipment: Integrating AI into Sustainable WEEE Management</span><span class="talk-venue-info">IEEE 9th RTSI, Gammarth, Tunisia</span></div><span class="talk-date-badge">2025</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Heatmap Visualization for Deep Learning Analysis of Waste Printed Circuit Boards</span><span class="talk-venue-info">IEEE ECIS 2025, Yueyang, China</span></div><span class="talk-date-badge">2025</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Semi-Supervised Multi-Stage Transfer Learning for Electronic Component Detection</span><span class="talk-venue-info">IEEE 9th RTSI, Gammarth, Tunisia</span></div><span class="talk-date-badge">2025</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Adaptive Multi-Stage Transfer Learning for Electronic Component Detection in WPCBs</span><span class="talk-venue-info">ICASET 2025, Kenitra, Morocco</span></div><span class="talk-date-badge">2025</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Real-Time Detection of Electronic Components in WPCBs: A Transformer-Based Approach</span><span class="talk-venue-info">ApplePies 2024, Polytechnic University of Turin</span></div><span class="talk-date-badge">2024</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Deep Learning-Powered CV System for Selective Disassembly of WPCBs</span><span class="talk-venue-info">IEEE RTSI 2024, Politecnico di Milano</span></div><span class="talk-date-badge">2024</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Measuring the Recyclability of Electronic Components to Assist Sorting of WPCBs</span><span class="talk-venue-info">ICWMT19, Hangzhou, China</span></div><span class="talk-date-badge">2024</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Virtual Mines – Component-level recycling of PCBs using deep learning</span><span class="talk-venue-info">WIRN 2023, Vietri sul Mare, Italy</span></div><span class="talk-date-badge">2023</span></div>
+        <div class="talk-item-row"><div class="talk-meta-left"><span class="talk-item-title">Recovering Critical Raw Materials from WEEE using Artificial Intelligence</span><span class="talk-venue-info">MAS 2022, Rome, Italy</span></div><span class="talk-date-badge">2022</span></div>
+      </div>
+    </div>
+
+    <!-- ── AWARDS ── -->
+    <div id="page-awards" class="page-section">
+      <h2>Awards &amp; Honors</h2>
+      <div class="awards-grid-list">
+        <div class="award-item-row"><span class="award-item-year">2026</span><span class="award-item-title">PostDoc Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></span></div>
+        <div class="award-item-row"><span class="award-item-year">2025</span><span class="award-item-title">Research Fellowship, DIBRIS, <a href="https://unige.it/" target="_blank">University of Genoa</a></span></div>
+        <div class="award-item-row"><span class="award-item-year">2022</span><span class="award-item-title">PON-PhD Scholarship in Computer Science, Italian Ministry of Research</span></div>
+        <div class="award-item-row"><span class="award-item-year">2019</span><span class="award-item-title">Research Fellowship Grant, NUST Islamabad, Pakistan</span></div>
+        <div class="award-item-row"><span class="award-item-year">2019</span><span class="award-item-title">Selected Participant for Jeju National University ML Camp, South Korea</span></div>
+        <div class="award-item-row"><span class="award-item-year">2017</span><span class="award-item-title">PEEF Scholarship for Postgraduate Studies at NUST</span></div>
+        <div class="award-item-row"><span class="award-item-year">2014</span><span class="award-item-title">HEC Scholarship (Higher Education Commission), UET Taxila</span></div>
+      </div>
+    </div>
+
+    <!-- ── SERVICE ── -->
+    <div id="page-service" class="page-section">
+      <h2>Professional Service</h2>
+      <div class="service-columns-grid">
+        <div class="service-column-card">
+          <h4>Editorial Boards</h4>
+          <ul class="service-item-list">
+            <li>Editorial Board, AI &amp; Sustainable Finance Journal (AISFJ)</li>
+            <li>Reviewer, PLOS One (2025–Present)</li>
+          </ul>
+        </div>
+        <div class="service-column-card">
+          <h4>Program Committees</h4>
+          <ul class="service-item-list">
+            <li>PC Member, USIC 2026, Hong Kong</li>
+            <li>PC Member, USIC 2025, Hong Kong</li>
+            <li>PC Member, ACCSE 2025, Valencia</li>
+            <li>PC Member, ACCSE 2024, Venice</li>
+            <li>PC Member, ACCSE 2023, Nice</li>
+            <li>Student Committee, ICOA 2022</li>
+          </ul>
+        </div>
+        <div class="service-column-card">
+          <h4>Peer Reviewer</h4>
+          <ul class="service-item-list">
+            <li>Reviewer, ICIVIS 2025, Hangzhou</li>
+            <li>Reviewer, NeurIPS 2024 AFME Workshop</li>
+            <li>Reviewer, ICOA 2023, Abu Dhabi</li>
+          </ul>
+        </div>
+        <div class="service-column-card">
+          <h4>Memberships</h4>
+          <ul class="service-item-list">
+            <li>IEEE &amp; IEEE Computer Society</li>
+            <li>Registered Engineer, Pakistan Engineering Council (#14851)</li>
+            <li>DoCS-DIBRIS Organizing Committee</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- ── CFP ── -->
+    <div id="page-cfp" class="page-section">
+      <h2>IEEE RTSI 2026 Special Session</h2>
+      <div class="cfp-section-layout">
+        <div class="cfp-main-info">
+          <div class="cfp-banner-box">
+            <h3>"AI-Powered Innovations for Circular Economy: Advancing Sustainable Recycling"</h3>
+            <div class="cfp-banner-forum">
+              IEEE 10th International Forum on Research and Technologies for Society and Industry (RTSI 2026)<br>
+              📍 Aalto University, Espoo, Finland &nbsp;·&nbsp; 🗓️ 16–18 August 2026
+            </div>
+          </div>
+          <p class="cfp-description-text">
+            Artificial Intelligence is playing an increasingly important role in building smarter and more sustainable recycling systems. This special session will explore how AI, robotics, and data-driven technologies can support efficient waste management, material recovery, and circular economy solutions. We welcome contributions from academia and industry.
+          </p>
+          <div class="cfp-topics-wrapper">
+            <h4>Topics of Interest</h4>
+            <div class="cfp-topics-chips">
+              <span class="cfp-topic-pill">AI-based waste sorting &amp; recycling</span>
+              <span class="cfp-topic-pill">Robotics for automated disassembly</span>
+              <span class="cfp-topic-pill">Computer vision for recycling systems</span>
+              <span class="cfp-topic-pill">Edge AI for real-time processing</span>
+              <span class="cfp-topic-pill">Predictive analytics &amp; recyclability assessment</span>
+              <span class="cfp-topic-pill">Circular supply chains &amp; industrial applications</span>
+            </div>
+          </div>
+        </div>
+        <div class="cfp-side-cards">
+          <div class="cfp-dates-card">
+            <div class="cfp-card-title">Important Dates</div>
+            <div class="cfp-dates-list">
+              <div class="cfp-date-row-item"><span class="cfp-date-label-text">Submission Deadline</span><span class="cfp-date-value-text highlight">05 Jun 2026</span></div>
+              <div class="cfp-date-row-item"><span class="cfp-date-label-text">Acceptance Notice</span><span class="cfp-date-value-text">15 Jun 2026</span></div>
+              <div class="cfp-date-row-item"><span class="cfp-date-label-text">Conference Dates</span><span class="cfp-date-value-text">16–18 Aug 2026</span></div>
+            </div>
+          </div>
+          <div class="cfp-organizers-card">
+            <div class="cfp-card-title">Session Organizers</div>
+            <div class="cfp-organizers-list">
+              <div class="cfp-organizer-item"><div class="cfp-organizer-name">Dr. Muhammad Mohsin</div><div class="cfp-organizer-title">University of Genoa, Italy</div></div>
+              <div class="cfp-organizer-item"><div class="cfp-organizer-name">Alberto Cabri</div><div class="cfp-organizer-title">Vega Research Laboratories, Italy</div></div>
+            </div>
+          </div>
+          <div style="display:flex;flex-direction:column;gap:0.5rem;">
+            <a href="https://2026.ieee-rtsi.org/track-list/" target="_blank" class="cfp-btn-outline">Conference Tracks</a>
+            <a href="https://easychair.org/my/conference?conf=rtsi2026" target="_blank" class="cfp-btn-solid">Submit via EasyChair</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
 <script src="js/main.js"></script>
 </body>
 </html>
