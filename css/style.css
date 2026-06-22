@@ -673,6 +673,28 @@ a:hover { text-decoration: underline; }
   color: var(--muted);
 }
 
+/* ── Service single-column layout ── */
+.service-single-col {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.service-group h4 {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.3rem;
+  border-bottom: 1px solid var(--border);
+}
+
+/* Talks subsection h2 */
+#page-talks h2:not(:first-child) {
+  margin-top: 0.25rem;
+  margin-bottom: 1rem;
+}
+
 /* ── CFP Section ── */
 .cfp-section-layout {
   display: flex;
