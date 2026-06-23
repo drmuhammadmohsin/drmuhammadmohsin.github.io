@@ -255,88 +255,19 @@ a:hover { text-decoration: underline; }
 }
 
 /* ── Publications Section ── */
-.publications-controls {
-  margin-bottom: 1.5rem;
-  display: flex;
-  flex-direction: column;
-  gap: 0.75rem;
-}
 
-.publications-search-bar {
-  display: flex;
-  align-items: center;
-  gap: 0.5rem;
-  border: 1px solid var(--border);
-  border-radius: 6px;
-  padding: 0.4rem 0.75rem;
-  background: #f6f8fa;
-}
+.pub-category { margin-bottom: 2rem; }
 
-.publications-search-bar svg {
-  width: 14px;
-  height: 14px;
-  color: var(--muted);
-  flex-shrink: 0;
-}
-
-.publications-search-input {
-  flex: 1;
-  border: none;
-  outline: none;
-  background: transparent;
-  font-size: 0.85rem;
+.pub-cat-heading {
+  font-size: 1rem;
+  font-weight: 600;
   color: var(--text);
-  font-family: inherit;
-}
-
-.publications-tabs-row {
-  display: flex;
-  gap: 0.5rem;
-  flex-wrap: wrap;
-}
-
-.pub-filter-btn {
-  background: none;
-  border: 1px solid var(--border);
-  border-radius: 4px;
-  padding: 0.25rem 0.65rem;
-  font-size: 0.8rem;
-  color: var(--muted);
-  cursor: pointer;
-  font-family: inherit;
-  display: flex;
-  align-items: center;
-  gap: 0.35rem;
-  transition: background 0.15s, color 0.15s, border-color 0.15s;
-}
-
-.pub-filter-btn:hover { background: #f6f8fa; color: var(--text); }
-.pub-filter-btn.active { background: var(--link); color: #fff; border-color: var(--link); }
-.pub-filter-btn.active .pub-filter-count { background: rgba(255,255,255,0.25); color: #fff; }
-
-.pub-filter-count {
-  background: #f6f8fa;
-  border-radius: 10px;
-  padding: 0 0.4rem;
-  font-size: 0.72rem;
-  font-weight: 500;
-  color: var(--muted);
+  padding-bottom: 0.4rem;
+  margin-bottom: 0.25rem;
+  border-bottom: 2px solid var(--border);
 }
 
 .pub-list { display: flex; flex-direction: column; gap: 0; }
-
-.pub-list-year-group { margin-bottom: 1.5rem; }
-
-.pub-year-header {
-  font-size: 0.8rem;
-  font-weight: 600;
-  color: var(--muted);
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  padding: 0.25rem 0;
-  margin-bottom: 0.5rem;
-  border-bottom: 1px solid var(--border);
-}
 
 .pub-entry-item {
   display: flex;
