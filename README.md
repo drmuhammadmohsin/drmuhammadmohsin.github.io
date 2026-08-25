@@ -1,6 +1,6 @@
 # Dr. Muhammad Mohsin
 
-**Postdoctoral Researcher | AI & Circular Economy**  
+**Postdoctoral Researcher & Adjunct Assistant Professor | AI & Circular Economy**  
 📍 University of Genoa, Italy
 
 Welcome to the repository for my personal academic portfolio! You can view the live website here:  
